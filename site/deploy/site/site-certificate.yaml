@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: project-starter-site
+  namespace: istio-system
+spec:
+  secretName: project-starter-site-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: 'ps.atls.tech'
+  dnsNames:
+    - 'ps.atls.tech'

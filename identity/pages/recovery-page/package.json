@@ -1,0 +1,17 @@
+{
+  "name": "@identity/recovery-page",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "peerDependencies": {
+    "react": "^17.0.1"
+  },
+  "devDependencies": {
+    "@atls-ui-proto/layout": "0.0.2",
+    "@atls/react-kratos-browser-flows": "0.0.1",
+    "@identity/auth-layout-fragment": "workspace:0.0.1",
+    "@identity/messages-fragment": "workspace:0.0.1",
+    "@identity/recovery-link-fragment": "workspace:0.0.1",
+    "@types/react": "^17.0.8"
+  }
+}

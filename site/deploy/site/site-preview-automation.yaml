@@ -1,0 +1,26 @@
+apiVersion: preview.monstrs.tech/v1alpha1
+kind: PreviewAutomation
+metadata:
+  name: site
+  namespace: project-starter
+spec:
+  gatewayRef:
+    name: project-starter-preview
+    namespace: istio-system
+
+  imageRepositoryRef:
+    name: project-starter-site
+    namespace: flux-system
+
+  sourceRef:
+    kind: GitRepository
+    namespace: flux-system
+    name: project-starter
+
+  resources:
+    - name: site
+      kind: Deployment
+      version: apps/v1
+    - name: site
+      kind: Service
+      version: v1

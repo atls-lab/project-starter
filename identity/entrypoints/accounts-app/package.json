@@ -1,0 +1,44 @@
+{
+  "name": "@identity/accounts-app-entrypoint",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "yarn next dev src",
+    "build": "yarn app renderer build",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@atls-ui-proto/theme": "0.0.1",
+    "@atls/next-app-with-body-parser": "0.0.2",
+    "@atls/next-config-with-pnp-workspaces": "0.0.2",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.3.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "js-cookie": "^3.0.1",
+    "next": "^11.1.2",
+    "next-compose-plugins": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "xorshift": "*"
+  },
+  "devDependencies": {
+    "@identity/error-page": "workspace:0.0.1",
+    "@identity/index-page": "workspace:0.0.1",
+    "@identity/login-page": "workspace:0.0.1",
+    "@identity/recovery-page": "workspace:0.0.1",
+    "@identity/registration-page": "workspace:0.0.1",
+    "@identity/settings-page": "workspace:0.0.1",
+    "@identity/verification-page": "workspace:0.0.1",
+    "@types/cookie-parser": "^1",
+    "@types/express": "^4.17.12",
+    "@types/node": "^14.17.1",
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
+    "typescript": "^4.4.2"
+  },
+  "externalDependencies": {
+    "next/babel": "*",
+    "next": "*"
+  }
+}

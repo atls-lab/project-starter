@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1alpha1
+kind: ImageRepository
+metadata:
+  name: project-starter-accounts-app
+  namespace: flux-system
+spec:
+  image: eu.gcr.io/the-mesh-254617/ps-identity-accounts-app-entrypoint
+  interval: 1m0s
+  secretRef:
+    name: flux-sync-gcr

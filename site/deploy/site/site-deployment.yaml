@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: site
+  namespace: project-starter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: site
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: site
+    spec:
+      containers:
+        - name: site
+          image: eu.gcr.io/the-mesh-254617/ps-site-renderer:431e443-1619014536539 # {"$imagepolicy": "flux-system:project-starter-site"}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          env:
+            - name: KRATOS_PUBLIC_URL
+              value: https://identity.ps.atls.tech
+            - name: SERVICE_NAME
+              value: site

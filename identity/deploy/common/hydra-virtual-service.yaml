@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: hydra-project-starter
+  namespace: project-starter
+spec:
+  hosts:
+    - 'sso.ps.atls.tech'
+  gateways:
+    - hydra-project-starter
+  http:
+    - route:
+        - destination:
+            host: hydra-public
+            port:
+              number: 4444

@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: kratos-project-starter
+  namespace: project-starter
+spec:
+  hosts:
+    - 'identity.ps.atls.tech'
+  gateways:
+    - kratos-project-starter
+  http:
+    - route:
+        - destination:
+            host: project-starter-kratos-public
+            port:
+              number: 4433
