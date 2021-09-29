@@ -1,0 +1,93 @@
+version: v0.7.4-alpha.1
+
+serve:
+  public:
+    base_url: http://127.0.0.1:4433/
+    cors:
+      enabled: true
+      allowed_origins:
+        - http://localhost:3000
+        - http://127.0.0.1:3000
+      debug: true
+  admin:
+    base_url: http://kratos:4434/
+
+selfservice:
+  default_browser_return_url: http://127.0.0.1:3000/
+  whitelisted_return_urls:
+    - http://127.0.0.1:3000
+
+  methods:
+    password:
+      enabled: true
+    link:
+      enabled: true
+    oidc:
+      enabled: true
+      config:
+        providers:
+          - id: github
+            provider: github
+            client_id: 164289d994fb493bf23b
+            client_secret: 8ed83e4e4919087e9859d74e5622ad7328db872e
+            mapper_url: file:///etc/config/kratos/oidc.github.jsonnet
+            scope:
+              - user:email
+
+  flows:
+    error:
+      ui_url: http://127.0.0.1:3000/auth/error
+
+    settings:
+      ui_url: http://127.0.0.1:3000/profile/settings
+      privileged_session_max_age: 15m
+
+    recovery:
+      enabled: true
+      ui_url: http://127.0.0.1:3000/profile/recovery
+
+    verification:
+      enabled: true
+      ui_url: http://127.0.0.1:3000/auth/verification
+      after:
+        default_browser_return_url: http://127.0.0.1:3000/
+
+    logout:
+      after:
+        default_browser_return_url: http://127.0.0.1:3000/auth/login
+
+    login:
+      ui_url: http://127.0.0.1:3000/auth/login
+      lifespan: 10m
+
+    registration:
+      lifespan: 10m
+      ui_url: http://127.0.0.1:3000/auth/registration
+      after:
+        password:
+          hooks:
+            - hook: session
+
+log:
+  level: debug
+  format: text
+  leak_sensitive_values: true
+
+secrets:
+  cookie:
+    - PLEASE-CHANGE-ME-I-AM-VERY-INSECURE
+
+hashers:
+  argon2:
+    parallelism: 1
+    memory: 128MB
+    iterations: 2
+    salt_length: 16
+    key_length: 16
+
+identity:
+  default_schema_url: file:///etc/config/kratos/identity.schema.json
+
+courier:
+  smtp:
+    connection_uri: smtps://test:test@mailslurper:1025/?skip_ssl_verify=true&legacy_ssl=true

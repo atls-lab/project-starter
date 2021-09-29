@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: accounts-app
+  namespace: project-starter
+spec:
+  hosts:
+    - 'accounts.ps.atls.tech'
+  gateways:
+    - accounts-app
+  http:
+    - route:
+        - destination:
+            host: accounts-app
+            port:
+              number: 3000

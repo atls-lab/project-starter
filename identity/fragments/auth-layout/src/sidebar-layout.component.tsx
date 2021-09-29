@@ -1,0 +1,59 @@
+import React                          from 'react'
+import { FC }                         from 'react'
+import { Column }                     from '@atls-ui-proto/layout'
+import { Row }                        from '@atls-ui-proto/layout'
+import { Layout }                     from '@atls-ui-proto/layout'
+import { Box }                        from '@atls-ui-proto/layout'
+import { Text }                       from '@atls-ui-proto/text'
+import { BackgroundImagePlaceholder } from '@atls-ui-proto/placeholder'
+import { LogoPlaceholder }            from '@atls-ui-proto/placeholder'
+
+import { SidebarLayoutProps }         from './layout.interfaces'
+
+export const SidebarLayout: FC<SidebarLayoutProps> = ({
+  children,
+  actions,
+  title,
+  position = 'left',
+}) => (
+  <BackgroundImagePlaceholder>
+    <Row height='100%'>
+      {position === 'right' && <Layout flexBasis={[0, '50%']} />}
+      <Layout flexBasis={['100%', '50%']}>
+        <Box background='white' width='100%' px={[16, 32]}>
+          <Column>
+            <Layout flexGrow={1} flexBasis='50%'>
+              <Column>
+                <Layout flexBasis={120} justifyContent='center'>
+                  <LogoPlaceholder>Project Starter</LogoPlaceholder>
+                </Layout>
+              </Column>
+            </Layout>
+            <Layout>
+              <Column>
+                {title && (
+                  <>
+                    <Layout justifyContent='center'>
+                      <Text fontSize={24} color='#A0A4B2'>
+                        {title}
+                      </Text>
+                    </Layout>
+                    <Layout flexBasis={36} />
+                  </>
+                )}
+                <Layout justifyContent='center'>{children}</Layout>
+              </Column>
+            </Layout>
+            <Layout flexGrow={1} flexBasis='50%' alignItems='flex-end' justifyContent='center'>
+              {actions && (
+                <Layout mb={40} justifyContent='center'>
+                  {actions}
+                </Layout>
+              )}
+            </Layout>
+          </Column>
+        </Box>
+      </Layout>
+    </Row>
+  </BackgroundImagePlaceholder>
+)

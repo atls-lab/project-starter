@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: site
+  namespace: project-starter
+spec:
+  hosts:
+    - 'ps.atls.tech'
+  gateways:
+    - site
+  http:
+    - route:
+        - destination:
+            host: site
+            port:
+              number: 3000
