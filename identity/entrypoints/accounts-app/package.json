@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
+    "build": "yarn next build src",
     "dev": "yarn next dev src",
-    "build": "yarn app renderer build",
+    "extract": "formatjs extract '../../fragments/**/src/*.ts*' --out-file locales/ru.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format simple",
     "start": "node dist/index.js"
   },
   "dependencies": {
@@ -16,7 +17,7 @@
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "js-cookie": "^3.0.1",
-    "next": "^11.1.2",
+    "next": "^12.0.7",
     "next-compose-plugins": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

@@ -4,7 +4,8 @@
   "license": "MIT",
   "main": "src/index.tsx",
   "peerDependencies": {
-    "react": "^17.0.1"
+    "react": "^17.0.1",
+    "react-intl": "^5.18.1"
   },
   "devDependencies": {
     "@atls-ui-proto/layout": "0.0.2",
@@ -15,7 +16,7 @@
     "@types/react": "^17.0.8",
     "@types/react-router-dom": "5.1.7",
     "@types/styled-system": "^5.1.11",
-    "next": "^11.1.2",
+    "next": "^12.0.7",
     "react": "^17.0.2",
     "react-router-dom": "5.2.0",
     "styled-system": "^5.1.5",

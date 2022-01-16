@@ -7,8 +7,8 @@
     "next.config.js"
   ],
   "scripts": {
-    "dev": "yarn app renderer dev",
     "build": "yarn app renderer build",
+    "dev": "run next dev src",
     "start": "node dist/index.js"
   },
   "dependencies": {
@@ -20,7 +20,7 @@
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
     "express": "^4.17.1",
-    "next": "^11.1.2",
+    "next": "^12.0.7",
     "next-compose-plugins": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

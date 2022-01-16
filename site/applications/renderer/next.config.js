@@ -3,7 +3,8 @@ const { withWorkspaces } = require('@monstrs/next-config-with-pnp-workspaces')
 
 const nextConfig = {
   future: {
-    webpack5: true,
+    externalDir: true,
+    swcFileReading: false,
   },
   webpack: (config) => {
     // eslint-disable-next-line

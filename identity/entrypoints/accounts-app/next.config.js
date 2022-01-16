@@ -3,7 +3,8 @@ const { withWorkspaces } = require('@atls/next-config-with-pnp-workspaces')
 
 const nextConfig = {
   experimental: {
-    esmExternals: 'loose',
+    externalDir: true,
+    swcFileReading: false,
   },
   webpack: (config) => {
     // eslint-disable-next-line
@@ -15,4 +16,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withPlugins([withWorkspaces], nextConfig)
+module.exports = withPlugins([], nextConfig)
