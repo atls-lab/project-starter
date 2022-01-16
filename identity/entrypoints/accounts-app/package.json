@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "scripts": {
-    "build": "yarn next build src",
+    "build": "yarn service build && yarn next build src --no-lint && cp -r ./src/.next ./dist/.next",
     "dev": "yarn next dev src",
     "extract": "formatjs extract '../../fragments/**/src/*.ts*' --out-file locales/ru.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format simple",
     "start": "node dist/index.js"

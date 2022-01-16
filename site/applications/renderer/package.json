@@ -7,7 +7,7 @@
     "next.config.js"
   ],
   "scripts": {
-    "build": "yarn app renderer build",
+    "build": "yarn service build && yarn next build src --no-lint && cp -r ./src/.next ./dist/.next",
     "dev": "run next dev src",
     "start": "node dist/index.js"
   },
