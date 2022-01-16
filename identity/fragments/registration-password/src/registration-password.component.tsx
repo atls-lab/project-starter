@@ -11,6 +11,7 @@ import { FlowMessages }     from '@atls/react-kratos-browser-flows'
 import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'
@@ -28,7 +29,9 @@ export const RegistrationPassword = () => (
       <Column>
         <Layout>
           <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='traits.email'>Email</label>
+            <label htmlFor='traits.email'>
+              <FormattedMessage id='registration_password.email' defaultMessage='Email' />
+            </label>
           </Text>
         </Layout>
         <Layout mt='8px'>
@@ -45,7 +48,9 @@ export const RegistrationPassword = () => (
         </Layout>
         <Layout>
           <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='password'>Пароль</label>
+            <label htmlFor='password'>
+              <FormattedMessage id='registration_password.password' defaultMessage='Пароль' />
+            </label>
           </Text>
         </Layout>
         <Layout mt='8px'>
@@ -62,7 +67,9 @@ export const RegistrationPassword = () => (
         </Layout>
         <Layout>
           <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='traits.name.first'>Фамилия</label>
+            <label htmlFor='traits.name.first'>
+              <FormattedMessage id='registration_password.last_name' defaultMessage='Фамилия' />
+            </label>
           </Text>
         </Layout>
         <Layout mt='8px'>
@@ -79,7 +86,9 @@ export const RegistrationPassword = () => (
         </Layout>
         <Layout>
           <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='traits.name.last'>Имя</label>
+            <label htmlFor='traits.name.last'>
+              <FormattedMessage id='registration_password.name' defaultMessage='Имя' />
+            </label>
           </Text>
         </Layout>
         <Layout mt='8px'>
@@ -97,7 +106,10 @@ export const RegistrationPassword = () => (
         <Layout>
           <FlowSubmit method='password'>
             <Button type='submit' size='large' fill>
-              Создать аккаунт
+              <FormattedMessage
+                id='registration_password.create_account'
+                defaultMessage='Создать аккаунт'
+              />
             </Button>
           </FlowSubmit>
         </Layout>

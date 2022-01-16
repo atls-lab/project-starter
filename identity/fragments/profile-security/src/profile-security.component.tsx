@@ -12,6 +12,7 @@ import { FlowMessages }     from '@atls/react-kratos-browser-flows'
 import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'
@@ -27,13 +28,15 @@ export const ProfileSecurity = () => (
     </FlowMessages>
     <Layout>
       <Text fontSize={24} fontWeigth={500}>
-        Безопасность
+        <FormattedMessage id='profile_security.security' defaultMessage='Безопасность' />
       </Text>
     </Layout>
     <Layout flexBasis={24} />
     <Layout>
       <Text fontWeight={600} fontSize={12}>
-        <label htmlFor='password'>Пароль</label>
+        <label htmlFor='password'>
+          <FormattedMessage id='profile_security.password' defaultMessage='Пароль' />
+        </label>
       </Text>
     </Layout>
     <Layout flexBasis={10} />
@@ -55,14 +58,14 @@ export const ProfileSecurity = () => (
         <Layout flexBasis={['auto', 'auto', 240]}>
           <FlowSubmit method='password'>
             <Button type='submit' size='large' rounding={6} fill>
-              Сохранить
+              <FormattedMessage id='profile_security.save' defaultMessage='Сохранить' />
             </Button>
           </FlowSubmit>
         </Layout>
         <Layout flexBasis={[24, 24, 40]} />
         <Layout>
           <Button size='large' rounding={6} inverted fill>
-            Сбросить
+            <FormattedMessage id='profile_security.reset' defaultMessage='Сбросить' />
           </Button>
         </Layout>
       </Row>

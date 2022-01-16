@@ -1,7 +1,7 @@
 {
   "name": "@identity/accounts-app-entrypoint",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "scripts": {
     "build": "yarn next build src",
     "dev": "yarn next dev src",
@@ -14,6 +14,7 @@
     "@atls/next-config-with-pnp-workspaces": "0.0.2",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
+    "@formatjs/cli": "4.4.0",
     "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "js-cookie": "^3.0.1",
@@ -21,6 +22,8 @@
     "next-compose-plugins": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "6.1.0",
+    "react-intl": "5.18.1",
     "xorshift": "*"
   },
   "devDependencies": {

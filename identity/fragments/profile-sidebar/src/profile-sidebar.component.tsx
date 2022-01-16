@@ -6,6 +6,7 @@ import { Text }            from '@atls-ui-proto/text'
 
 import React               from 'react'
 import { Link }            from 'react-router-dom'
+import { FormattedMessage } from 'react-intl'
 
 import { Route }     from 'react-router-dom'
 
@@ -38,21 +39,30 @@ export const ProfileSidebar = () => (
   <Column px={[24, 24, 40]}>
     <Layout flexBasis={32} />
     <Layout pl={15}>
-      <LogoPlaceholder>Project Starter</LogoPlaceholder>
+      <LogoPlaceholder>
+        <FormattedMessage id='profile_sidebar.project_starter' defaultMessage='Project Starter' />
+      </LogoPlaceholder>
     </Layout>
     <Layout flexBasis={60} />
     <Layout>
       <SidebarLink href='/' exact>
-        Профиль
+        <FormattedMessage id='profile_sidebar.profile' defaultMessage='Профиль' />
       </SidebarLink>
     </Layout>
     <Layout flexBasis='8px' />
     <Layout>
-      <SidebarLink href='/security'>Безопасность</SidebarLink>
+      <SidebarLink href='/security'>
+        <FormattedMessage id='profile_sidebar.security' defaultMessage='Безопасность' />
+      </SidebarLink>
     </Layout>
     <Layout flexBasis='8px' />
     <Layout>
-      <SidebarLink href='/social-links'>Привязка соц. сетей</SidebarLink>
+      <SidebarLink href='/social-links'>
+        <FormattedMessage
+          id='profile_sidebar.social_networks'
+          defaultMessage='Привязка соц. сетей'
+        />
+      </SidebarLink>
     </Layout>
   </Column>
 )

@@ -12,6 +12,7 @@ import { FlowMessages }     from '@atls/react-kratos-browser-flows'
 import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'
@@ -27,7 +28,10 @@ export const ProfileInformation = () => (
     </FlowMessages>
     <Layout>
       <Text fontSize={24} fontWeigth={500}>
-        Личная информация
+        <FormattedMessage
+          id='profile_information.personal_information'
+          defaultMessage='Личная информация'
+        />
       </Text>
     </Layout>
     <Layout flexBasis={24} />
@@ -37,7 +41,9 @@ export const ProfileInformation = () => (
           <Column>
             <Layout>
               <Text fontWeight={600} fontSize={12}>
-                <label htmlFor='traits.name.first'>Имя</label>
+                <label htmlFor='traits.name.first'>
+                  <FormattedMessage id='profile_information.name' defaultMessage='Имя' />
+                </label>
               </Text>
             </Layout>
             <Layout flexBasis={10} />
@@ -60,7 +66,9 @@ export const ProfileInformation = () => (
           <Column>
             <Layout>
               <Text fontWeight={600} fontSize={12}>
-                <label htmlFor='traits.name.last'>Фамилия</label>
+                <label htmlFor='traits.name.last'>
+                  <FormattedMessage id='profile_information.lastname' defaultMessage='Фамилия' />
+                </label>
               </Text>
             </Layout>
             <Layout flexBasis={10} />
@@ -86,7 +94,9 @@ export const ProfileInformation = () => (
           <Column>
             <Layout>
               <Text fontWeight={600} fontSize={12}>
-                <label htmlFor='traits.email'>E-mail</label>
+                <label htmlFor='traits.email'>
+                  <FormattedMessage id='profile_information.email' defaultMessage='E-mail' />
+                </label>
               </Text>
             </Layout>
             <Layout flexBasis={10} />
@@ -114,14 +124,14 @@ export const ProfileInformation = () => (
         <Layout flexBasis={['auto', 'auto', 240]}>
           <FlowSubmit method='profile'>
             <Button type='submit' size='large' rounding={6} fill>
-              Сохранить
+              <FormattedMessage id='profile_information.save' defaultMessage='Сохранить' />
             </Button>
           </FlowSubmit>
         </Layout>
         <Layout flexBasis={[24, 24, 40]} />
         <Layout>
           <Button size='large' rounding={6} inverted fill>
-            Сбросить
+            <FormattedMessage id='profile_information.reset' defaultMessage='Сбросить' />
           </Button>
         </Layout>
       </Row>

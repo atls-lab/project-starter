@@ -1,7 +1,7 @@
 {
   "name": "@identity/profile-oidc-fragment",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "main": "src/index.tsx",
   "devDependencies": {
     "@atls-ui-proto/input": "0.0.5",
@@ -17,6 +17,7 @@
     "styled-tools": "^1.7.2"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
+    "react": "^17.0.1",
+    "react-intl": "^5.18.1"
   }
 }

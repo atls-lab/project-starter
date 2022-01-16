@@ -11,6 +11,7 @@ import { FlowMessages }     from '@atls/react-kratos-browser-flows'
 import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'
@@ -29,19 +30,28 @@ export const RecoveryLink = () => (
         <Layout flexBasis={20} />
         <Layout>
           <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>
+              <FormattedMessage id='recovery_link.email' defaultMessage='Email' />
+            </label>
           </Text>
         </Layout>
         <Layout mt='8px'>
           <FlowNode name='email'>
             {({ attributes }, value, onChange) => (
-              <Input
-                id='email'
-                placeholder='Введите адрес вашей почты'
-                {...attributes}
-                value={value}
-                onChange={onChange}
-              />
+              <FormattedMessage
+                id='recovery_link.email_address'
+                defaultMessage='Введите адрес вашей почты'
+              >
+                {(msg) => (
+                  <Input
+                    id='email'
+                    placeholder={String(msg)}
+                    {...attributes}
+                    value={value}
+                    onChange={onChange}
+                  />
+                )}
+              </FormattedMessage>
             )}
           </FlowNode>
         </Layout>
@@ -51,13 +61,21 @@ export const RecoveryLink = () => (
           </FlowNodeMessages>
         </Layout>
         <Layout>
-          <Text>Введите email указанный при регистрации</Text>
+          <Text>
+            <FormattedMessage
+              id='recovery_link.enter_email'
+              defaultMessage='Введите email указанный при регистрации'
+            />
+          </Text>
         </Layout>
         <Layout flexBasis={40} />
         <Layout>
           <FlowSubmit method='link'>
             <Button type='submit' size='large' fill>
-              Сбросить пароль
+              <FormattedMessage
+                id='recovery_link.reset_password'
+                defaultMessage='Сбросить пароль'
+              />
             </Button>
           </FlowSubmit>
         </Layout>

@@ -1,7 +1,7 @@
 {
   "name": "@identity/index-page",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "main": "src/index.tsx",
   "devDependencies": {
     "@types/cookie": "^0",
@@ -10,6 +10,8 @@
     "js-cookie": "^3.0.1"
   },
   "peerDependencies": {
-    "react": "^17.0.1"
+    "react": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^5.18.1"
   }
 }

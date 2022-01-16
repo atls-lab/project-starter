@@ -24,5 +24,5 @@
     "target": "es2019",
     "jsx": "react"
   },
-  "include": ["site/**/*", "gateway/**/*"]
+  "include": ["site/**/*", "gateway/**/*", "identity/**/*"]
 }
