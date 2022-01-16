@@ -1423,6 +1423,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.12.13":
+  version: 7.16.7
+  resolution: "@babel/runtime@npm:7.16.7"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: 47912f0aaacd1cab2e2552aaf3e6eaffbcaf2d5ac9b07a89a12ac0d42029cb92c070b0d16f825e4277c4a34677c54d8ffe85e1f7c6feb57de58f700eec67ce2f
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.12.13, @babel/template@npm:^7.3.3":
   version: 7.12.13
   resolution: "@babel/template@npm:7.12.13"
@@ -1632,6 +1641,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/cache@npm:^11.7.1":
+  version: 11.7.1
+  resolution: "@emotion/cache@npm:11.7.1"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+    "@emotion/sheet": ^1.1.0
+    "@emotion/utils": ^1.0.0
+    "@emotion/weak-memoize": ^0.2.5
+    stylis: 4.0.13
+  checksum: cf7aa8fe3bacfdedcda94b53e76a7635e122043439715fcfbf7f1a81340cfe6099a59134481a03ec3e0437466566d18528577d1e6ea92f5b98c372b8b38a8f35
+  languageName: node
+  linkType: hard
+
 "@emotion/css-prettifier@npm:^1.0.0":
   version: 1.0.0
   resolution: "@emotion/css-prettifier@npm:1.0.0"
@@ -1655,6 +1677,15 @@ __metadata:
   dependencies:
     "@emotion/memoize": ^0.7.4
   checksum: 87351133ad80612138d9e34e79198635d36b238c7a5fddb4593798ecf8a2db6ac1d84e1e5e282a7fec04fb589e0cd4b1214ad080a9181671dcab2ce24ef22c1b
+  languageName: node
+  linkType: hard
+
+"@emotion/is-prop-valid@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@emotion/is-prop-valid@npm:1.1.1"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+  checksum: 5816696dae6ac79537a31fe95256e0c1f55651507204676dd9903542b102f727c16a68924e6634a89b0972f0d15b0803bb9d4e14bd0fb8a49da8a2e3956e6639
   languageName: node
   linkType: hard
 
@@ -1686,7 +1717,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:*, @emotion/react@npm:^11.1.5":
+"@emotion/react@npm:*":
   version: 11.1.5
   resolution: "@emotion/react@npm:11.1.5"
   dependencies:
@@ -1706,6 +1737,29 @@ __metadata:
     "@types/react":
       optional: true
   checksum: e1d13d0fca16f3da526d4325a897fa650763c8ae3570f31fa796da6327df6acf92d20043f511b8b365555b281d2e157c627e5b9b2f847c25e1991ebbea606fad
+  languageName: node
+  linkType: hard
+
+"@emotion/react@npm:^11.7.1":
+  version: 11.7.1
+  resolution: "@emotion/react@npm:11.7.1"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/cache": ^11.7.1
+    "@emotion/serialize": ^1.0.2
+    "@emotion/sheet": ^1.1.0
+    "@emotion/utils": ^1.0.0
+    "@emotion/weak-memoize": ^0.2.5
+    hoist-non-react-statics: ^3.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 3392aa71f9c68c16022947959f7f842174e6b075b3baf58e185462411cd9b5a87557109a9225b1abaa2d7200a08b7cb9d7f21aa035f0d36b2c89e19b2a124e02
   languageName: node
   linkType: hard
 
@@ -1729,7 +1783,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:*, @emotion/styled@npm:^11.3.0":
+"@emotion/sheet@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@emotion/sheet@npm:1.1.0"
+  checksum: a4b74e16a8fea1157413efe4904f5f679d724323cb605d66d20a0b98744422f5d411fca927ceb52e4de454a0a819c5273ca9496db9f011b4ecd17b9f1b212007
+  languageName: node
+  linkType: hard
+
+"@emotion/styled@npm:*":
   version: 11.3.0
   resolution: "@emotion/styled@npm:11.3.0"
   dependencies:
@@ -1748,6 +1809,28 @@ __metadata:
     "@types/react":
       optional: true
   checksum: 5e5c1e89d2022696e44d2a44e352aba56ab0961d9c4a78eff5d1bfa3deae08487fb17641610446595471d74e956b791e619d3a9006c18e145ed849ef7062e1b5
+  languageName: node
+  linkType: hard
+
+"@emotion/styled@npm:^11.6.0":
+  version: 11.6.0
+  resolution: "@emotion/styled@npm:11.6.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/babel-plugin": ^11.3.0
+    "@emotion/is-prop-valid": ^1.1.1
+    "@emotion/serialize": ^1.0.2
+    "@emotion/utils": ^1.0.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    "@emotion/react": ^11.0.0-rc.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 612bbf114a4ca49e5b3ec4554bea1cd5aad9eeb2371babc3e6b79eab5020bd0300b9904108b621837fe715e221ba09dd131dc29918c1fd966e082d8e74fca833
   languageName: node
   linkType: hard
 
@@ -1806,18 +1889,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/cli@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@formatjs/cli@npm:4.4.0"
+"@formatjs/cli@npm:4.7.1":
+  version: 4.7.1
+  resolution: "@formatjs/cli@npm:4.7.1"
   dependencies:
-    "@formatjs/icu-messageformat-parser": 2.0.14
-    "@formatjs/ts-transformer": 3.6.0
+    "@formatjs/icu-messageformat-parser": 2.0.16
+    "@formatjs/ts-transformer": 3.8.2
     "@types/estree": ^0.0.50
     "@types/fs-extra": ^9.0.1
     "@types/json-stable-stringify": ^1.0.32
     "@types/node": 14
-    "@vue/compiler-core": ^3.2.19
-    "@vue/compiler-sfc": ^3.2.19
+    "@vue/compiler-core": ^3.2.23
     chalk: ^4.0.0
     commander: 8
     fast-glob: ^3.2.7
@@ -1825,20 +1907,11 @@ __metadata:
     json-stable-stringify: ^1.0.1
     loud-rejection: ^2.2.0
     tslib: ^2.1.0
-    typescript: ^4.4
+    typescript: ^4.5
+    vue: ^3.2.23
   bin:
     formatjs: bin/formatjs
-  checksum: 6c541b6cf7572e93f0a898fc15c93e12659a0758bc8e426db9044848ab45d09877b4cebe66a7d82c1fdb4a16429d2cedf42c25c211b2e249ea0e941fc8680957
-  languageName: node
-  linkType: hard
-
-"@formatjs/ecma402-abstract@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@formatjs/ecma402-abstract@npm:1.10.0"
-  dependencies:
-    "@formatjs/intl-localematcher": 0.2.21
-    tslib: ^2.1.0
-  checksum: 3ea000ba9e9e9ca21018a782d0cd26c0ef84ce7a242b3538b17f4450ff5eeac539a0d1b41bad629499bd8c7857119da5363690958e68bb4724bb01341f68559d
+  checksum: 0eae65c5d169e676d161b742e254943cd4bff2164e036a9e9a7c59b08df3b62654180d34e85991eb2a9cf07f22dbe9651859d6af135eb7ab68af05e362dbb7cb
   languageName: node
   linkType: hard
 
@@ -1877,17 +1950,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/icu-messageformat-parser@npm:2.0.14":
-  version: 2.0.14
-  resolution: "@formatjs/icu-messageformat-parser@npm:2.0.14"
-  dependencies:
-    "@formatjs/ecma402-abstract": 1.10.0
-    "@formatjs/icu-skeleton-parser": 1.3.1
-    tslib: ^2.1.0
-  checksum: efbf72704cf462bf832b1f309daee0b16cc7ea5fe533a2f7ff470f4ba863b5958bef9f4fa222de6ecd18c00c2997dde12d5d36f2e9faaffca42a4c1e96da074e
-  languageName: node
-  linkType: hard
-
 "@formatjs/icu-messageformat-parser@npm:2.0.16":
   version: 2.0.16
   resolution: "@formatjs/icu-messageformat-parser@npm:2.0.16"
@@ -1917,16 +1979,6 @@ __metadata:
     "@formatjs/ecma402-abstract": 1.9.1
     tslib: ^2.1.0
   checksum: e6c74be5d7272a71d8d1e2814ee60a2fc84d7b4190be07b3b9c8d47066778f5e213e106a52f2c7c0a03cfaae479829280ea3b7d006eed4d8f5dd0f54319a30d5
-  languageName: node
-  linkType: hard
-
-"@formatjs/icu-skeleton-parser@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@formatjs/icu-skeleton-parser@npm:1.3.1"
-  dependencies:
-    "@formatjs/ecma402-abstract": 1.10.0
-    tslib: ^2.1.0
-  checksum: 03aae4b10c824fc675e68bac9bbb3a9cb73f35af242e17dcee120e1b85061e7d421ca1f468dce7fe9e7d0efbcfff718469e662de97b24ae37182ac3c11ed6b10
   languageName: node
   linkType: hard
 
@@ -1982,15 +2034,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/intl-localematcher@npm:0.2.21":
-  version: 0.2.21
-  resolution: "@formatjs/intl-localematcher@npm:0.2.21"
-  dependencies:
-    tslib: ^2.1.0
-  checksum: d766eb8ce8b2628d781fdb34fd0833a0a1b28f20e70a72dfabbca27cf02bd1b994a72c357b2b3d4888bc20c33b6b7cc7e10e92847ec228a40745a2e84d8d2e24
-  languageName: node
-  linkType: hard
-
 "@formatjs/intl-localematcher@npm:0.2.22":
   version: 0.2.22
   resolution: "@formatjs/intl-localematcher@npm:0.2.22"
@@ -2040,21 +2083,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@formatjs/ts-transformer@npm:3.6.0":
-  version: 3.6.0
-  resolution: "@formatjs/ts-transformer@npm:3.6.0"
+"@formatjs/ts-transformer@npm:3.8.2":
+  version: 3.8.2
+  resolution: "@formatjs/ts-transformer@npm:3.8.2"
   dependencies:
-    "@formatjs/icu-messageformat-parser": 2.0.14
-    "@types/node": 14 || 16
+    "@formatjs/icu-messageformat-parser": 2.0.16
+    "@types/node": 14 || 16 || 17
     chalk: ^4.0.0
     tslib: ^2.1.0
-    typescript: ^4.4
+    typescript: ^4.5
   peerDependencies:
     ts-jest: 27
   peerDependenciesMeta:
     ts-jest:
       optional: true
-  checksum: f8c9916f555ab48c2f8e938f6cf74ef1e709f6d3968c32f125512b898d55c78ccc77563a1261ae2c73988a87a1491ef56e7930f09f805f1de447d2289adf6590
+  checksum: 5fb8db805a343c201ccf4e6a162ddff2cedf4736f9a6d236406ce4cac779bd0cfea66fe3566935464c8227edd227c8790032c3bb4d555c28727e0f6e03952bda
   languageName: node
   linkType: hard
 
@@ -2134,9 +2177,9 @@ __metadata:
     "@atls-ui-proto/theme": 0.0.1
     "@atls/next-app-with-body-parser": 0.0.2
     "@atls/next-config-with-pnp-workspaces": 0.0.2
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
-    "@formatjs/cli": 4.4.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@formatjs/cli": 4.7.1
     "@identity/error-page": "workspace:0.0.1"
     "@identity/index-page": "workspace:0.0.1"
     "@identity/login-page": "workspace:0.0.1"
@@ -2144,11 +2187,11 @@ __metadata:
     "@identity/registration-page": "workspace:0.0.1"
     "@identity/settings-page": "workspace:0.0.1"
     "@identity/verification-page": "workspace:0.0.1"
-    "@types/cookie-parser": ^1
-    "@types/express": ^4.17.12
-    "@types/node": ^14.17.1
-    "@types/react": ^17.0.8
-    "@types/react-dom": ^17.0.5
+    "@types/cookie-parser": ^1.4.2
+    "@types/express": ^4.17.13
+    "@types/node": ^17.0.8
+    "@types/react": ^17.0.38
+    "@types/react-dom": ^17.0.11
     cookie-parser: ^1.4.5
     express: ^4.17.1
     js-cookie: ^3.0.1
@@ -2158,7 +2201,7 @@ __metadata:
     react-dom: ^17.0.2
     react-helmet: 6.1.0
     react-intl: 5.18.1
-    typescript: ^4.4.2
+    typescript: ^4.5.4
     xorshift: "*"
   languageName: unknown
   linkType: soft
@@ -2170,11 +2213,11 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/placeholder": 0.0.1
     "@atls-ui-proto/text": 0.0.5
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2192,9 +2235,9 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/styled": ^11.3.0
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -2210,7 +2253,7 @@ __metadata:
     "@atls/react-kratos-browser-flows": 0.0.1
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/error-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
+    "@types/react": ^17.0.38
   peerDependencies:
     react: ^17.0.1
     react-helmet: ^6.1.0
@@ -2222,9 +2265,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@identity/index-page@workspace:identity/pages/index-page"
   dependencies:
-    "@types/cookie": ^0
-    "@types/cookies": ^0
-    "@types/react": ^17.0.8
+    "@types/cookie": ^0.4.1
+    "@types/cookies": ^0.7.7
+    "@types/react": ^17.0.38
     js-cookie: ^3.0.1
   peerDependencies:
     react: ^17.0.1
@@ -2244,7 +2287,7 @@ __metadata:
     "@identity/messages-fragment": "workspace:0.0.1"
     "@identity/oidc-fragment": "workspace:0.0.1"
     "@identity/registration-password-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
+    "@types/react": ^17.0.38
   peerDependencies:
     react: ^17.0.1
     react-helmet: ^6.1.0
@@ -2261,11 +2304,11 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2281,11 +2324,11 @@ __metadata:
   dependencies:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@ory/kratos-client": ^0.7.6-alpha.1
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2303,10 +2346,10 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2324,11 +2367,11 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2346,10 +2389,10 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2368,11 +2411,11 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2389,14 +2432,14 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/placeholder": 0.0.1
     "@atls-ui-proto/text": 0.0.5
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
-    "@types/react": ^17.0.8
-    "@types/react-router-dom": 5.1.7
-    "@types/styled-system": ^5.1.11
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17.0.38
+    "@types/react-router-dom": 5.3.2
+    "@types/styled-system": ^5.1.15
     next: ^12.0.7
     react: ^17.0.2
-    react-router-dom: 5.2.0
+    react-router-dom: 5.3.0
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -2414,11 +2457,11 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2437,7 +2480,7 @@ __metadata:
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
     "@identity/recovery-link-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
+    "@types/react": ^17.0.38
   peerDependencies:
     react: ^17.0.1
     react-helmet: ^6.1.0
@@ -2454,11 +2497,11 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2479,7 +2522,7 @@ __metadata:
     "@identity/messages-fragment": "workspace:0.0.1"
     "@identity/oidc-fragment": "workspace:0.0.1"
     "@identity/registration-password-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
+    "@types/react": ^17.0.38
   peerDependencies:
     react: ^17.0.1
     react-helmet: ^6.1.0
@@ -2496,11 +2539,11 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -2523,10 +2566,10 @@ __metadata:
     "@identity/profile-security-fragment": "workspace:0.0.1"
     "@identity/profile-sidebar-fragment": "workspace:0.0.1"
     "@identity/recovery-password-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/react-router-dom": 5.1.7
+    "@types/react": ^17.0.38
+    "@types/react-router-dom": 5.3.2
     next: ^12.0.7
-    react-router-dom: 5.2.0
+    react-router-dom: 5.3.0
   peerDependencies:
     react: ^17.0.1
     react-helmet: ^6.1.0
@@ -2543,10 +2586,10 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
     "@atls/react-kratos-browser-flows": 0.0.1
-    "@emotion/styled": ^11.3.0
+    "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:
@@ -2565,7 +2608,7 @@ __metadata:
     "@identity/login-password-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
     "@identity/verification-link-fragment": "workspace:0.0.1"
-    "@types/react": ^17.0.8
+    "@types/react": ^17.0.38
   peerDependencies:
     react: ^17.0.1
     react-helmet: ^6.1.0
@@ -3235,8 +3278,8 @@ __metadata:
     "@atls-ui-proto/layout": ^0.0.2
     "@site/navigation-fragment": 0.0.1
     "@site/verification-notification-fragment": 0.0.1
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -3252,10 +3295,10 @@ __metadata:
     "@atls-ui-proto/text": ^0.0.5
     "@atls/react-identity-links": 0.0.1
     "@atls/react-user": ^0.1.42
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -3271,8 +3314,8 @@ __metadata:
     "@atls-ui-proto/layout": ^0.0.2
     "@site/navigation-fragment": 0.0.1
     "@site/verification-notification-fragment": 0.0.1
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
   peerDependencies:
     react: ^17.0.1
   languageName: unknown
@@ -3287,21 +3330,21 @@ __metadata:
     "@atls/next-config-with-pnp-workspaces": ^0.0.2
     "@atls/react-api-auth-user": ^0.0.1
     "@atls/react-user": ^0.1.42
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
     "@ory/kratos-client": ^0.7.6-alpha.1
     "@site/index-page": "workspace:0.0.1"
     "@site/promo-page": "workspace:0.0.1"
-    "@types/express": ^4.17.12
-    "@types/node": ^14.17.1
-    "@types/react": ^17.0.8
-    "@types/react-dom": ^17.0.5
+    "@types/express": ^4.17.13
+    "@types/node": ^17.0.8
+    "@types/react": ^17.0.38
+    "@types/react-dom": ^17.0.11
     express: ^4.17.1
     next: ^12.0.7
     next-compose-plugins: ^2.2.1
     react: ^17.0.2
     react-dom: ^17.0.2
-    typescript: ^4.4.2
+    typescript: ^4.5.4
   languageName: unknown
   linkType: soft
 
@@ -3313,10 +3356,10 @@ __metadata:
     "@atls-ui-proto/text": ^0.0.5
     "@atls/react-identity-links": 0.0.1
     "@atls/react-user": ^0.1.42
-    "@emotion/react": ^11.1.5
-    "@emotion/styled": ^11.3.0
-    "@types/react": ^17.0.8
-    "@types/styled-system": ^5.1.11
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -3561,7 +3604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cookie-parser@npm:^1":
+"@types/cookie-parser@npm:^1.4.2":
   version: 1.4.2
   resolution: "@types/cookie-parser@npm:1.4.2"
   dependencies:
@@ -3570,14 +3613,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cookie@npm:^0":
+"@types/cookie@npm:^0.4.1":
   version: 0.4.1
   resolution: "@types/cookie@npm:0.4.1"
   checksum: 3275534ed69a76c68eb1a77d547d75f99fedc80befb75a3d1d03662fb08d697e6f8b1274e12af1a74c6896071b11510631ba891f64d30c78528d0ec45a9c1a18
   languageName: node
   linkType: hard
 
-"@types/cookies@npm:^0":
+"@types/cookies@npm:^0.7.7":
   version: 0.7.7
   resolution: "@types/cookies@npm:0.7.7"
   dependencies:
@@ -3616,7 +3659,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^8":
+"@types/eslint@npm:^8.2.2":
   version: 8.2.2
   resolution: "@types/eslint@npm:8.2.2"
   dependencies:
@@ -3640,18 +3683,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:^4.17.18":
-  version: 4.17.19
-  resolution: "@types/express-serve-static-core@npm:4.17.19"
+"@types/express-serve-static-core@npm:4.17.26":
+  version: 4.17.26
+  resolution: "@types/express-serve-static-core@npm:4.17.26"
   dependencies:
     "@types/node": "*"
     "@types/qs": "*"
     "@types/range-parser": "*"
-  checksum: fb00b18ab1dc9a4763e88ec2c4000c28e24f3396cf3106498b00320308541b54a2e33e2518c18eb069be4ebb4068b6436a7dc246b1cb093a079e81f9ea31cfc3
+  checksum: 064080c3c21136f9017e108559602ec5989ce90828d6ede6e3c375e5693a72500b3c06206cdc4a59496ae1ad8af1e282223efb3d79907233fc4811a2cf4d4392
   languageName: node
   linkType: hard
 
-"@types/express@npm:*, @types/express@npm:^4.17.12":
+"@types/express@npm:*":
   version: 4.17.12
   resolution: "@types/express@npm:4.17.12"
   dependencies:
@@ -3660,6 +3703,18 @@ __metadata:
     "@types/qs": "*"
     "@types/serve-static": "*"
   checksum: 5869f575f66e5ea891a00fd253719577a1afe8d39fba47f3f24539188dac351d61f4511a168c6b5b5c902c724b26809950421325887896f5e23f28a3a2aa9458
+  languageName: node
+  linkType: hard
+
+"@types/express@npm:^4.17.13":
+  version: 4.17.13
+  resolution: "@types/express@npm:4.17.13"
+  dependencies:
+    "@types/body-parser": "*"
+    "@types/express-serve-static-core": ^4.17.18
+    "@types/qs": "*"
+    "@types/serve-static": "*"
+  checksum: 12a2a0e6c4b993fc0854bec665906788aea0d8ee4392389d7a98a5de1eefdd33c9e1e40a91f3afd274011119c506f7b4126acb97fae62ae20b654974d44cba12
   languageName: node
   linkType: hard
 
@@ -3809,10 +3864,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14 || 16":
-  version: 16.11.19
-  resolution: "@types/node@npm:16.11.19"
-  checksum: a9ba0cd1e61c8ad50f3fc9c2b37b795bf0286dacb39dcc985da90328abf0c5151dffe9932d20bc9a6a52c3ce7bfc1e5a7c2dc1416480fb84f1c2d70e25caeba0
+"@types/node@npm:14 || 16 || 17, @types/node@npm:^17.0.8":
+  version: 17.0.8
+  resolution: "@types/node@npm:17.0.8"
+  checksum: f4cadeb9e602027520abc88c77142697e33cf6ac98bb02f8b595a398603cbd33df1f94d01c055c9f13cde0c8eaafc5e396ca72645458d42b4318b845bc7f1d0f
   languageName: node
   linkType: hard
 
@@ -3820,13 +3875,6 @@ __metadata:
   version: 13.13.48
   resolution: "@types/node@npm:13.13.48"
   checksum: 2c441c25a5012ce4c4c4b5b1fd4d162c958ea68d6532b30e88e1773c427c9d6971156956d4a3570cb7b057678993bc0aac9a1e023ea0ebe126e679f012659e8f
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:^14.17.1":
-  version: 14.17.1
-  resolution: "@types/node@npm:14.17.1"
-  checksum: 81cc34ecd6e21ed723f00e55f042ccc1e1bde306122fa73aab9437584339fe1dd0c10e00ee691c99f0b9ca1ebcc9d6f0d35ca78356f7d0d580eaf3e93bd48718
   languageName: node
   linkType: hard
 
@@ -3872,23 +3920,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.9":
-  version: 17.0.9
-  resolution: "@types/react-dom@npm:17.0.9"
+"@types/react-dom@npm:^17.0.11":
+  version: 17.0.11
+  resolution: "@types/react-dom@npm:17.0.11"
   dependencies:
     "@types/react": "*"
-  checksum: b7e898e1a22643a371f58e801a3d1d8cf13a82d77063c24be73e840ef8d877ca1d04adc5db168d0dac3167dc050a26b1d70efc5fe8566a7f46a3c488a8322989
+  checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
   languageName: node
   linkType: hard
 
-"@types/react-router-dom@npm:5.1.7":
-  version: 5.1.7
-  resolution: "@types/react-router-dom@npm:5.1.7"
+"@types/react-router-dom@npm:5.3.2":
+  version: 5.3.2
+  resolution: "@types/react-router-dom@npm:5.3.2"
   dependencies:
     "@types/history": "*"
     "@types/react": "*"
     "@types/react-router": "*"
-  checksum: ad40f55557bb7cd8d19d783c1d7dbca85e8874e03cced37e464f74f9f0a588a9a7e411de74da362d1a5c5bf80f7aaca78fe9a66d26741e47c5c06e49a62d1229
+  checksum: 90f052dc5a43a77edaf41d2afa781c8ed2164cd7922b3cdf5daae446b02a2f279382425e6efc338260782c0a24d25a6101e3658acb41c8a053695968a351ea96
   languageName: node
   linkType: hard
 
@@ -3902,14 +3950,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.20":
-  version: 17.0.20
-  resolution: "@types/react@npm:17.0.20"
+"@types/react@npm:*, @types/react@npm:16 || 17, @types/react@npm:^17.0.38":
+  version: 17.0.38
+  resolution: "@types/react@npm:17.0.38"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: e342bfaa4fe052fc3a445ea49f746f3fd82cfc9c8028eae139a3e0763ead1871f353bd40da2a472f23d2b52544d2781d40e3159c0703e7e2ff08c13f067a3b9c
+  checksum: 4079f4f959cd4a4bfaeda8b89fe8a1b1f8bdc9d87acfdc5f74a0b39cec9ec6a470724357c62778c0f063180b360c250e920c5a142f1dbcda67d9cc25a6d43a85
   languageName: node
   linkType: hard
 
@@ -3953,12 +4001,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-system@npm:^5.1.11":
-  version: 5.1.11
-  resolution: "@types/styled-system@npm:5.1.11"
+"@types/styled-system@npm:^5.1.15":
+  version: 5.1.15
+  resolution: "@types/styled-system@npm:5.1.15"
   dependencies:
     csstype: ^3.0.2
-  checksum: 656e6de464243ad2a06b019e51786a6ac9b529cb52c6f76ef98a3978d6152802fbaf37b01cb84a157dbe032292f3174c789ae75cedcb34dcf0671b4e09204fb2
+  checksum: ca1bbd4b5f36ac417079a9d0e3cd99893e41a6034197ef6ad6cda972277f8bf44f914dcc2dfb3bfbf7cba708561ae5b648166967f68622dec1eef1bfbc9ce59b
   languageName: node
   linkType: hard
 
@@ -4091,7 +4139,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-core@npm:3.2.27, @vue/compiler-core@npm:^3.2.19":
+"@vue/compiler-core@npm:3.2.27, @vue/compiler-core@npm:^3.2.23":
   version: 3.2.27
   resolution: "@vue/compiler-core@npm:3.2.27"
   dependencies:
@@ -4113,7 +4161,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-sfc@npm:^3.2.19":
+"@vue/compiler-sfc@npm:3.2.27":
   version: 3.2.27
   resolution: "@vue/compiler-sfc@npm:3.2.27"
   dependencies:
@@ -4151,6 +4199,48 @@ __metadata:
     estree-walker: ^2.0.2
     magic-string: ^0.25.7
   checksum: 95727e2ee5d84529597e822b00a160892262165233e56dda3ceb1931aae305b7ddba22da5562646b7191bb0352b4946b8469099db422c3754789cdd8f54d5987
+  languageName: node
+  linkType: hard
+
+"@vue/reactivity@npm:3.2.27":
+  version: 3.2.27
+  resolution: "@vue/reactivity@npm:3.2.27"
+  dependencies:
+    "@vue/shared": 3.2.27
+  checksum: 33a0306668021d0d7aaacdf28c613b8a01006184fdabf1a4cd4f93ac429161f85d4258359b09b2fde86cbc8a1090d6269831ae71461695667aa8d94fc24902c9
+  languageName: node
+  linkType: hard
+
+"@vue/runtime-core@npm:3.2.27":
+  version: 3.2.27
+  resolution: "@vue/runtime-core@npm:3.2.27"
+  dependencies:
+    "@vue/reactivity": 3.2.27
+    "@vue/shared": 3.2.27
+  checksum: dcd02aadedcc2f8398158437b7b2ecf4ed1cde68c19542382b2902c50ab8785b0215eda865e8dc84da7c105e35886a5e74e4cbaa12ecdbc010ceb9e857368165
+  languageName: node
+  linkType: hard
+
+"@vue/runtime-dom@npm:3.2.27":
+  version: 3.2.27
+  resolution: "@vue/runtime-dom@npm:3.2.27"
+  dependencies:
+    "@vue/runtime-core": 3.2.27
+    "@vue/shared": 3.2.27
+    csstype: ^2.6.8
+  checksum: 9c7303011eb2efe070bf9d9dc0c3c12c67dbc598c1897aedc88757574ea71cae4a94f2e8fd2e06ffabd0acb2380412f38c253370d28bac0c339ef6b66110445b
+  languageName: node
+  linkType: hard
+
+"@vue/server-renderer@npm:3.2.27":
+  version: 3.2.27
+  resolution: "@vue/server-renderer@npm:3.2.27"
+  dependencies:
+    "@vue/compiler-ssr": 3.2.27
+    "@vue/shared": 3.2.27
+  peerDependencies:
+    vue: 3.2.27
+  checksum: d918c36b2be8536bb916ee4a4fa2601430490a174731269694f61cb31e3c79b6a14d8f4cee52b6a340ee4d1eda7815b61e676eb98d7dac4f46b2427f2860c5ba
   languageName: node
   linkType: hard
 
@@ -6527,6 +6617,13 @@ __metadata:
   dependencies:
     cssom: ~0.3.6
   checksum: 5f05e6fd2e3df0b44695c2f08b9ef38b011862b274e320665176467c0725e44a53e341bc4959a41176e83b66064ab786262e7380fd1cabeae6efee0d255bb4e3
+  languageName: node
+  linkType: hard
+
+"csstype@npm:^2.6.8":
+  version: 2.6.19
+  resolution: "csstype@npm:2.6.19"
+  checksum: 72b51ddd30ba308d08373cd890e79526efdc19a9762941845040055f75353992f2d8d4cf4db282a8e1d3d9d2a39c989c65fe32b7b2655f08d313660c4048d2d6
   languageName: node
   linkType: hard
 
@@ -12473,12 +12570,12 @@ __metadata:
   dependencies:
     "@atls/actl-cli": ^0.4.50
     "@jest/core": ^27.4.5
-    "@types/eslint": ^8
-    "@types/node": ^14.17.1
-    "@types/react": ^17.0.8
+    "@types/eslint": ^8.2.2
+    "@types/node": ^17.0.8
+    "@types/react": ^17.0.38
     eslint: ^8.4.1
     husky: ^7.0.2
-    typescript: ^4.4.2
+    typescript: ^4.5.4
   dependenciesMeta:
     next@12.0.4:
       unplugged: true
@@ -12862,28 +12959,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:5.2.0":
-  version: 5.2.0
-  resolution: "react-router-dom@npm:5.2.0"
+"react-router-dom@npm:5.3.0":
+  version: 5.3.0
+  resolution: "react-router-dom@npm:5.3.0"
   dependencies:
-    "@babel/runtime": ^7.1.2
+    "@babel/runtime": ^7.12.13
     history: ^4.9.0
     loose-envify: ^1.3.1
     prop-types: ^15.6.2
-    react-router: 5.2.0
+    react-router: 5.2.1
     tiny-invariant: ^1.0.2
     tiny-warning: ^1.0.0
   peerDependencies:
     react: ">=15"
-  checksum: 98d2d35f9540ac4a3c14dc023623fc8411a6a6338e95d726370e07b27c3bc6e854516537c8e3f9ad2483c4bbd579ba28cce9aff843a19fe8ebff663318886335
+  checksum: 47584fd629ecca52398d7888cab193b8a74057cc99a7ef44410c405d4082f618c3c0399db5325bc3524f9c511404086169570013b61a94dfa6acdfdc850d7a1f
   languageName: node
   linkType: hard
 
-"react-router@npm:5.2.0":
-  version: 5.2.0
-  resolution: "react-router@npm:5.2.0"
+"react-router@npm:5.2.1":
+  version: 5.2.1
+  resolution: "react-router@npm:5.2.1"
   dependencies:
-    "@babel/runtime": ^7.1.2
+    "@babel/runtime": ^7.12.13
     history: ^4.9.0
     hoist-non-react-statics: ^3.1.0
     loose-envify: ^1.3.1
@@ -12895,7 +12992,7 @@ __metadata:
     tiny-warning: ^1.0.0
   peerDependencies:
     react: ">=15"
-  checksum: 6fc908729110a65a5676a9e41333e0f511a3c0ff84c93c0dc704330cf3e02124c93aaeab8031b0e2c71712390d9278fff848eeebfbdda36dca3201142f309973
+  checksum: 7daae084bf64531eb619cc5f4cc40ce5ae0a541b64f71d74ec71a38cbf6130ebdbb7cf38f157303fad5846deec259401f96c4d6c7386466dcc989719e01f9aaa
   languageName: node
   linkType: hard
 
@@ -14119,6 +14216,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"stylis@npm:4.0.13":
+  version: 4.0.13
+  resolution: "stylis@npm:4.0.13"
+  checksum: 8ea7a87028b6383c6a982231c4b5b6150031ce028e0fdaf7b2ace82253d28a8af50cc5a9da8a421d3c7c4441592f393086e332795add672aa4a825f0fe3713a3
+  languageName: node
+  linkType: hard
+
 "stylis@npm:^4.0.3":
   version: 4.0.9
   resolution: "stylis@npm:4.0.9"
@@ -14694,27 +14798,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"typescript@*, typescript@^4.4.2":
-  version: 4.4.3
-  resolution: "typescript@npm:4.4.3"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 05823f21796d450531a7e4ab299715d38fd9ded0e4ce7400876053f4b5166ca3dde7a68cecfe72d9086039f03c0b6edba36516fb10ed83c5837d9600532ea4c2
-  languageName: node
-  linkType: hard
-
-typescript@^3.2.4:
-  version: 3.9.10
-  resolution: "typescript@npm:3.9.10"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 46c842e2cd4797b88b66ef06c9c41dd21da48b95787072ccf39d5f2aa3124361bc4c966aa1c7f709fae0509614d76751455b5231b12dbb72eb97a31369e1ff92
-  languageName: node
-  linkType: hard
-
-"typescript@npm:^4.4":
+"typescript@npm:4.5.4":
   version: 4.5.4
   resolution: "typescript@npm:4.5.4"
   bin:
@@ -14724,27 +14808,7 @@ typescript@^3.2.4:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@*#~builtin<compat/typescript>, typescript@patch:typescript@^4.4.2#~builtin<compat/typescript>":
-  version: 4.4.3
-  resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=de8f8a"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 33a916819907e819430802c50405f18c187448d678696a81545f494a7ec16207f8c15340c945df62109bd1d951091a9f15f3d2eb931a3c889f962c8509017697
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^3.2.4#~builtin<compat/typescript>":
-  version: 3.9.10
-  resolution: "typescript@patch:typescript@npm%3A3.9.10#~builtin<compat/typescript>::version=3.9.10&hash=de8f8a"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: dc7141ab555b23a8650a6787f98845fc11692063d02b75ff49433091b3af2fe3d773650dea18389d7c21f47d620fb3b110ea363dab4ab039417a6ccbbaf96fc2
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.4#~builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>":
   version: 4.5.4
   resolution: "typescript@patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=de8f8a"
   bin:
@@ -14935,6 +14999,19 @@ typescript@^3.2.4:
   version: 1.1.2
   resolution: "vm-browserify@npm:1.1.2"
   checksum: 10a1c50aab54ff8b4c9042c15fc64aefccce8d2fb90c0640403242db0ee7fb269f9b102bdb69cfb435d7ef3180d61fd4fb004a043a12709abaf9056cfd7e039d
+  languageName: node
+  linkType: hard
+
+"vue@npm:^3.2.23":
+  version: 3.2.27
+  resolution: "vue@npm:3.2.27"
+  dependencies:
+    "@vue/compiler-dom": 3.2.27
+    "@vue/compiler-sfc": 3.2.27
+    "@vue/runtime-dom": 3.2.27
+    "@vue/server-renderer": 3.2.27
+    "@vue/shared": 3.2.27
+  checksum: 8af7ea86bd7ae8863c479d38d6908b1004243333fe198138ddc3d277224ed8e28fc7b104d97cb0e7bf2435e25ed45c842672516a12fafef77951c3b031d063ca
   languageName: node
   linkType: hard
 

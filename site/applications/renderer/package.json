@@ -17,8 +17,8 @@
     "@atls/next-config-with-pnp-workspaces": "^0.0.2",
     "@atls/react-api-auth-user": "^0.0.1",
     "@atls/react-user": "^0.1.42",
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "express": "^4.17.1",
     "next": "^12.0.7",
     "next-compose-plugins": "^2.2.1",
@@ -29,10 +29,10 @@
     "@ory/kratos-client": "^0.7.6-alpha.1",
     "@site/index-page": "workspace:0.0.1",
     "@site/promo-page": "workspace:0.0.1",
-    "@types/express": "^4.17.12",
-    "@types/node": "^14.17.1",
-    "@types/react": "^17.0.8",
-    "@types/react-dom": "^17.0.5",
-    "typescript": "^4.4.2"
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.8",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "typescript": "^4.5.4"
   }
 }

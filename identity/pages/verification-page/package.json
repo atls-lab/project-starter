@@ -10,7 +10,7 @@
     "@identity/login-password-fragment": "workspace:0.0.1",
     "@identity/messages-fragment": "workspace:0.0.1",
     "@identity/verification-link-fragment": "workspace:0.0.1",
-    "@types/react": "^17.0.8"
+    "@types/react": "^17.0.38"
   },
   "peerDependencies": {
     "react": "^17.0.1",
