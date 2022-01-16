@@ -1,12 +1,13 @@
-import React                          from 'react'
-import { FC }                         from 'react'
 import { Column }                     from '@atls-ui-proto/layout'
 import { Row }                        from '@atls-ui-proto/layout'
 import { Layout }                     from '@atls-ui-proto/layout'
 import { Box }                        from '@atls-ui-proto/layout'
-import { Text }                       from '@atls-ui-proto/text'
 import { BackgroundImagePlaceholder } from '@atls-ui-proto/placeholder'
 import { LogoPlaceholder }            from '@atls-ui-proto/placeholder'
+import { Text }                       from '@atls-ui-proto/text'
+
+import React                          from 'react'
+import { FC }                         from 'react'
 
 import { SidebarLayoutProps }         from './layout.interfaces'
 

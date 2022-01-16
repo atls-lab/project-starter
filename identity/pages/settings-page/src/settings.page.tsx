@@ -1,11 +1,12 @@
+import { Layout }             from '@atls-ui-proto/layout'
+import { Column }             from '@atls-ui-proto/layout'
+import { Row }                from '@atls-ui-proto/layout'
+
 import React                  from 'react'
 import { HashRouter }         from 'react-router-dom'
 import { Switch }             from 'react-router-dom'
 import { Route }              from 'react-router-dom'
 
-import { Layout }             from '@atls-ui-proto/layout'
-import { Column }             from '@atls-ui-proto/layout'
-import { Row }                from '@atls-ui-proto/layout'
 import { ProfileInformation } from '@identity/profile-information-fragment'
 import { ProfileOidc }        from '@identity/profile-oidc-fragment'
 import { ProfileSecurity }    from '@identity/profile-security-fragment'

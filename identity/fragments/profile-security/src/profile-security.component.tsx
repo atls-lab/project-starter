@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import React                from 'react'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
@@ -11,6 +10,8 @@ import { FlowNode }         from '@atls/react-kratos-browser-flows'
 import { FlowSubmit }       from '@atls/react-kratos-browser-flows'
 import { FlowMessages }     from '@atls/react-kratos-browser-flows'
 import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
+
+import React                from 'react'
 
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'

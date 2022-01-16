@@ -1,5 +1,6 @@
-import React             from 'react'
 import { ThemeProvider } from '@atls-ui-proto/theme'
+
+import React             from 'react'
 
 const App = ({ Component, pageProps, ...props }) => (
   <ThemeProvider>

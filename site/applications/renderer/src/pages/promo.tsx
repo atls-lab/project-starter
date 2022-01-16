@@ -1,6 +1,7 @@
-import React                from 'react'
 import { UserProvider }     from '@atls/react-user'
 import { getKratosSession } from '@atls/kratos-session'
+
+import React                from 'react'
 
 import { PromoPage }        from '@site/promo-page'
 

@@ -1,6 +1,7 @@
-import React     from 'react'
 import { Text }  from '@atls-ui-proto/text'
 import { Space } from '@atls-ui-proto/text'
+
+import React     from 'react'
 
 export const GoToLoginRecovery = () => (
   <div>

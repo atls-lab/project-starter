@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import React      from 'react'
 import { Column } from '@atls-ui-proto/layout'
 import { Layout } from '@atls-ui-proto/layout'
 import { Text }   from '@atls-ui-proto/text'
+
+import React      from 'react'
 
 export const ProfileOidc = () => (
   <Column height='100%'>

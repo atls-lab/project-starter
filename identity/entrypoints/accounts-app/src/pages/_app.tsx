@@ -1,8 +1,9 @@
-import React             from 'react'
-import { useEffect }     from 'react'
-import { useRouter }     from 'next/router'
 import { ThemeProvider } from '@atls-ui-proto/theme'
+
 import Cookies           from 'js-cookie'
+import React             from 'react'
+import { useRouter }     from 'next/router'
+import { useEffect }     from 'react'
 
 const useReturnTo = () => {
   const router = useRouter()

@@ -1,8 +1,9 @@
+import { KratosErrorsFlowProvider } from '@atls/react-kratos-browser-flows'
+
 import React                        from 'react'
 
-import { Error }                    from '@identity/error-fragment'
 import { AuthLayout }               from '@identity/auth-layout-fragment'
-import { KratosErrorsFlowProvider } from '@atls/react-kratos-browser-flows'
+import { Error }                    from '@identity/error-fragment'
 
 export const ErrorPage = () => (
   <KratosErrorsFlowProvider>

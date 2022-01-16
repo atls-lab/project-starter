@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.tsx",
-  "peerDependencies": {
-    "react": "^17.0.1",
-    "react-intl": "^5.18.1"
-  },
   "devDependencies": {
     "@atls-ui-proto/layout": "0.0.2",
     "@atls-ui-proto/placeholder": "0.0.1",
@@ -21,5 +17,9 @@
     "react-router-dom": "5.2.0",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-intl": "^5.18.1"
   }
 }

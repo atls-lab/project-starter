@@ -1,14 +1,15 @@
-import React               from 'react'
-import { IdentityLink }    from '@atls/react-identity-links'
+import { Button }          from '@atls-ui-proto/button'
 import { Box }             from '@atls-ui-proto/layout'
 import { Layout }          from '@atls-ui-proto/layout'
 import { Row }             from '@atls-ui-proto/layout'
 import { LogoPlaceholder } from '@atls-ui-proto/placeholder'
-import { WithUser }        from '@atls/react-user'
-import { WithoutUser }     from '@atls/react-user'
-import { Button }          from '@atls-ui-proto/button'
 import { Text }            from '@atls-ui-proto/text'
 import { Space }           from '@atls-ui-proto/text'
+import { IdentityLink }    from '@atls/react-identity-links'
+import { WithUser }        from '@atls/react-user'
+import { WithoutUser }     from '@atls/react-user'
+
+import React               from 'react'
 
 export const Navigation = () => (
   <Box
