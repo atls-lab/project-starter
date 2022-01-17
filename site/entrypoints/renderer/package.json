@@ -1,0 +1,36 @@
+{
+  "name": "@site/renderer-entrypoint",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "files": [
+    "dist/",
+    "next.config.js"
+  ],
+  "scripts": {
+    "build": "yarn next build src --no-lint && mkdir dist && cp -r ./src/.next ./dist/.next",
+    "dev": "run next dev src",
+    "prepack": "run build",
+    "start": "$(yarn bin next) start dist"
+  },
+  "dependencies": {
+    "@atls-ui-proto/theme": "0.0.1",
+    "@atls/kratos-session": "^0.0.1",
+    "@atls/react-api-auth-user": "^0.0.3",
+    "@atls/react-user": "^0.1.43",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@ory/kratos-client": "^0.7.6-alpha.1",
+    "@site/index-page": "workspace:0.0.1",
+    "@site/promo-page": "workspace:0.0.1",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.0",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "typescript": "^4.5.4"
+  }
+}

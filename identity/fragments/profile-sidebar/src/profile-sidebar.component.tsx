@@ -1,14 +1,13 @@
-import { Column }          from '@atls-ui-proto/layout'
-import { Layout }          from '@atls-ui-proto/layout'
-import { Box }             from '@atls-ui-proto/layout'
-import { LogoPlaceholder } from '@atls-ui-proto/placeholder'
-import { Text }            from '@atls-ui-proto/text'
+import { Column }           from '@atls-ui-proto/layout'
+import { Layout }           from '@atls-ui-proto/layout'
+import { Box }              from '@atls-ui-proto/layout'
+import { LogoPlaceholder }  from '@atls-ui-proto/placeholder'
+import { Text }             from '@atls-ui-proto/text'
 
-import React               from 'react'
-import { Link }            from 'react-router-dom'
+import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-
-import { Route }     from 'react-router-dom'
+import { Link }             from 'react-router-dom'
+import { Route }            from 'react-router-dom'
 
 const SidebarLink = ({ href, icon, children, exact }: any) => (
   <Route path={href} exact={exact}>

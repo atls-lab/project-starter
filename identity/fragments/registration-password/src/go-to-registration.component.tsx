@@ -1,7 +1,7 @@
-import { Text }  from '@atls-ui-proto/text'
-import { Space } from '@atls-ui-proto/text'
+import { Text }             from '@atls-ui-proto/text'
+import { Space }            from '@atls-ui-proto/text'
 
-import React     from 'react'
+import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 export const GoToRegistration = () => (

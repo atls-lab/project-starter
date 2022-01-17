@@ -1,10 +1,10 @@
-import { Button }    from '@atls-ui-proto/button'
-import { Column }    from '@atls-ui-proto/layout'
-import { Layout }    from '@atls-ui-proto/layout'
-import { Text }      from '@atls-ui-proto/text'
-import { FlowError } from '@atls/react-kratos-browser-flows'
+import { Button }           from '@atls-ui-proto/button'
+import { Column }           from '@atls-ui-proto/layout'
+import { Layout }           from '@atls-ui-proto/layout'
+import { Text }             from '@atls-ui-proto/text'
+import { FlowError }        from '@atls/react-kratos-browser-flows'
 
-import React         from 'react'
+import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 export const Error = () => (

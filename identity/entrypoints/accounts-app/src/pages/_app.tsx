@@ -2,9 +2,9 @@ import { ThemeProvider } from '@atls-ui-proto/theme'
 
 import Cookies           from 'js-cookie'
 import React             from 'react'
+import { IntlProvider }  from 'react-intl'
 import { useRouter }     from 'next/router'
 import { useEffect }     from 'react'
-import { IntlProvider }  from 'react-intl'
 
 import ru                from '../../locales/ru.json'
 

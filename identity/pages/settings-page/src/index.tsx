@@ -1,8 +1,8 @@
 import { KratosSettingsFlowProvider } from '@atls/react-kratos-browser-flows'
 
 import React                          from 'react'
-import { useRouter }                  from 'next/router'
 import dynamic                        from 'next/dynamic'
+import { useRouter }                  from 'next/router'
 
 import { RecoveryPage }               from './recovery.page'
 import { RecoverySeo }                from './recovery.seo'
