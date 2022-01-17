@@ -1,10 +1,12 @@
 const withPlugins = require('next-compose-plugins')
-const { withWorkspaces } = require('@monstrs/next-config-with-pnp-workspaces')
+const { withWorkspaces } = require('@atls/next-config-with-pnp-workspaces')
 
 const nextConfig = {
   future: {
     externalDir: true,
     swcFileReading: false,
+    workerThreads: true,
+    esmExternals: 'loose',
   },
   webpack: (config) => {
     // eslint-disable-next-line

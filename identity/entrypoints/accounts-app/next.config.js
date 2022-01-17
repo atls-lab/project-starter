@@ -4,6 +4,8 @@ const nextConfig = {
   experimental: {
     externalDir: true,
     swcFileReading: false,
+    workerThreads: true,
+    esmExternals: 'loose',
   },
   webpack: (config) => {
     // eslint-disable-next-line

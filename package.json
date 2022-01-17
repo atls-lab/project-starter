@@ -23,7 +23,13 @@
     "typescript": "^4.5.4"
   },
   "dependenciesMeta": {
-    "next@12.0.4": {
+    "@ory/kratos-client@0.5.5-alpha.4": {
+      "unplugged": true
+    },
+    "@ory/kratos-client@0.7.6-alpha.1": {
+      "unplugged": true
+    },
+    "next@12.0.8-canary.10": {
       "unplugged": true
     }
   },
