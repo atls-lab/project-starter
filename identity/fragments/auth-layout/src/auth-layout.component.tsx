@@ -1,8 +1,8 @@
 import React               from 'react'
 import { FC }              from 'react'
 
-import { SidebarLayout }   from './sidebar-layout.component'
 import { AuthLayoutProps } from './layout.interfaces'
+import { SidebarLayout }   from './sidebar-layout.component'
 
 export const AuthLayout: FC<AuthLayoutProps> = ({ type, ...props }) => {
   if (type === 'sidebar') {

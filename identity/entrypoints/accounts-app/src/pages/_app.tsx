@@ -1,8 +1,12 @@
-import React             from 'react'
-import { useEffect }     from 'react'
-import { useRouter }     from 'next/router'
 import { ThemeProvider } from '@atls-ui-proto/theme'
+
 import Cookies           from 'js-cookie'
+import React             from 'react'
+import { IntlProvider }  from 'react-intl'
+import { useRouter }     from 'next/router'
+import { useEffect }     from 'react'
+
+import ru                from '../../locales/ru.json'
 
 const useReturnTo = () => {
   const router = useRouter()
@@ -21,7 +25,9 @@ const App = ({ Component, pageProps, ...props }) => {
 
   return (
     <ThemeProvider>
-      <Component {...pageProps} {...props} />
+      <IntlProvider locale='ru' defaultLocale='ru' messages={ru}>
+        <Component {...pageProps} {...props} />
+      </IntlProvider>
     </ThemeProvider>
   )
 }

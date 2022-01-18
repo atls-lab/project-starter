@@ -1,0 +1,31 @@
+{
+  "name": "@gateway/public-entrypoint",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "yarn service build",
+    "dev": "yarn app service dev",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "apollo-server-core": "*",
+    "graphql": "^15.5.0",
+    "grpc": "*"
+  },
+  "devDependencies": {
+    "@atls/nestjs-gateway": "^0.0.2",
+    "@atls/nestjs-logger": "^0.2.37",
+    "@atls/services-proto-files": "0.0.2",
+    "@nestjs/common": "^7.6.17",
+    "@nestjs/core": "^7.6.17",
+    "@nestjs/platform-express": "^7.6.17",
+    "reflect-metadata": "0.1.13",
+    "rxjs": "6.6.7"
+  },
+  "externalDependencies": {
+    "apollo-server-core": "*",
+    "graphql": "*"
+  }
+}

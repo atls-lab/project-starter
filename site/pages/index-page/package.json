@@ -1,16 +1,16 @@
 {
   "name": "@site/index-page",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "main": "src/index.tsx",
-  "peerDependencies": {
-    "react": "^17.0.1"
-  },
   "devDependencies": {
     "@atls-ui-proto/layout": "^0.0.2",
     "@site/navigation-fragment": "0.0.1",
     "@site/verification-notification-fragment": "0.0.1",
-    "@types/react": "^17.0.8",
-    "@types/styled-system": "^5.1.11"
+    "@types/react": "^17.0.38",
+    "@types/styled-system": "^5.1.15"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1"
   }
 }

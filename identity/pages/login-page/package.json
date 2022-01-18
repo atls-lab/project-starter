@@ -1,11 +1,8 @@
 {
   "name": "@identity/login-page",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "main": "src/index.tsx",
-  "peerDependencies": {
-    "react": "^17.0.1"
-  },
   "devDependencies": {
     "@atls-ui-proto/layout": "0.0.2",
     "@atls/react-kratos-browser-flows": "0.0.1",
@@ -14,6 +11,11 @@
     "@identity/messages-fragment": "workspace:0.0.1",
     "@identity/oidc-fragment": "workspace:0.0.1",
     "@identity/registration-password-fragment": "workspace:0.0.1",
-    "@types/react": "^17.0.8"
+    "@types/react": "^17.0.38"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^5.18.1"
   }
 }

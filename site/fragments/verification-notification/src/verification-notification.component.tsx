@@ -1,9 +1,10 @@
-import React            from 'react'
-import { IdentityLink } from '@atls/react-identity-links'
-import { WithUser }     from '@atls/react-user'
 import { Box }          from '@atls-ui-proto/layout'
 import { Text }         from '@atls-ui-proto/text'
 import { Space }        from '@atls-ui-proto/text'
+import { IdentityLink } from '@atls/react-identity-links'
+import { WithUser }     from '@atls/react-user'
+
+import React            from 'react'
 
 export const VerificationNotification = () => (
   <WithUser>

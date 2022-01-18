@@ -1,10 +1,11 @@
+import { Column }                     from '@atls-ui-proto/layout'
+import { KratosRecoveryFlowProvider } from '@atls/react-kratos-browser-flows'
+
 import React                          from 'react'
 
-import { KratosRecoveryFlowProvider } from '@atls/react-kratos-browser-flows'
+import { AuthLayout }                 from '@identity/auth-layout-fragment'
 import { GoToLoginRecovery }          from '@identity/recovery-link-fragment'
 import { RecoveryLink }               from '@identity/recovery-link-fragment'
-import { AuthLayout }                 from '@identity/auth-layout-fragment'
-import { Column }                     from '@atls-ui-proto/layout'
 
 export const RecoveryPage = () => (
   <KratosRecoveryFlowProvider>

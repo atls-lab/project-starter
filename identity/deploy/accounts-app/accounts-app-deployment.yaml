@@ -19,21 +19,21 @@ spec:
         app: accounts-app
     spec:
       containers:
-      - name: accounts-app
-        image: eu.gcr.io/the-mesh-254617/ps-identity-accounts-app-entrypoint:bca406a-1631689013403 # {"$imagepolicy": "flux-system:project-starter-accounts-app"}
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3000
-          name: http
-          protocol: TCP
-        env:
-        - name: KRATOS_BROWSER_URL
-          value: https://identity.ps.atls.tech
-        - name: PUBLIC_BROWSER_URL
-          value: https://identity.ps.atls.tech
-        - name: EXTERNAL_RENDERER_URL
-          value: http://accounts-renderer:3000
-        - name: HYDRA_ADMIN_URL
-          value: http://hydra-admin:4445
-        - name: SERVICE_NAME
-          value: accounts-app
+        - name: accounts-app
+          image: eu.gcr.io/the-mesh-254617/ps-identity-accounts-app-entrypoint:bca406a-1631689013403 # {"$imagepolicy": "flux-system:project-starter-accounts-app"}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          env:
+            - name: KRATOS_BROWSER_URL
+              value: https://identity.ps.atls.tech
+            - name: PUBLIC_BROWSER_URL
+              value: https://identity.ps.atls.tech
+            - name: EXTERNAL_RENDERER_URL
+              value: http://accounts-renderer:3000
+            - name: HYDRA_ADMIN_URL
+              value: http://hydra-admin:4445
+            - name: SERVICE_NAME
+              value: accounts-app

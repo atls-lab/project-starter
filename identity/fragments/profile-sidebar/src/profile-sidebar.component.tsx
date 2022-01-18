@@ -1,10 +1,13 @@
-import React               from 'react'
-import { Column }          from '@atls-ui-proto/layout'
-import { Layout }          from '@atls-ui-proto/layout'
-import { Box }             from '@atls-ui-proto/layout'
-import { Text }            from '@atls-ui-proto/text'
-import { LogoPlaceholder } from '@atls-ui-proto/placeholder'
-import { Route, Link }     from 'react-router-dom'
+import { Column }           from '@atls-ui-proto/layout'
+import { Layout }           from '@atls-ui-proto/layout'
+import { Box }              from '@atls-ui-proto/layout'
+import { LogoPlaceholder }  from '@atls-ui-proto/placeholder'
+import { Text }             from '@atls-ui-proto/text'
+
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { Link }             from 'react-router-dom'
+import { Route }            from 'react-router-dom'
 
 const SidebarLink = ({ href, icon, children, exact }: any) => (
   <Route path={href} exact={exact}>
@@ -35,21 +38,30 @@ export const ProfileSidebar = () => (
   <Column px={[24, 24, 40]}>
     <Layout flexBasis={32} />
     <Layout pl={15}>
-      <LogoPlaceholder>Project Starter</LogoPlaceholder>
+      <LogoPlaceholder>
+        <FormattedMessage id='profile_sidebar.project_starter' defaultMessage='Project Starter' />
+      </LogoPlaceholder>
     </Layout>
     <Layout flexBasis={60} />
     <Layout>
       <SidebarLink href='/' exact>
-        Профиль
+        <FormattedMessage id='profile_sidebar.profile' defaultMessage='Профиль' />
       </SidebarLink>
     </Layout>
     <Layout flexBasis='8px' />
     <Layout>
-      <SidebarLink href='/security'>Безопасность</SidebarLink>
+      <SidebarLink href='/security'>
+        <FormattedMessage id='profile_sidebar.security' defaultMessage='Безопасность' />
+      </SidebarLink>
     </Layout>
     <Layout flexBasis='8px' />
     <Layout>
-      <SidebarLink href='/social-links'>Привязка соц. сетей</SidebarLink>
+      <SidebarLink href='/social-links'>
+        <FormattedMessage
+          id='profile_sidebar.social_networks'
+          defaultMessage='Привязка соц. сетей'
+        />
+      </SidebarLink>
     </Layout>
   </Column>
 )

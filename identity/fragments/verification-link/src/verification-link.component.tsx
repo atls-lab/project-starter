@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import React                from 'react'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
@@ -10,6 +9,9 @@ import { FlowNode }         from '@atls/react-kratos-browser-flows'
 import { FlowSubmit }       from '@atls/react-kratos-browser-flows'
 import { FlowMessages }     from '@atls/react-kratos-browser-flows'
 import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
+
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'
@@ -27,32 +29,46 @@ export const VerificationLink = () => (
         </FlowMessages>
         <Layout>
           <Text fontSize={14} lineHeight='24px' textAlign='center'>
-            Мы отправили ссылку с подтверждением на почту, указанную вами при регистрации. Перейдите
-            по ссылке из письма для активации учетной записи.
+            <FormattedMessage
+              id='verification_link.we_send'
+              defaultMessage='Мы отправили ссылку с подтверждением на почту, указанную вами при регистрации. Перейдите по ссылке из письма для активации учетной записи.'
+            />
           </Text>
         </Layout>
         <Layout flexBasis={[40, 60, 80]} />
         <Layout justifyContent='center'>
           <Text fontSize={18} color='#A0A4B2'>
-            Не получили письмо?
+            <FormattedMessage
+              id='verification_link.dont_get'
+              defaultMessage='Не получили письмо?'
+            />
           </Text>
         </Layout>
         <Layout flexBasis={10} />
         <Layout>
           <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>
+              <FormattedMessage id='verification_link.email' defaultMessage='Email' />
+            </label>
           </Text>
         </Layout>
         <Layout mt='8px'>
           <FlowNode name='email'>
             {({ attributes }, value, onChange) => (
-              <Input
-                id='email'
-                placeholder='Введите адрес вашей почты'
-                {...attributes}
-                value={value}
-                onChange={onChange}
-              />
+              <FormattedMessage
+                id='verification_link.enter_email'
+                defaultMessage='Введите адрес вашей почты'
+              >
+                {(msg) => (
+                  <Input
+                    id='email'
+                    placeholder={String(msg)}
+                    {...attributes}
+                    value={value}
+                    onChange={onChange}
+                  />
+                )}
+              </FormattedMessage>
             )}
           </FlowNode>
         </Layout>
@@ -64,7 +80,10 @@ export const VerificationLink = () => (
         <Layout>
           <FlowSubmit method='link'>
             <Button type='submit' size='large' fill>
-              Отправить еще раз
+              <FormattedMessage
+                id='verification_link.send_again'
+                defaultMessage='Отправить еще раз'
+              />
             </Button>
           </FlowSubmit>
         </Layout>

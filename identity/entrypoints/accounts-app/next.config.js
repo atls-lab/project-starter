@@ -1,8 +1,10 @@
 const withPlugins = require('next-compose-plugins')
-const { withWorkspaces } = require('@atls/next-config-with-pnp-workspaces')
 
 const nextConfig = {
   experimental: {
+    externalDir: true,
+    swcFileReading: false,
+    workerThreads: true,
     esmExternals: 'loose',
   },
   webpack: (config) => {
@@ -15,4 +17,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withPlugins([withWorkspaces], nextConfig)
+module.exports = withPlugins([], nextConfig)

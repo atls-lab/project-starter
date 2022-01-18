@@ -45,4 +45,5 @@ images.json
 
 .next
 dist/
-*.iml
+.idea/workspace.xml
+.idea/vcs.xml

@@ -1,12 +1,14 @@
-import React                          from 'react'
-import { FC }                         from 'react'
 import { Column }                     from '@atls-ui-proto/layout'
 import { Row }                        from '@atls-ui-proto/layout'
 import { Layout }                     from '@atls-ui-proto/layout'
 import { Box }                        from '@atls-ui-proto/layout'
-import { Text }                       from '@atls-ui-proto/text'
 import { BackgroundImagePlaceholder } from '@atls-ui-proto/placeholder'
 import { LogoPlaceholder }            from '@atls-ui-proto/placeholder'
+import { Text }                       from '@atls-ui-proto/text'
+
+import React                          from 'react'
+import { FC }                         from 'react'
+import { FormattedMessage }           from 'react-intl'
 
 import { SidebarLayoutProps }         from './layout.interfaces'
 
@@ -25,7 +27,12 @@ export const SidebarLayout: FC<SidebarLayoutProps> = ({
             <Layout flexGrow={1} flexBasis='50%'>
               <Column>
                 <Layout flexBasis={120} justifyContent='center'>
-                  <LogoPlaceholder>Project Starter</LogoPlaceholder>
+                  <LogoPlaceholder>
+                    <FormattedMessage
+                      id='auth_layout.project_starter'
+                      defaultMessage='Project Starter'
+                    />
+                  </LogoPlaceholder>
                 </Layout>
               </Column>
             </Layout>

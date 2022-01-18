@@ -1,24 +1,25 @@
 {
   "name": "@identity/profile-information-fragment",
   "version": "0.0.1",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "main": "src/index.tsx",
-  "peerDependencies": {
-    "react": "^17.0.1"
-  },
   "devDependencies": {
     "@atls-ui-proto/button": "0.0.5",
     "@atls-ui-proto/input": "0.0.5",
     "@atls-ui-proto/layout": "0.0.2",
     "@atls-ui-proto/text": "0.0.5",
     "@atls/react-kratos-browser-flows": "0.0.1",
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
     "@identity/messages-fragment": "workspace:0.0.1",
-    "@types/react": "^17.0.8",
-    "@types/styled-system": "^5.1.11",
+    "@types/react": "^17.0.38",
+    "@types/styled-system": "^5.1.15",
     "react": "^17.0.2",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-intl": "^5.18.1"
   }
 }

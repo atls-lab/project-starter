@@ -1,8 +1,9 @@
-import React                  from 'react'
-import { FC }                 from 'react'
-import { Text }               from '@atls-ui-proto/text'
 import { Column }             from '@atls-ui-proto/layout'
 import { Layout }             from '@atls-ui-proto/layout'
+import { Text }               from '@atls-ui-proto/text'
+
+import React                  from 'react'
+import { FC }                 from 'react'
 
 import { FieldMessagesProps } from './messages.interfaces'
 

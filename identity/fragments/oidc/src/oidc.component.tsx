@@ -1,4 +1,3 @@
-import React              from 'react'
 import { Button }         from '@atls-ui-proto/button'
 import { Column }         from '@atls-ui-proto/layout'
 import { Row }            from '@atls-ui-proto/layout'
@@ -7,6 +6,8 @@ import { Text }           from '@atls-ui-proto/text'
 import { FlowNode }       from '@atls/react-kratos-browser-flows'
 import { FlowNodesGroup } from '@atls/react-kratos-browser-flows'
 import { FlowForm }       from '@atls/react-kratos-browser-flows'
+
+import React              from 'react'
 
 export const Oidc = ({ title }) => (
   <Column justifyContent='center' alignItems='center'>
