@@ -20,7 +20,7 @@ services:
   kratos-migrate:
     depends_on:
       - db
-    image: oryd/kratos:v0.7.6-alpha.1
+    image: oryd/kratos:v0.8.2-alpha.1
     environment:
       - DSN=postgres://postgres:password@db:5432/db?sslmode=disable&max_conns=20&max_idle_conns=4
     volumes:
@@ -35,7 +35,7 @@ services:
       - kratos-migrate
       - mailslurper
       - db
-    image: oryd/kratos:v0.7.6-alpha.1
+    image: oryd/kratos:v0.8.2-alpha.1
     ports:
       - '4433:4433'
       - '4434:4434'
@@ -69,12 +69,6 @@ services:
       - ./:/workspace
       - unplugged:/workspace/.yarn/unplugged
     entrypoint: yarn workspace @identity/accounts-app-entrypoint dev
-    #environment:
-    #  - MQTT_URL=mqtt://mosquitto:1883
-    #  - DB_HOST=db
-    #depends_on:
-    #  - mosquitto
-    #  - db
     ports:
       - '3000:3000'
 

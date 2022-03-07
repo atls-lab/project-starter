@@ -12,8 +12,12 @@ serve:
   admin:
     base_url: http://kratos:4434/
 
+session:
+  whoami:
+    required_aal: aal1
+
 selfservice:
-  default_browser_return_url: http://127.0.0.1:3000/
+  default_browser_return_url: http://127.0.0.1:3000/profile/settings
   whitelisted_return_urls:
     - http://127.0.0.1:3000
 
@@ -21,6 +25,12 @@ selfservice:
     password:
       enabled: true
     link:
+      enabled: true
+    totp:
+      enabled: true
+      config:
+        issuer: project-starter.local
+    lookup_secret:
       enabled: true
     oidc:
       enabled: true
@@ -33,6 +43,13 @@ selfservice:
             mapper_url: file:///etc/config/kratos/oidc.github.jsonnet
             scope:
               - user:email
+          - id: facebook
+            provider: facebook
+            client_id: '1556094978093786'
+            client_secret: 2e322a8a6d4c67f8d146b298a7931a07
+            mapper_url: file:///etc/config/kratos/oidc.facebook.jsonnet
+            scope:
+              - email
 
   flows:
     error:
@@ -41,6 +58,7 @@ selfservice:
     settings:
       ui_url: http://127.0.0.1:3000/profile/settings
       privileged_session_max_age: 15m
+      required_aal: aal1
 
     recovery:
       enabled: true
