@@ -15,8 +15,8 @@
   "dependencies": {
     "@atls-ui-proto/theme": "0.0.1",
     "@atls/kratos-session": "^0.0.1",
-    "@atls/react-api-auth-user": "^0.0.3",
-    "@atls/react-user": "^0.1.43",
+    "@atls/react-identity-user-provider": "^0.0.2",
+    "@atls/react-user": "^0.1.44",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "next": "^12.0.7",
@@ -24,7 +24,6 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@ory/kratos-client": "^0.7.6-alpha.1",
     "@site/index-page": "workspace:0.0.1",
     "@site/promo-page": "workspace:0.0.1",
     "@types/express": "^4.17.13",

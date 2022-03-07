@@ -1187,48 +1187,50 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@atls/react-api-auth-user", [\
+      ["@atls/react-identity-links", [\
         ["npm:0.0.3", {\
-          "packageLocation": "./.yarn/cache/@atls-react-api-auth-user-npm-0.0.3-c0a0a62ed0-dc2eda7c45.zip/node_modules/@atls/react-api-auth-user/",\
+          "packageLocation": "./.yarn/cache/@atls-react-identity-links-npm-0.0.3-9b719c7bc8-62f68ee443.zip/node_modules/@atls/react-identity-links/",\
           "packageDependencies": [\
-            ["@atls/react-api-auth-user", "npm:0.0.3"]\
+            ["@atls/react-identity-links", "npm:0.0.3"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.0.3", {\
-          "packageLocation": "./.yarn/__virtual__/@atls-react-api-auth-user-virtual-929b2f4cac/0/cache/@atls-react-api-auth-user-npm-0.0.3-c0a0a62ed0-dc2eda7c45.zip/node_modules/@atls/react-api-auth-user/",\
+        ["virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.3", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-react-identity-links-virtual-1c8750e024/0/cache/@atls-react-identity-links-npm-0.0.3-9b719c7bc8-62f68ee443.zip/node_modules/@atls/react-identity-links/",\
           "packageDependencies": [\
-            ["@atls/react-api-auth-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.0.3"],\
-            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.43"],\
-            ["@types/atls__react-user", null],\
+            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.3"],\
             ["@types/react", "npm:17.0.38"],\
-            ["react", "npm:17.0.2"]\
+            ["react", "npm:17.0.2"],\
+            ["tldjs", "npm:2.3.1"]\
           ],\
           "packagePeers": [\
-            "@atls/react-user",\
-            "@types/atls__react-user",\
             "@types/react",\
             "react"\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@atls/react-identity-links", [\
-        ["npm:0.0.1", {\
-          "packageLocation": "./.yarn/cache/@atls-react-identity-links-npm-0.0.1-2caa661246-1033d1df18.zip/node_modules/@atls/react-identity-links/",\
+      ["@atls/react-identity-user-provider", [\
+        ["npm:0.0.2", {\
+          "packageLocation": "./.yarn/cache/@atls-react-identity-user-provider-npm-0.0.2-9b00b040d8-4105f58e3e.zip/node_modules/@atls/react-identity-user-provider/",\
           "packageDependencies": [\
-            ["@atls/react-identity-links", "npm:0.0.1"]\
+            ["@atls/react-identity-user-provider", "npm:0.0.2"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.1", {\
-          "packageLocation": "./.yarn/__virtual__/@atls-react-identity-links-virtual-96538dc8a6/0/cache/@atls-react-identity-links-npm-0.0.1-2caa661246-1033d1df18.zip/node_modules/@atls/react-identity-links/",\
+        ["virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-react-identity-user-provider-virtual-58dbbfd434/0/cache/@atls-react-identity-user-provider-npm-0.0.2-9b00b040d8-4105f58e3e.zip/node_modules/@atls/react-identity-user-provider/",\
           "packageDependencies": [\
-            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.1"],\
+            ["@atls/react-identity-user-provider", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.0.2"],\
+            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44"],\
+            ["@types/atls__react-user", null],\
             ["@types/react", "npm:17.0.38"],\
-            ["react", "npm:17.0.2"]\
+            ["react", "npm:17.0.2"],\
+            ["tldjs", "npm:2.3.1"]\
           ],\
           "packagePeers": [\
+            "@atls/react-user",\
+            "@types/atls__react-user",\
             "@types/react",\
             "react"\
           ],\
@@ -1275,37 +1277,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@atls/react-user", [\
-        ["npm:0.1.42", {\
-          "packageLocation": "./.yarn/cache/@atls-react-user-npm-0.1.42-c7ebb9b5c4-b73790db11.zip/node_modules/@atls/react-user/",\
+        ["npm:0.1.44", {\
+          "packageLocation": "./.yarn/cache/@atls-react-user-npm-0.1.44-b22cab891b-f6322c8d1f.zip/node_modules/@atls/react-user/",\
           "packageDependencies": [\
-            ["@atls/react-user", "npm:0.1.42"]\
+            ["@atls/react-user", "npm:0.1.44"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:0.1.43", {\
-          "packageLocation": "./.yarn/cache/@atls-react-user-npm-0.1.43-b9c8b8b22d-3180cac175.zip/node_modules/@atls/react-user/",\
+        ["virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-react-user-virtual-5d1a19bb1b/0/cache/@atls-react-user-npm-0.1.44-b22cab891b-f6322c8d1f.zip/node_modules/@atls/react-user/",\
           "packageDependencies": [\
-            ["@atls/react-user", "npm:0.1.43"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.1.42", {\
-          "packageLocation": "./.yarn/__virtual__/@atls-react-user-virtual-cac3da3c6b/0/cache/@atls-react-user-npm-0.1.42-c7ebb9b5c4-b73790db11.zip/node_modules/@atls/react-user/",\
-          "packageDependencies": [\
-            ["@atls/react-user", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.1.42"],\
-            ["@types/react", "npm:17.0.38"],\
-            ["react", "npm:17.0.2"]\
-          ],\
-          "packagePeers": [\
-            "@types/react",\
-            "react"\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.43", {\
-          "packageLocation": "./.yarn/__virtual__/@atls-react-user-virtual-4f508f5973/0/cache/@atls-react-user-npm-0.1.43-b9c8b8b22d-3180cac175.zip/node_modules/@atls/react-user/",\
-          "packageDependencies": [\
-            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.43"],\
+            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44"],\
             ["@types/react", "npm:17.0.38"],\
             ["react", "npm:17.0.2"]\
           ],\
@@ -7816,8 +7798,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-proto/layout", "npm:0.0.2"],\
             ["@atls-ui-proto/placeholder", "virtual:5e51635aa7e97e71b763a09d5f4338c6c30411c01d60a26203fe64984bd2c45cd34c8b843df8f0a7d74852691ef68ae0147c9e26fbac108d537cb952801e900f#npm:0.0.1"],\
             ["@atls-ui-proto/text", "npm:0.0.5"],\
-            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.1"],\
-            ["@atls/react-user", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.1.42"],\
+            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.3"],\
+            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44"],\
             ["@emotion/react", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.7.1"],\
             ["@emotion/styled", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.6.0"],\
             ["@types/react", "npm:17.0.38"],\
@@ -7840,8 +7822,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-proto/layout", "npm:0.0.2"],\
             ["@atls-ui-proto/placeholder", "virtual:5e51635aa7e97e71b763a09d5f4338c6c30411c01d60a26203fe64984bd2c45cd34c8b843df8f0a7d74852691ef68ae0147c9e26fbac108d537cb952801e900f#npm:0.0.1"],\
             ["@atls-ui-proto/text", "npm:0.0.5"],\
-            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.1"],\
-            ["@atls/react-user", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.1.42"],\
+            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.3"],\
+            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44"],\
             ["@emotion/react", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.7.1"],\
             ["@emotion/styled", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.6.0"],\
             ["@types/react", "npm:17.0.38"],\
@@ -7891,11 +7873,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/renderer-entrypoint", "workspace:site/entrypoints/renderer"],\
             ["@atls-ui-proto/theme", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:0.0.1"],\
             ["@atls/kratos-session", "npm:0.0.1"],\
-            ["@atls/react-api-auth-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.0.3"],\
-            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.43"],\
+            ["@atls/react-identity-user-provider", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.0.2"],\
+            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44"],\
             ["@emotion/react", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.7.1"],\
             ["@emotion/styled", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.6.0"],\
-            ["@ory/kratos-client", "npm:0.7.6-alpha.1"],\
             ["@site/index-page", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#workspace:site/pages/index-page"],\
             ["@site/promo-page", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#workspace:site/pages/promo-page"],\
             ["@types/express", "npm:4.17.13"],\
@@ -7917,8 +7898,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/verification-notification-fragment", "virtual:94c4a01bebf2460edae5df77bb16641d97b7b3af8ec40e5360a30ce4055c239d9dbc60f3cde477f348a762efa46ea0e988399f968284b0d797c593bfa9c89e09#workspace:site/fragments/verification-notification"],\
             ["@atls-ui-proto/layout", "npm:0.0.2"],\
             ["@atls-ui-proto/text", "npm:0.0.5"],\
-            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.1"],\
-            ["@atls/react-user", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.1.42"],\
+            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.3"],\
+            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44"],\
             ["@emotion/react", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.7.1"],\
             ["@emotion/styled", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.6.0"],\
             ["@types/react", "npm:17.0.38"],\
@@ -7939,8 +7920,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/verification-notification-fragment", "workspace:site/fragments/verification-notification"],\
             ["@atls-ui-proto/layout", "npm:0.0.2"],\
             ["@atls-ui-proto/text", "npm:0.0.5"],\
-            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.1"],\
-            ["@atls/react-user", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.1.42"],\
+            ["@atls/react-identity-links", "virtual:2e0271baa8e7acccd21303a5a9140d71713bf52e97c130505979d54d92698428304864d6811c3bb6494508f6cc0833138da0c64e9d0b94c5014209e2d20ba746#npm:0.0.3"],\
+            ["@atls/react-user", "virtual:facf602d67d3a47a69fde649069c8ea8a55ca154f018eb70d1cffe46b142bea432e2bb2de4bc47d81d2900c54aade279ddb84c097b3372f591736a2cf077aeef#npm:0.1.44"],\
             ["@emotion/react", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.7.1"],\
             ["@emotion/styled", "virtual:30a8d5132b230acc196cac18c82fdb22914cde21c8f1ea3f89a8ba7fea63dc6e72efef10177e87c9739b54b49702ad6faf9a716636e887d1d6ee491b43ed402f#npm:11.6.0"],\
             ["@types/react", "npm:17.0.38"],\
@@ -17558,6 +17539,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["punycode", [\
+        ["npm:1.4.1", {\
+          "packageLocation": "./.yarn/cache/punycode-npm-1.4.1-be4c23e6d2-fa6e698cb5.zip/node_modules/punycode/",\
+          "packageDependencies": [\
+            ["punycode", "npm:1.4.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:2.1.1", {\
           "packageLocation": "./.yarn/cache/punycode-npm-2.1.1-26eb3e15cf-823bf443c6.zip/node_modules/punycode/",\
           "packageDependencies": [\
@@ -19312,6 +19300,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["tinylogic", "npm:1.0.3"],\
             ["chevrotain", "npm:9.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tldjs", [\
+        ["npm:2.3.1", {\
+          "packageLocation": "./.yarn/unplugged/tldjs-npm-2.3.1-25e51f3b87/node_modules/tldjs/",\
+          "packageDependencies": [\
+            ["tldjs", "npm:2.3.1"],\
+            ["punycode", "npm:1.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\

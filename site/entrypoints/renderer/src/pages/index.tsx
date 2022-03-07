@@ -1,13 +1,13 @@
-import { ApiAuthUserProvider } from '@atls/react-api-auth-user'
+import { IdentityBrowserUserProvider } from '@atls/react-identity-user-provider'
 
-import React                   from 'react'
+import React                           from 'react'
 
-import { IndexPage }           from '@site/index-page'
+import { IndexPage }                   from '@site/index-page'
 
 const Page = () => (
-  <ApiAuthUserProvider>
+  <IdentityBrowserUserProvider>
     <IndexPage />
-  </ApiAuthUserProvider>
+  </IdentityBrowserUserProvider>
 )
 
 export default Page
