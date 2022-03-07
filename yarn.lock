@@ -440,22 +440,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/react-api-auth-user@npm:^0.0.3":
+"@atls/react-identity-links@npm:0.0.3":
   version: 0.0.3
-  resolution: "@atls/react-api-auth-user@npm:0.0.3"
+  resolution: "@atls/react-identity-links@npm:0.0.3"
+  dependencies:
+    tldjs: ^2.3.1
   peerDependencies:
-    "@atls/react-user": "*"
     react: ^17.0.1
-  checksum: dc2eda7c452b67964fa5efea682f172d3f34a69e9fd5a88fc01c45d92398e35c9c70e3dff79d89e1680d54f7585a69d899f6808f32dd95b6bfeaefd054200ef5
+  checksum: 62f68ee443f2b417483a63a9b877f501dec547a3d5b02863e0d88e6d8e6ba1324e8ec1e13fe2313d0cdbe97b91f6482df3ded51efb793b70b0178da90bdd0e20
   languageName: node
   linkType: hard
 
-"@atls/react-identity-links@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@atls/react-identity-links@npm:0.0.1"
+"@atls/react-identity-user-provider@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls/react-identity-user-provider@npm:0.0.2"
+  dependencies:
+    tldjs: ^2.3.1
   peerDependencies:
+    "@atls/react-user": "*"
     react: ^17.0.1
-  checksum: 1033d1df18105d7fc3e9806425864ba905d80b7088dcc234f400f32a7ebb7683d3a67db1540a14ad68b53ed7f90c4f44b06b6cc5f4b51d886a19390b6314515e
+  checksum: 4105f58e3e9899ba1d1b4a162bbd1059073cd2e644cb5f32c08a80889dc98e9e6ccfa123e462a925bf42d6f0e8b821674503cba8968d3cc1a966eecd831c35c6
   languageName: node
   linkType: hard
 
@@ -471,21 +475,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/react-user@npm:^0.1.42":
-  version: 0.1.42
-  resolution: "@atls/react-user@npm:0.1.42"
+"@atls/react-user@npm:^0.1.44":
+  version: 0.1.44
+  resolution: "@atls/react-user@npm:0.1.44"
   peerDependencies:
     react: ^17.0.1
-  checksum: b73790db11b67be30bc7b51224796614bf56e5fa7caa4c689c9d67a05304f1df310ff2c605d495e869b32900429a7f17077cd31bf7051dc14b38899bc513effe
-  languageName: node
-  linkType: hard
-
-"@atls/react-user@npm:^0.1.43":
-  version: 0.1.43
-  resolution: "@atls/react-user@npm:0.1.43"
-  peerDependencies:
-    react: ^17.0.1
-  checksum: 3180cac175c0e508f436269aa78ed52d1d4eedf18a215c3eaab99a0cb1ef1b0c02f2ee64b9f8dcecc071a5d6bd9ddbbeeaaddb9b860be952efc193f3745e3789
+  checksum: f6322c8d1f515b45ca8febc4fa2aa6f71710ecf8abc705a2f6a5e72a17f338a209c00f78e2e290fff3ed25c64068b1524619e1b48e46888e25dc37faddac7c74
   languageName: node
   linkType: hard
 
@@ -4398,8 +4393,8 @@ __metadata:
     "@atls-ui-proto/layout": ^0.0.2
     "@atls-ui-proto/placeholder": ^0.0.1
     "@atls-ui-proto/text": ^0.0.5
-    "@atls/react-identity-links": 0.0.1
-    "@atls/react-user": ^0.1.42
+    "@atls/react-identity-links": 0.0.3
+    "@atls/react-user": ^0.1.44
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@types/react": ^17.0.38
@@ -4432,11 +4427,10 @@ __metadata:
   dependencies:
     "@atls-ui-proto/theme": 0.0.1
     "@atls/kratos-session": ^0.0.1
-    "@atls/react-api-auth-user": ^0.0.3
-    "@atls/react-user": ^0.1.43
+    "@atls/react-identity-user-provider": ^0.0.2
+    "@atls/react-user": ^0.1.44
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
-    "@ory/kratos-client": ^0.7.6-alpha.1
     "@site/index-page": "workspace:0.0.1"
     "@site/promo-page": "workspace:0.0.1"
     "@types/express": ^4.17.13
@@ -4456,8 +4450,8 @@ __metadata:
   dependencies:
     "@atls-ui-proto/layout": ^0.0.2
     "@atls-ui-proto/text": ^0.0.5
-    "@atls/react-identity-links": 0.0.1
-    "@atls/react-user": ^0.1.42
+    "@atls/react-identity-links": 0.0.3
+    "@atls/react-user": ^0.1.44
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@types/react": ^17.0.38
@@ -12328,6 +12322,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"punycode@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "punycode@npm:1.4.1"
+  checksum: fa6e698cb53db45e4628559e557ddaf554103d2a96a1d62892c8f4032cd3bc8871796cae9eabc1bc700e2b6677611521ce5bb1d9a27700086039965d0cf34518
+  languageName: node
+  linkType: hard
+
 "punycode@npm:^2.1.0, punycode@npm:^2.1.1":
   version: 2.1.1
   resolution: "punycode@npm:2.1.1"
@@ -13691,6 +13692,15 @@ fsevents@^2.3.2:
   dependencies:
     chevrotain: ^9.1.0
   checksum: fdf7fcc170050889b210fd035b1eb2ac81a68d1324010a427eeee53ac49613ecaa3fbd33b41adb1264dfb02b4d500b3f442da1db3ffc53834c654345c1658afa
+  languageName: node
+  linkType: hard
+
+"tldjs@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "tldjs@npm:2.3.1"
+  dependencies:
+    punycode: ^1.4.1
+  checksum: f699c6a6aa29b0f0ed1297f3a8c692dd9403139d2e5c5381490c69e9e447e499dd8caaa2b228af30ecc8591b45af51344d2b39d99af2d29fcee964e8093428de
   languageName: node
   linkType: hard
 
