@@ -16,6 +16,9 @@
             "credentials": {
               "password": {
                 "identifier": true
+              },
+              "totp": {
+                "account_name": true
               }
             },
             "verification": {
@@ -37,6 +40,14 @@
             "last": {
               "type": "string",
               "minLength": 2
+            }
+          }
+        },
+        "avatar": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
             }
           }
         }
