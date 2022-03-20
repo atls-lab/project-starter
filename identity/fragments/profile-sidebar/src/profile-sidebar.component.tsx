@@ -48,20 +48,5 @@ export const ProfileSidebar = () => (
         <FormattedMessage id='profile_sidebar.profile' defaultMessage='Профиль' />
       </SidebarLink>
     </Layout>
-    <Layout flexBasis='8px' />
-    <Layout>
-      <SidebarLink href='/security'>
-        <FormattedMessage id='profile_sidebar.security' defaultMessage='Безопасность' />
-      </SidebarLink>
-    </Layout>
-    <Layout flexBasis='8px' />
-    <Layout>
-      <SidebarLink href='/social-links'>
-        <FormattedMessage
-          id='profile_sidebar.social_networks'
-          defaultMessage='Привязка соц. сетей'
-        />
-      </SidebarLink>
-    </Layout>
   </Column>
 )

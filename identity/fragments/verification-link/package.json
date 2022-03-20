@@ -8,7 +8,7 @@
     "@atls-ui-proto/input": "0.0.5",
     "@atls-ui-proto/layout": "0.0.2",
     "@atls-ui-proto/text": "0.0.5",
-    "@atls/react-kratos-browser-flows": "0.0.1",
+    "@atls/next-identity-integration": "^0.0.8",
     "@emotion/styled": "^11.6.0",
     "@identity/messages-fragment": "workspace:0.0.1",
     "@types/react": "^17.0.38",

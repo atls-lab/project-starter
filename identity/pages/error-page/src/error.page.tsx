@@ -1,14 +1,14 @@
-import { KratosErrorsFlowProvider } from '@atls/react-kratos-browser-flows'
+import { ErrorFlow }  from '@atls/next-identity-integration'
 
-import React                        from 'react'
+import React          from 'react'
 
-import { AuthLayout }               from '@identity/auth-layout-fragment'
-import { Error }                    from '@identity/error-fragment'
+import { AuthLayout } from '@identity/auth-layout-fragment'
+import { Error }      from '@identity/error-fragment'
 
 export const ErrorPage = () => (
-  <KratosErrorsFlowProvider>
+  <ErrorFlow>
     <AuthLayout>
       <Error />
     </AuthLayout>
-  </KratosErrorsFlowProvider>
+  </ErrorFlow>
 )

@@ -8,8 +8,6 @@
   ],
   "resolutions": {
     "@types/express-serve-static-core": "4.17.26",
-    "class-transformer": "0.3.1",
-    "graphql": "16.3.0",
     "next": "12.1.0",
     "typescript": "4.4.4"
   },
@@ -32,5 +30,5 @@
       "unplugged": true
     }
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.2.0"
 }

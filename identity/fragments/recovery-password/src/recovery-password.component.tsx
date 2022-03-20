@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
+import { FlowNode }         from '@atls/next-identity-integration'
+import { FlowSubmit }       from '@atls/next-identity-integration'
+import { FlowMessages }     from '@atls/next-identity-integration'
+import { FlowNodeMessages } from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
-import { FlowNode }         from '@atls/react-kratos-browser-flows'
-import { FlowSubmit }       from '@atls/react-kratos-browser-flows'
-import { FlowMessages }     from '@atls/react-kratos-browser-flows'
-import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
@@ -61,10 +61,18 @@ export const RecoveryPassword = () => (
           </FlowNodeMessages>
         </Layout>
         <Layout>
-          <FlowSubmit method='password'>
-            <Button type='submit' size='large' fill>
-              <FormattedMessage id='recovery_password.confirm' defaultMessage='Подтвердить' />
-            </Button>
+          <FlowSubmit>
+            {({ submitting, onSubmit }) => (
+              <Button
+                type='submit'
+                size='large'
+                fill
+                disabled={submitting}
+                onClick={() => onSubmit({ method: 'password' })}
+              >
+                <FormattedMessage id='recovery_password.confirm' defaultMessage='Подтвердить' />
+              </Button>
+            )}
           </FlowSubmit>
         </Layout>
       </Column>

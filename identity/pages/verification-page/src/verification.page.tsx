@@ -1,18 +1,18 @@
-import { Column }                         from '@atls-ui-proto/layout'
-import { KratosVerificationFlowProvider } from '@atls/react-kratos-browser-flows'
+import { VerificationFlow } from '@alts/next-identity-integration'
+import { Column }           from '@alts-ui-proto/layout'
 
-import React                              from 'react'
+import React                from 'react'
 
-import { AuthLayout }                     from '@identity/auth-layout-fragment'
-import { GoToLogin }                      from '@identity/login-password-fragment'
-import { VerificationLink }               from '@identity/verification-link-fragment'
+import { AuthLayout }       from '@identity/auth-layout-fragment'
+import { GoToLogin }        from '@identity/login-password-fragment'
+import { VerificationLink } from '@identity/verification-link-fragment'
 
 export const VerificationPage = () => (
-  <KratosVerificationFlowProvider>
+  <VerificationFlow>
     <AuthLayout actions={<GoToLogin />} title='Верификация'>
       <Column>
         <VerificationLink />
       </Column>
     </AuthLayout>
-  </KratosVerificationFlowProvider>
+  </VerificationFlow>
 )

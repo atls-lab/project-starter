@@ -1,33 +1,25 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
+import { FlowNode }         from '@atls/next-identity-integration'
+import { FlowSubmit }       from '@atls/next-identity-integration'
+import { FlowNodeMessages } from '@atls/next-identity-integration'
+import { FlowNodesFilter }  from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
 import { Row }              from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
-import { FlowNode }         from '@atls/react-kratos-browser-flows'
-import { FlowSubmit }       from '@atls/react-kratos-browser-flows'
-import { FlowMessages }     from '@atls/react-kratos-browser-flows'
-import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { FieldMessages }    from '@identity/messages-fragment'
-import { GeneralMessages }  from '@identity/messages-fragment'
 
 export const ProfileSecurity = () => (
   <Column height='100%' maxWidth={['none', 'none', 520]}>
-    <FlowMessages>
-      {(messages) => (
-        <Layout>
-          <GeneralMessages messages={messages} />
-        </Layout>
-      )}
-    </FlowMessages>
     <Layout>
-      <Text fontSize={24} fontWeigth={500}>
+      <Text fontSize={28} fontWeigth={500}>
         <FormattedMessage id='profile_security.security' defaultMessage='Безопасность' />
       </Text>
     </Layout>
@@ -52,23 +44,169 @@ export const ProfileSecurity = () => (
         {(messages) => <FieldMessages messages={messages} />}
       </FlowNodeMessages>
     </Layout>
-    <Layout flexBasis={40} flexGrow={1} />
+
     <Layout>
       <Row flexDirection={['column', 'column', 'row']}>
-        <Layout flexBasis={['auto', 'auto', 240]}>
-          <FlowSubmit method='password'>
-            <Button type='submit' size='large' rounding={6} fill>
-              <FormattedMessage id='profile_security.save' defaultMessage='Сохранить' />
-            </Button>
+        <Layout flexBasis={['auto', 'auto', 120]}>
+          <FlowSubmit>
+            {({ submitting, onSubmit }) => (
+              <Button
+                type='submit'
+                rounding={6}
+                fill
+                disabled={submitting}
+                onClick={() => onSubmit({ method: 'password' })}
+              >
+                <FormattedMessage id='profile_security.save' defaultMessage='Сохранить' />
+              </Button>
+            )}
           </FlowSubmit>
         </Layout>
-        <Layout flexBasis={[24, 24, 40]} />
-        <Layout>
-          <Button size='large' rounding={6} inverted fill>
-            <FormattedMessage id='profile_security.reset' defaultMessage='Сбросить' />
-          </Button>
-        </Layout>
       </Row>
+    </Layout>
+
+    <Layout flexBasis={40} />
+
+    <Layout>
+      <FlowNodesFilter predicate={(node) => node.group === 'totp' && node.type === 'img'}>
+        <Column>
+          <Layout>
+            <Text fontSize={18} fontWeigth={500}>
+              <FormattedMessage
+                id='profile_security.manage_totp'
+                defaultMessage='Настройка 2FA TOTP Authenticator App'
+              />
+            </Text>
+          </Layout>
+
+          <Layout flexBasis={24} />
+
+          <Layout>
+            <Text fontSize={14} fontWeigth={500}>
+              <FormattedMessage
+                id='profile_security.totp_app'
+                defaultMessage='Добавьте TOTP Authenticator App в свою учетную запись, чтобы улучшить её безопасность. популярные приложения для аутентификации — LastPass и Google Authenticator'
+              />
+            </Text>
+          </Layout>
+          <Layout flexBasis={10} />
+          <Layout>
+            <FlowNode name='totp_qr'>
+              {({ attributes }) => <img {...attributes} alt='totp_qr' />}
+            </FlowNode>
+          </Layout>
+          <Layout flexBasis={24} />
+          <Layout>
+            <Text fontSize={14} fontWeigth={500}>
+              <label htmlFor='totp_secret'>
+                <FormattedMessage
+                  id='profile_security.totp_secret'
+                  defaultMessage='Это секрет вашего приложения для проверки подлинности. Используйте его, если вы не можете отсканировать QR-код.'
+                />
+              </label>
+            </Text>
+          </Layout>
+
+          <Layout flexBasis={16} />
+
+          <Layout>
+            <FlowNode name='totp_secret_key'>
+              {({ attributes }) => (
+                <Text fontSize={24} fontWeight={600}>
+                  {attributes.text.text}
+                </Text>
+              )}
+            </FlowNode>
+          </Layout>
+
+          <Layout flexBasis={24} />
+          <Layout>
+            <Text fontWeight={600} fontSize={12}>
+              <label htmlFor='totp_code'>
+                <FormattedMessage
+                  id='profile_security.totp_code'
+                  defaultMessage='Код верификации'
+                />
+              </label>
+            </Text>
+          </Layout>
+
+          <Layout flexBasis={10} />
+          <Layout>
+            <FlowNode name='totp_code'>
+              {({ attributes }, value, onChange) => (
+                <Input id='totp_code' {...attributes} value={value} onChange={onChange} />
+              )}
+            </FlowNode>
+          </Layout>
+          <Layout flexBasis={24} pb='8px'>
+            <FlowNodeMessages name='totp_code'>
+              {(messages) => <FieldMessages messages={messages} />}
+            </FlowNodeMessages>
+          </Layout>
+
+          <Layout>
+            <Row flexDirection={['column', 'column', 'row']}>
+              <Layout flexBasis={['auto', 'auto', 120]}>
+                <FlowSubmit>
+                  {({ submitting, onSubmit }) => (
+                    <Button
+                      type='submit'
+                      rounding={6}
+                      fill
+                      disabled={submitting}
+                      onClick={() => onSubmit({ method: 'totp' })}
+                    >
+                      <FormattedMessage id='profile_security.save' defaultMessage='Сохранить' />
+                    </Button>
+                  )}
+                </FlowSubmit>
+              </Layout>
+            </Row>
+          </Layout>
+        </Column>
+      </FlowNodesFilter>
+    </Layout>
+
+    <Layout>
+      <FlowNodesFilter
+        predicate={(node) => node.group === 'totp' && node.attributes.name === 'totp_unlink'}
+      >
+        <Column>
+          <Layout>
+            <Text fontSize={18} fontWeigth={500}>
+              <FormattedMessage
+                id='profile_security.unlink_totp'
+                defaultMessage='Отключить 2FA TOTP Authenticator App'
+              />
+            </Text>
+          </Layout>
+
+          <Layout flexBasis={24} />
+          <Layout>
+            <Row flexDirection={['column', 'column', 'row']}>
+              <Layout flexBasis={['auto', 'auto', 120]}>
+                <FlowSubmit>
+                  {({ submitting, onSubmit }) => (
+                    <Button
+                      type='submit'
+                      rounding={6}
+                      fill
+                      disabled={submitting}
+                      onClick={() => onSubmit({ totp_unlink: true, method: undefined })}
+                    >
+                      <FormattedMessage
+                        id='profile_security.disable_totp'
+                        defaultMessage='Отключить'
+                      />
+                    </Button>
+                  )}
+                </FlowSubmit>
+              </Layout>
+            </Row>
+          </Layout>
+        </Column>
+      </FlowNodesFilter>
     </Layout>
   </Column>
 )

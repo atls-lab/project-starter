@@ -1,14 +1,12 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-
+import { FlowSubmit }       from '@atls/next-identity-integration'
+import { FlowMessages }     from '@atls/next-identity-integration'
+import { FlowNodeMessages } from '@atls/next-identity-integration'
+import { FlowNode }         from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
-import { FlowNode }         from '@atls/react-kratos-browser-flows'
-import { FlowSubmit }       from '@atls/react-kratos-browser-flows'
-import { FlowMessages }     from '@atls/react-kratos-browser-flows'
-import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
@@ -28,53 +26,65 @@ export const LoginPassword = () => (
     <Layout maxWidth={320} width='100%'>
       <Column>
         <Layout>
-          <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='password_identifier'>
-              <FormattedMessage id='login_password.email' defaultMessage='Email' />
-            </label>
-          </Text>
-        </Layout>
-        <Layout mt='8px'>
           <FlowNode name='password_identifier'>
             {(field, value, onChange) => (
-              <Input
-                id='password_identifier'
-                {...field.attributes}
-                value={value}
-                onChange={onChange}
-              />
+              <Column>
+                <Layout>
+                  <Text fontWeight={600} fontSize={12}>
+                    <FormattedMessage id='login_password.email' defaultMessage='Email' />
+                  </Text>
+                </Layout>
+                <Layout mt='8px'>
+                  <Input
+                    id='password_identifier'
+                    {...field.attributes}
+                    value={value}
+                    onChange={onChange}
+                  />
+                </Layout>
+                <Layout flexBasis={24} pb='8px'>
+                  <FlowNodeMessages name='password_identifier'>
+                    {(messages) => <FieldMessages messages={messages} />}
+                  </FlowNodeMessages>
+                </Layout>
+              </Column>
             )}
           </FlowNode>
         </Layout>
-        <Layout flexBasis={24} pb='8px'>
-          <FlowNodeMessages name='password_identifier'>
-            {(messages) => <FieldMessages messages={messages} />}
-          </FlowNodeMessages>
-        </Layout>
         <Layout>
-          <Text fontWeight={600} fontSize={12}>
-            <label htmlFor='password'>
-              <FormattedMessage id='login_password.password' defaultMessage='Пароль' />
-            </label>
-          </Text>
-        </Layout>
-        <Layout mt='8px'>
           <FlowNode name='password'>
             {(field, value, onChange) => (
-              <Input id='password' {...field.attributes} value={value} onChange={onChange} />
+              <Column>
+                <Layout>
+                  <Text fontWeight={600} fontSize={12}>
+                    <FormattedMessage id='login_password.password' defaultMessage='Пароль' />
+                  </Text>
+                </Layout>
+                <Layout mt='8px'>
+                  <Input id='password' {...field.attributes} value={value} onChange={onChange} />
+                </Layout>
+                <Layout flexBasis={32} pb='8px'>
+                  <FlowNodeMessages name='password'>
+                    {(messages) => <FieldMessages messages={messages} />}
+                  </FlowNodeMessages>
+                </Layout>
+              </Column>
             )}
           </FlowNode>
         </Layout>
-        <Layout flexBasis={32} pb='8px'>
-          <FlowNodeMessages name='password'>
-            {(messages) => <FieldMessages messages={messages} />}
-          </FlowNodeMessages>
-        </Layout>
         <Layout>
-          <FlowSubmit method='password'>
-            <Button type='submit' size='large' fill>
-              <FormattedMessage id='login_password.enter' defaultMessage='Войти' />
-            </Button>
+          <FlowSubmit>
+            {({ submitting, onSubmit }) => (
+              <Button
+                type='submit'
+                size='large'
+                fill
+                disabled={submitting}
+                onClick={() => onSubmit({ method: 'password' })}
+              >
+                <FormattedMessage id='login_password.enter' defaultMessage='Войти' />
+              </Button>
+            )}
           </FlowSubmit>
         </Layout>
         <Layout flexBasis={20} />

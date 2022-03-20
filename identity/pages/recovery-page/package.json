@@ -5,7 +5,7 @@
   "main": "src/index.tsx",
   "devDependencies": {
     "@atls-ui-proto/layout": "0.0.2",
-    "@atls/react-kratos-browser-flows": "0.0.1",
+    "@atls/next-identity-integration": "^0.0.8",
     "@identity/auth-layout-fragment": "workspace:0.0.1",
     "@identity/messages-fragment": "workspace:0.0.1",
     "@identity/recovery-link-fragment": "workspace:0.0.1",
