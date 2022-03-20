@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@ui-proto/theme'
+import { ThemeProvider } from '@atls-ui-proto/theme'
 
 import React             from 'react'
 import { IntlProvider }  from 'react-intl'

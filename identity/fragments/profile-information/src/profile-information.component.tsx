@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import { FlowNode }         from '@atlss/next-identity-integration'
-import { FlowSubmit }       from '@atlss/next-identity-integration'
-import { FlowNodeMessages } from '@atlss/next-identity-integration'
+import { FlowNode }         from '@atls/next-identity-integration'
+import { FlowSubmit }       from '@atls/next-identity-integration'
+import { FlowNodeMessages } from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'

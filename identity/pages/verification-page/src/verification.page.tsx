@@ -1,5 +1,5 @@
-import { VerificationFlow } from '@alts/next-identity-integration'
-import { Column }           from '@alts-ui-proto/layout'
+import { VerificationFlow } from '@atls/next-identity-integration'
+import { Column }           from '@atls-ui-proto/layout'
 
 import React                from 'react'
 

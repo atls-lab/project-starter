@@ -19,5 +19,8 @@
   "peerDependencies": {
     "react": "^17.0.1",
     "react-intl": "^5.18.1"
+  },
+  "dependencies": {
+    "@atls-ui-proto/button": "^0.0.5"
   }
 }

@@ -3540,6 +3540,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@identity/profile-oidc-fragment@workspace:identity/fragments/profile-oidc"
   dependencies:
+    "@atls-ui-proto/button": ^0.0.5
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5

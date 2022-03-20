@@ -1,5 +1,5 @@
-import { LoginFlow }        from '@alts/next-identity-integration'
-import { Column }           from '@alts-ui-proto/layout'
+import { LoginFlow }        from '@atls/next-identity-integration'
+import { Column }           from '@atls-ui-proto/layout'
 
 import React                from 'react'
 

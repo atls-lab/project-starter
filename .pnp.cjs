@@ -6314,6 +6314,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@identity-profile-oidc-fragment-virtual-df88458f64/1/identity/fragments/profile-oidc/",\
           "packageDependencies": [\
             ["@identity/profile-oidc-fragment", "virtual:bff40a2ed2ca40bfc350ddd40585d9ac9f1d3fed1960e07ef3580efbd0bac4fc5a286b5848ec00d5df8c542a5119b9144c284e5e09ccacfa35698720e2a214f3#workspace:identity/fragments/profile-oidc"],\
+            ["@atls-ui-proto/button", "virtual:c1fff41f036fc2b85b86e7ddd3a6961f7686e930a941c02ab747c2b696de08a325f2be0a0554d91ee796aa4e2d8a0011eb728fc89032fe8ea003b84b32f7968c#npm:0.0.5"],\
             ["@atls-ui-proto/input", "virtual:c1fff41f036fc2b85b86e7ddd3a6961f7686e930a941c02ab747c2b696de08a325f2be0a0554d91ee796aa4e2d8a0011eb728fc89032fe8ea003b84b32f7968c#npm:0.0.5"],\
             ["@atls-ui-proto/layout", "npm:0.0.2"],\
             ["@atls-ui-proto/text", "npm:0.0.5"],\
@@ -6340,6 +6341,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@identity-profile-oidc-fragment-virtual-f481b29318/1/identity/fragments/profile-oidc/",\
           "packageDependencies": [\
             ["@identity/profile-oidc-fragment", "virtual:cc667978d969d7fa420f10353b4194040c2891742a8e7fedf399df1c6069c40de2f222bfbf405379ebcf011142b5fb276c8c278d7854f81810da3fdbfe6fccdc#workspace:identity/fragments/profile-oidc"],\
+            ["@atls-ui-proto/button", "virtual:c1fff41f036fc2b85b86e7ddd3a6961f7686e930a941c02ab747c2b696de08a325f2be0a0554d91ee796aa4e2d8a0011eb728fc89032fe8ea003b84b32f7968c#npm:0.0.5"],\
             ["@atls-ui-proto/input", "virtual:c1fff41f036fc2b85b86e7ddd3a6961f7686e930a941c02ab747c2b696de08a325f2be0a0554d91ee796aa4e2d8a0011eb728fc89032fe8ea003b84b32f7968c#npm:0.0.5"],\
             ["@atls-ui-proto/layout", "npm:0.0.2"],\
             ["@atls-ui-proto/text", "npm:0.0.5"],\
@@ -6365,6 +6367,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./identity/fragments/profile-oidc/",\
           "packageDependencies": [\
             ["@identity/profile-oidc-fragment", "workspace:identity/fragments/profile-oidc"],\
+            ["@atls-ui-proto/button", "virtual:c1fff41f036fc2b85b86e7ddd3a6961f7686e930a941c02ab747c2b696de08a325f2be0a0554d91ee796aa4e2d8a0011eb728fc89032fe8ea003b84b32f7968c#npm:0.0.5"],\
             ["@atls-ui-proto/input", "virtual:c1fff41f036fc2b85b86e7ddd3a6961f7686e930a941c02ab747c2b696de08a325f2be0a0554d91ee796aa4e2d8a0011eb728fc89032fe8ea003b84b32f7968c#npm:0.0.5"],\
             ["@atls-ui-proto/layout", "npm:0.0.2"],\
             ["@atls-ui-proto/text", "npm:0.0.5"],\
