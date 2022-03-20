@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: accounts
+  namespace: project-starter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: accounts
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: accounts
+    spec:
+      containers:
+      - name: accounts
+        image: eu.gcr.io/the-mesh-254617/ps-identity-accounts-app-entrypoint:490d982-1646653474140 # {"$imagepolicy": "flux-system:project-starter-accounts"}
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        env:
+        - name: KRATOS_BROWSER_URL
+          value: https://identity.project-starter.site
+        - name: PUBLIC_BROWSER_URL
+          value: https://identity.project-starter.site
+        - name: SERVICE_NAME
+          value: accounts

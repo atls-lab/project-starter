@@ -3,46 +3,35 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "scripts": {
-    "build": "yarn service build && yarn next build src --no-lint && cp -r ./src/.next ./dist/.next",
+    "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
     "dev": "yarn next dev src",
     "extract": "formatjs extract '../../fragments/**/src/*.ts*' --out-file locales/ru.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format simple",
+    "prepack": "run build",
     "start": "node dist/index.js"
   },
   "dependencies": {
     "@atls-ui-proto/theme": "0.0.1",
-    "@atls/next-app-with-body-parser": "0.0.2",
-    "@atls/next-config-with-pnp-workspaces": "0.0.2",
+    "@atls/next-identity-integration": "^0.0.8",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
-    "@formatjs/cli": "4.7.1",
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
-    "js-cookie": "^3.0.1",
-    "next": "^12.0.7",
-    "next-compose-plugins": "^2.2.1",
+    "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "6.1.0",
-    "react-intl": "5.18.1",
-    "xorshift": "*"
+    "react-intl": "5.23.0"
   },
   "devDependencies": {
+    "@formatjs/cli": "4.5.0",
     "@identity/error-page": "workspace:0.0.1",
     "@identity/index-page": "workspace:0.0.1",
     "@identity/login-page": "workspace:0.0.1",
+    "@identity/logout-page": "workspace:0.0.1",
     "@identity/recovery-page": "workspace:0.0.1",
     "@identity/registration-page": "workspace:0.0.1",
     "@identity/settings-page": "workspace:0.0.1",
     "@identity/verification-page": "workspace:0.0.1",
-    "@types/cookie-parser": "^1.4.2",
-    "@types/express": "^4.17.13",
-    "@types/node": "^17.0.8",
-    "@types/react": "^17.0.38",
+    "@types/node": "^17.0.0",
+    "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "typescript": "^4.5.4"
-  },
-  "externalDependencies": {
-    "next/babel": "*",
-    "next": "*"
   }
 }

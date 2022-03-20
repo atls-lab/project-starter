@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kratos-project-starter
+  namespace: istio-system
+spec:
+  secretName: kratos-project-starter-tls
+  issuerRef:
+    name: letsencrypt
+    kind: ClusterIssuer
+  commonName: 'identity.project-starter.site'
+  dnsNames:
+    - 'identity.project-starter.site'

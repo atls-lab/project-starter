@@ -1,0 +1,24 @@
+{
+  "name": "@identity/logout-page",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.tsx",
+  "devDependencies": {
+    "@atls-ui-proto/layout": "0.0.3",
+    "@atls/next-identity-integration": "^0.0.8",
+    "@identity/auth-layout-fragment": "workspace:0.0.1",
+    "@identity/error-fragment": "workspace:0.0.1",
+    "@identity/login-password-fragment": "workspace:0.0.1",
+    "@identity/messages-fragment": "workspace:0.0.1",
+    "@identity/oidc-fragment": "workspace:0.0.1",
+    "@identity/registration-password-fragment": "workspace:0.0.1",
+    "@types/react": "^17.0.37",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^5.18.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^5.18.1"
+  }
+}

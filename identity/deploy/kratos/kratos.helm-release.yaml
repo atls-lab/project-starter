@@ -1,0 +1,199 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: project-starter-kratos
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: kratos
+      sourceRef:
+        kind: HelmRepository
+        name: ory
+      version: 0.19.3
+  interval: 1h0m0s
+  releaseName: project-starter-kratos
+  targetNamespace: project-starter
+  values:
+    job:
+      annotations:
+        sidecar.istio.io/inject: 'false'
+
+    service:
+      public:
+        port: 4433
+      admin:
+        port: 4434
+
+    image:
+      repository: oryd/kratos
+      tag: v0.8.2-alpha.1
+
+    kratos:
+      autoMigrate: true
+
+      identitySchemas:
+        'identity.default.schema.json': |
+          {
+            "$id": "https://schemas.ory.sh/presets/kratos/quickstart/email-password/identity.schema.json",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Person",
+            "type": "object",
+            "properties": {
+              "traits": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "title": "E-Mail",
+                    "minLength": 3,
+                    "ory.sh/kratos": {
+                      "credentials": {
+                        "password": {
+                          "identifier": true
+                        },
+                        "totp": {
+                          "account_name": true
+                        }
+                      },
+                      "verification": {
+                        "via": "email"
+                      },
+                      "recovery": {
+                        "via": "email"
+                      }
+                    }
+                  },
+                  "name": {
+                    "type": "object",
+                    "required": ["first", "last"],
+                    "properties": {
+                      "first": {
+                        "type": "string",
+                        "minLength": 2
+                      },
+                      "last": {
+                        "type": "string",
+                        "minLength": 2
+                      }
+                    }
+                  },
+                  "avatar": {
+                    "type": "object",
+                    "properties": {
+                      "url": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "required": ["email", "name"],
+                "additionalProperties": false
+              }
+            }
+          }
+
+      config:
+        version: v0.7.6-alpha.1
+
+        log:
+          level: debug
+
+        hashers:
+          argon2:
+            parallelism: 1
+            memory: 128MB
+            iterations: 2
+            salt_length: 16
+            key_length: 16
+
+        selfservice:
+          default_browser_return_url: https://accounts.project-starter.site/profile/settings
+
+          whitelisted_return_urls:
+            - https://accounts.project-starter.site/auth/registration/complete
+            - https://accounts.project-starter.site/auth/verification/complete
+            - https://accounts.project-starter.site/auth/login/complete
+            - https://accounts.project-starter.site/
+            - https://accounts.project-starter.site/profile/settings
+            - https://accounts.project-starter.site/auth/post-logout
+            - https://project-starter.site
+
+          flows:
+            settings:
+              ui_url: https://accounts.project-starter.site/profile/settings
+              required_aal: aal1
+
+            logout:
+              after:
+                default_browser_return_url: https://accounts.project-starter.site/auth/login
+
+            registration:
+              ui_url: https://accounts.project-starter.site/auth/registration
+              after:
+                password:
+                  hooks:
+                    - hook: session
+
+            verification:
+              enabled: true
+              ui_url: https://accounts.project-starter.site/auth/verification
+
+            login:
+              ui_url: https://accounts.project-starter.site/auth/login
+
+            recovery:
+              enabled: true
+              ui_url: https://accounts.project-starter.site/auth/recovery
+
+            error:
+              ui_url: https://accounts.project-starter.site/auth/error
+
+          methods:
+            link:
+              enabled: true
+            password:
+              enabled: true
+            profile:
+              enabled: true
+            oidc:
+              enabled: false
+            totp:
+              enabled: true
+              config:
+                issuer: project-starter.site
+
+        secrets:
+          default:
+            - PLEASE-CHANGE-ME-I-AM-VERY-INSECURE
+          cookie:
+            - PLEASE-CHANGE-ME-I-AM-VERY-INSECURE
+
+        serve:
+          public:
+            base_url: https://identity.project-starter.site/
+            cors:
+              enabled: true
+              allowed_origins:
+                - https://project-starter.site
+                - https://*.project-starter.site
+                - https://*.preview.project-starter.site
+                - https://*.local.project-starter.site
+
+        session:
+          cookie:
+            domain: .project-starter.site
+          whoami:
+            required_aal: aal1
+
+        identity:
+          default_schema_url: file:///etc/config/identity.default.schema.json
+
+        courier:
+          smtp:
+            connection_uri: smtps://AKIA2WVG45RELJFUE37P:BMIC00QbNKtidPxNZXdL2TpTcypMJ5eTTAY2zqGF7Fmy@email-smtp.eu-central-1.amazonaws.com:465/?skip_ssl_verify=true&legacy_ssl=true
+            from_address: no-reply@atls.tech
+
+        dsn: 'postgres://project-starter-project-starter:b2tGLF3J84W-z4VJW8u1w-2@db-postgresql.default.svc.cluster.local:5432/project-starter-project-starter?sslmode=disable'

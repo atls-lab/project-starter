@@ -1,13 +1,8 @@
-import React         from 'react'
+export default () => null
 
-import { IndexPage } from './index.page'
-import { Seo }       from './seo'
-
-const Index = () => (
-  <>
-    <Seo />
-    <IndexPage />
-  </>
-)
-
-export default Index
+export const getServerSideProps = () => ({
+  redirect: {
+    destination: '/auth/login',
+    permanent: false,
+  },
+})

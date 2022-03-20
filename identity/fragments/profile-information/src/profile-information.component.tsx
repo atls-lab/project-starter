@@ -1,33 +1,24 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
+import { FlowNode }         from '@atls/next-identity-integration'
+import { FlowSubmit }       from '@atls/next-identity-integration'
+import { FlowNodeMessages } from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
 import { Row }              from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
-import { FlowNode }         from '@atls/react-kratos-browser-flows'
-import { FlowSubmit }       from '@atls/react-kratos-browser-flows'
-import { FlowMessages }     from '@atls/react-kratos-browser-flows'
-import { FlowNodeMessages } from '@atls/react-kratos-browser-flows'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import { FieldMessages }    from '@identity/messages-fragment'
-import { GeneralMessages }  from '@identity/messages-fragment'
 
 export const ProfileInformation = () => (
   <Column height='100%'>
-    <FlowMessages>
-      {(messages) => (
-        <Layout>
-          <GeneralMessages messages={messages} />
-        </Layout>
-      )}
-    </FlowMessages>
     <Layout>
-      <Text fontSize={24} fontWeigth={500}>
+      <Text fontSize={28} fontWeigth={500}>
         <FormattedMessage
           id='profile_information.personal_information'
           defaultMessage='Личная информация'
@@ -118,21 +109,21 @@ export const ProfileInformation = () => (
         <Layout flexBasis={[0, 0, '50%']} />
       </Row>
     </Layout>
-    <Layout flexBasis={40} flexGrow={1} />
     <Layout>
       <Row flexDirection={['column', 'column', 'row']}>
         <Layout flexBasis={['auto', 'auto', 240]}>
-          <FlowSubmit method='profile'>
-            <Button type='submit' size='large' rounding={6} fill>
-              <FormattedMessage id='profile_information.save' defaultMessage='Сохранить' />
-            </Button>
+          <FlowSubmit>
+            {({ submitting, onSubmit }) => (
+              <Button
+                type='submit'
+                rounding={6}
+                disabled={submitting}
+                onClick={() => onSubmit({ method: 'profile' })}
+              >
+                <FormattedMessage id='profile_information.save' defaultMessage='Сохранить' />
+              </Button>
+            )}
           </FlowSubmit>
-        </Layout>
-        <Layout flexBasis={[24, 24, 40]} />
-        <Layout>
-          <Button size='large' rounding={6} inverted fill>
-            <FormattedMessage id='profile_information.reset' defaultMessage='Сбросить' />
-          </Button>
         </Layout>
       </Row>
     </Layout>
