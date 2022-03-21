@@ -4,6 +4,7 @@ module.exports = {
     swcFileReading: false,
     workerThreads: true,
     esmExternals: 'loose',
+    outputStandalone: true,
   },
   webpack: (config) => {
     // eslint-disable-next-line
