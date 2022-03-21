@@ -5,7 +5,6 @@
   "scripts": {
     "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
     "dev": "yarn next dev src",
-    "extract": "formatjs extract '../../fragments/**/src/*.ts*' --out-file locales/ru.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --format simple",
     "prepack": "run build",
     "start": "node dist/index.js"
   },

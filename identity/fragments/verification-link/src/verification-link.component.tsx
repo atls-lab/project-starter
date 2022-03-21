@@ -78,12 +78,18 @@ export const VerificationLink = () => (
           </FlowNodeMessages>
         </Layout>
         <Layout>
-          <FlowSubmit method='link'>
+          <FlowSubmit>
             {({ submitting, onSubmit }) => (
-              <Button type='submit' size='large' fill disabled={submitting} onClick={onSubmit}>
+              <Button
+                type='submit'
+                size='large'
+                fill
+                disabled={submitting}
+                onClick={() => onSubmit({ method: 'link' })}
+              >
                 <FormattedMessage
                   id='verification_link.send_again'
-                  defaultMessage='Отправить еще раз'
+                  defaultMessage='Отправить ещё раз'
                 />
               </Button>
             )}
