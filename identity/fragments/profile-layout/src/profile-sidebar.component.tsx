@@ -1,20 +1,26 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import { Column }           from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Box }              from '@atls-ui-proto/layout'
 import { LogoPlaceholder }  from '@atls-ui-proto/placeholder'
 import { Text }             from '@atls-ui-proto/text'
 
+import Link                 from 'next/link'
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
-import { Link }             from 'react-router-dom'
-import { Route }            from 'react-router-dom'
+import { useRouter }        from 'next/router'
 
-const SidebarLink = ({ href, icon, children, exact }: any) => (
-  <Route path={href} exact={exact}>
-    {({ match }) => (
-      <Link to={href} style={{ textDecoration: 'none', width: '100%' }}>
+const SidebarLink = ({ href, icon, children, exact }: any) => {
+  const { pathname } = useRouter()
+
+  const match = exact ? pathname === href : pathname.startsWith(href)
+
+  return (
+    <Link href={href}>
+      <a style={{ textDecoration: 'none', width: '100%' }}>
         <Box
-          p='16px 16px 16px 64px'
+          p='16px 16px 16px 32px'
           position='relative'
           height={48}
           width='100%'
@@ -29,10 +35,10 @@ const SidebarLink = ({ href, icon, children, exact }: any) => (
             {children}
           </Text>
         </Box>
-      </Link>
-    )}
-  </Route>
-)
+      </a>
+    </Link>
+  )
+}
 
 export const ProfileSidebar = () => (
   <Column px={[24, 24, 40]}>
@@ -44,9 +50,20 @@ export const ProfileSidebar = () => (
     </Layout>
     <Layout flexBasis={60} />
     <Layout>
-      <SidebarLink href='/' exact>
+      <SidebarLink href='/profile/settings'>
         <FormattedMessage id='profile_sidebar.profile' defaultMessage='Профиль' />
       </SidebarLink>
     </Layout>
+    <Layout flexGrow={1} />
+    <Layout>
+      <Link href='/auth/logout'>
+        <a style={{ textDecoration: 'none' }}>
+          <Text fontSize={16} fontWeight={500}>
+            <FormattedMessage id='profile_sidebar.logout' defaultMessage='Выйти' />
+          </Text>
+        </a>
+      </Link>
+    </Layout>
+    <Layout flexBasis={24} />
   </Column>
 )

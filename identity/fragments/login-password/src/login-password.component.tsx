@@ -14,6 +14,8 @@ import { FormattedMessage } from 'react-intl'
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'
 
+import { RecoveryLink }     from './recovery-link.component'
+
 export const LoginPassword = () => (
   <Column justifyContent='center' alignItems='center'>
     <FlowMessages>
@@ -89,11 +91,7 @@ export const LoginPassword = () => (
         </Layout>
         <Layout flexBasis={20} />
         <Layout justifyContent='flex-end'>
-          <a href='/auth/recovery' style={{ textDecoration: 'none' }}>
-            <Text fontSize={12} fontWeight={500}>
-              <FormattedMessage id='login_password.forgot' defaultMessage='Забыли пароль?' />
-            </Text>
-          </a>
+          <RecoveryLink />
         </Layout>
       </Column>
     </Layout>

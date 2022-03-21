@@ -6,5 +6,3 @@ metadata:
 spec:
   image: eu.gcr.io/the-mesh-254617/ps-site-renderer
   interval: 1m0s
-  secretRef:
-    name: flux-sync-gcr

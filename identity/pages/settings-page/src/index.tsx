@@ -1,20 +1,13 @@
-import { SettingsFlow } from '@atls/next-identity-integration'
-
 import React            from 'react'
-import dynamic          from 'next/dynamic'
 
+import { SettingsPage } from './settings.page'
 import { SettingsSeo }  from './settings.seo'
 
-const SettingsPageDefault = dynamic({
-  loader: () => import('./settings.page'),
-  ssr: false,
-})
-
-const SettingsPage = (props) => (
-  <SettingsFlow>
+const Settings = () => (
+  <>
     <SettingsSeo />
-    <SettingsPageDefault {...props} />
-  </SettingsFlow>
+    <SettingsPage />
+  </>
 )
 
-export default SettingsPage
+export default Settings

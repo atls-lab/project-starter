@@ -7,7 +7,6 @@ import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
-import { useFlow }          from '@atls/next-identity-integration'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
@@ -15,157 +14,117 @@ import { FormattedMessage } from 'react-intl'
 import { FieldMessages }    from '@identity/messages-fragment'
 import { GeneralMessages }  from '@identity/messages-fragment'
 
-const RegistrationType = ({ children }) => {
-  const { flow } = useFlow()
-
-  const registrationType = flow?.ui?.nodes?.find(
-    ({ attributes }) =>
-      attributes.name === 'method' &&
-      attributes.type === 'submit' &&
-      attributes.value === 'password'
-  )
-    ? 'password'
-    : 'oidc'
-
-  if (typeof children === 'function') {
-    return children(registrationType)
-  }
-
-  return children
-}
-
 export const RegistrationPassword = () => (
-  <RegistrationType>
-    {(registrationType) => (
-      <Column justifyContent='center' alignItems='center'>
-        <div>{registrationType}</div>
-        <FlowMessages>
-          {(messages) => (
-            <Layout>
-              <GeneralMessages messages={messages} />
-            </Layout>
-          )}
-        </FlowMessages>
-        <Layout maxWidth={320} width='100%'>
-          <Column>
-            <Layout>
-              <FlowNode name='traits.email'>
-                {({ attributes }, value, onChange) => (
-                  <Column>
-                    <Layout>
-                      <Text fontWeight={600} fontSize={12}>
-                        <FormattedMessage id='registration_password.email' defaultMessage='Email' />
-                      </Text>
-                    </Layout>
-                    <Layout mt='8px'>
-                      <Input id='traits.email' {...attributes} value={value} onChange={onChange} />
-                    </Layout>
-                    <Layout flexBasis={24} pb='8px'>
-                      <FlowNodeMessages name='traits.email'>
-                        {(messages) => <FieldMessages messages={messages} />}
-                      </FlowNodeMessages>
-                    </Layout>
-                  </Column>
-                )}
-              </FlowNode>
-            </Layout>
-            <Layout>
-              <FlowNode name='password'>
-                {({ attributes }, value, onChange) => (
-                  <Column>
-                    <Layout>
-                      <Text fontWeight={600} fontSize={12}>
-                        <FormattedMessage
-                          id='registration_password.password'
-                          defaultMessage='Пароль'
-                        />
-                      </Text>
-                    </Layout>
-                    <Layout mt='8px'>
-                      <Input id='password' {...attributes} value={value} onChange={onChange} />
-                    </Layout>
-                    <Layout flexBasis={24} pb='8px'>
-                      <FlowNodeMessages name='password'>
-                        {(messages) => <FieldMessages messages={messages} />}
-                      </FlowNodeMessages>
-                    </Layout>
-                  </Column>
-                )}
-              </FlowNode>
-            </Layout>
-            <Layout>
-              <FlowNode name='traits.name.first'>
-                {({ attributes }, value, onChange) => (
-                  <Column>
-                    <Layout>
-                      <Text fontWeight={600} fontSize={12}>
-                        <FormattedMessage
-                          id='registration_password.first_name'
-                          defaultMessage='Имя'
-                        />
-                      </Text>
-                    </Layout>
-                    <Layout mt='8px'>
-                      <Input
-                        id='traits.name.first'
-                        {...attributes}
-                        value={value}
-                        onChange={onChange}
-                      />
-                    </Layout>
-                    <Layout flexBasis={24} pb='8px'>
-                      <FlowNodeMessages name='traits.name.first'>
-                        {(messages) => <FieldMessages messages={messages} />}
-                      </FlowNodeMessages>
-                    </Layout>
-                  </Column>
-                )}
-              </FlowNode>
-            </Layout>
-            <Layout>
-              <FlowNode name='traits.name.last'>
-                {({ attributes }, value, onChange) => (
-                  <Column>
-                    <Layout>
-                      <Text fontWeight={600} fontSize={12}>
-                        <FormattedMessage
-                          id='registration_password.last_name'
-                          defaultMessage='Фамилия'
-                        />
-                      </Text>
-                    </Layout>
-                    <Layout mt='8px'>
-                      <Input
-                        id='traits.name.last'
-                        {...attributes}
-                        value={value}
-                        onChange={onChange}
-                      />
-                    </Layout>
-                    <Layout flexBasis={32} pb='8px'>
-                      <FlowNodeMessages name='traits.name.last'>
-                        {(messages) => <FieldMessages messages={messages} />}
-                      </FlowNodeMessages>
-                    </Layout>
-                  </Column>
-                )}
-              </FlowNode>
-            </Layout>
-            <Layout>
-              <FlowSubmit>
-                {({ submitting, onSubmit }) => (
-                  <Button fill size='large' disabled={submitting} onClick={() => onSubmit()}>
+  <Column justifyContent='center' alignItems='center'>
+    <FlowMessages>
+      {(messages) => (
+        <Layout>
+          <GeneralMessages messages={messages} />
+        </Layout>
+      )}
+    </FlowMessages>
+    <Layout maxWidth={320} width='100%'>
+      <Column>
+        <Layout>
+          <FlowNode name='traits.email'>
+            {({ attributes }, value, onChange) => (
+              <Column>
+                <Layout>
+                  <Text fontWeight={600} fontSize={12}>
+                    <FormattedMessage id='registration_password.email' defaultMessage='Email' />
+                  </Text>
+                </Layout>
+                <Layout mt='8px'>
+                  <Input id='traits.email' {...attributes} value={value} onChange={onChange} />
+                </Layout>
+                <Layout flexBasis={24} pb='8px'>
+                  <FlowNodeMessages name='traits.email'>
+                    {(messages) => <FieldMessages messages={messages} />}
+                  </FlowNodeMessages>
+                </Layout>
+              </Column>
+            )}
+          </FlowNode>
+        </Layout>
+        <Layout>
+          <FlowNode name='password'>
+            {({ attributes }, value, onChange) => (
+              <Column>
+                <Layout>
+                  <Text fontWeight={600} fontSize={12}>
+                    <FormattedMessage id='registration_password.password' defaultMessage='Пароль' />
+                  </Text>
+                </Layout>
+                <Layout mt='8px'>
+                  <Input id='password' {...attributes} value={value} onChange={onChange} />
+                </Layout>
+                <Layout flexBasis={24} pb='8px'>
+                  <FlowNodeMessages name='password'>
+                    {(messages) => <FieldMessages messages={messages} />}
+                  </FlowNodeMessages>
+                </Layout>
+              </Column>
+            )}
+          </FlowNode>
+        </Layout>
+        <Layout>
+          <FlowNode name='traits.name.first'>
+            {({ attributes }, value, onChange) => (
+              <Column>
+                <Layout>
+                  <Text fontWeight={600} fontSize={12}>
+                    <FormattedMessage id='registration_password.first_name' defaultMessage='Имя' />
+                  </Text>
+                </Layout>
+                <Layout mt='8px'>
+                  <Input id='traits.name.first' {...attributes} value={value} onChange={onChange} />
+                </Layout>
+                <Layout flexBasis={24} pb='8px'>
+                  <FlowNodeMessages name='traits.name.first'>
+                    {(messages) => <FieldMessages messages={messages} />}
+                  </FlowNodeMessages>
+                </Layout>
+              </Column>
+            )}
+          </FlowNode>
+        </Layout>
+        <Layout>
+          <FlowNode name='traits.name.last'>
+            {({ attributes }, value, onChange) => (
+              <Column>
+                <Layout>
+                  <Text fontWeight={600} fontSize={12}>
                     <FormattedMessage
-                      id='registration_password.create_account'
-                      defaultMessage='Создать аккаунт'
+                      id='registration_password.last_name'
+                      defaultMessage='Фамилия'
                     />
-                  </Button>
-                )}
-              </FlowSubmit>
-            </Layout>
-          </Column>
+                  </Text>
+                </Layout>
+                <Layout mt='8px'>
+                  <Input id='traits.name.last' {...attributes} value={value} onChange={onChange} />
+                </Layout>
+                <Layout flexBasis={32} pb='8px'>
+                  <FlowNodeMessages name='traits.name.last'>
+                    {(messages) => <FieldMessages messages={messages} />}
+                  </FlowNodeMessages>
+                </Layout>
+              </Column>
+            )}
+          </FlowNode>
+        </Layout>
+        <Layout>
+          <FlowSubmit>
+            {({ submitting, onSubmit }) => (
+              <Button fill size='large' disabled={submitting} onClick={() => onSubmit()}>
+                <FormattedMessage
+                  id='registration_password.create_account'
+                  defaultMessage='Создать аккаунт'
+                />
+              </Button>
+            )}
+          </FlowSubmit>
         </Layout>
       </Column>
-    )}
-  </RegistrationType>
+    </Layout>
+  </Column>
 )

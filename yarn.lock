@@ -1328,15 +1328,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.12.1, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.7.2":
-  version: 7.14.0
-  resolution: "@babel/runtime@npm:7.14.0"
-  dependencies:
-    regenerator-runtime: ^0.13.4
-  checksum: 257dc2594355dd8798455f25b6f2f9a00f162b427391265752933e0e3337b3b14661d09283187d5039ae3764f723890ffe767e995c73d662f1d515bdf48e5ade
-  languageName: node
-  linkType: hard
-
 "@babel/runtime@npm:^7.10.5":
   version: 7.15.4
   resolution: "@babel/runtime@npm:7.15.4"
@@ -1346,12 +1337,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.13":
-  version: 7.16.7
-  resolution: "@babel/runtime@npm:7.16.7"
+"@babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.7.2":
+  version: 7.14.0
+  resolution: "@babel/runtime@npm:7.14.0"
   dependencies:
     regenerator-runtime: ^0.13.4
-  checksum: 47912f0aaacd1cab2e2552aaf3e6eaffbcaf2d5ac9b07a89a12ac0d42029cb92c070b0d16f825e4277c4a34677c54d8ffe85e1f7c6feb57de58f700eec67ce2f
+  checksum: 257dc2594355dd8798455f25b6f2f9a00f162b427391265752933e0e3337b3b14661d09283187d5039ae3764f723890ffe767e995c73d662f1d515bdf48e5ade
   languageName: node
   linkType: hard
 
@@ -3442,6 +3433,7 @@ __metadata:
     "@identity/messages-fragment": "workspace:0.0.1"
     "@types/react": ^17.0.38
     "@types/styled-system": ^5.1.15
+    next: ^12.1.0
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -3536,6 +3528,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@identity/profile-layout-fragment@workspace:0.0.1, @identity/profile-layout-fragment@workspace:identity/fragments/profile-layout":
+  version: 0.0.0-use.local
+  resolution: "@identity/profile-layout-fragment@workspace:identity/fragments/profile-layout"
+  dependencies:
+    "@atls-ui-proto/layout": 0.0.2
+    "@atls-ui-proto/placeholder": 0.0.1
+    "@atls-ui-proto/text": 0.0.5
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17.0.38
+    "@types/styled-system": ^5.1.15
+    next: ^12.1.0
+    react: ^17.0.2
+    react-intl: ^5.18.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    react: ^17.0.1
+    react-intl: ^5.18.1
+  languageName: unknown
+  linkType: soft
+
 "@identity/profile-oidc-fragment@workspace:0.0.1, @identity/profile-oidc-fragment@workspace:identity/fragments/profile-oidc":
   version: 0.0.0-use.local
   resolution: "@identity/profile-oidc-fragment@workspace:identity/fragments/profile-oidc"
@@ -3581,29 +3595,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@identity/profile-sidebar-fragment@workspace:0.0.1, @identity/profile-sidebar-fragment@workspace:identity/fragments/profile-sidebar":
-  version: 0.0.0-use.local
-  resolution: "@identity/profile-sidebar-fragment@workspace:identity/fragments/profile-sidebar"
-  dependencies:
-    "@atls-ui-proto/layout": 0.0.2
-    "@atls-ui-proto/placeholder": 0.0.1
-    "@atls-ui-proto/text": 0.0.5
-    "@emotion/react": ^11.7.1
-    "@emotion/styled": ^11.6.0
-    "@types/react": ^17.0.38
-    "@types/react-router-dom": 5.3.2
-    "@types/styled-system": ^5.1.15
-    next: ^12.1.0
-    react: ^17.0.2
-    react-router-dom: 5.3.0
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
-  peerDependencies:
-    react: ^17.0.1
-    react-intl: ^5.18.1
-  languageName: unknown
-  linkType: soft
-
 "@identity/recovery-link-fragment@workspace:0.0.1, @identity/recovery-link-fragment@workspace:identity/fragments/recovery-link":
   version: 0.0.0-use.local
   resolution: "@identity/recovery-link-fragment@workspace:identity/fragments/recovery-link"
@@ -3618,6 +3609,7 @@ __metadata:
     "@identity/messages-fragment": "workspace:0.0.1"
     "@types/react": ^17.0.38
     "@types/styled-system": ^5.1.15
+    next: ^12.1.0
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -3700,6 +3692,7 @@ __metadata:
     "@identity/messages-fragment": "workspace:0.0.1"
     "@types/react": ^17.0.38
     "@types/styled-system": ^5.1.15
+    next: ^12.1.0
     react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
@@ -3718,14 +3711,12 @@ __metadata:
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
     "@identity/profile-information-fragment": "workspace:0.0.1"
+    "@identity/profile-layout-fragment": "workspace:0.0.1"
     "@identity/profile-oidc-fragment": "workspace:0.0.1"
     "@identity/profile-security-fragment": "workspace:0.0.1"
-    "@identity/profile-sidebar-fragment": "workspace:0.0.1"
     "@identity/recovery-password-fragment": "workspace:0.0.1"
     "@types/react": ^17.0.38
-    "@types/react-router-dom": 5.3.2
     next: ^12.1.0
-    react-router-dom: 5.3.0
   peerDependencies:
     react: ^17.0.1
     react-helmet: ^6.1.0
@@ -5017,13 +5008,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/history@npm:*":
-  version: 4.7.8
-  resolution: "@types/history@npm:4.7.8"
-  checksum: 9c867532afd80f72a7101a5bb3c10c1ad7cc8c2c14e92fdbc54d5fed0ef8cdb6060c0f261a39884e243424636c6ff85d8aaffb984e2edaac348d2f216f9eedeb
-  languageName: node
-  linkType: hard
-
 "@types/hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.1
   resolution: "@types/hoist-non-react-statics@npm:3.3.1"
@@ -5262,27 +5246,6 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
-  languageName: node
-  linkType: hard
-
-"@types/react-router-dom@npm:5.3.2":
-  version: 5.3.2
-  resolution: "@types/react-router-dom@npm:5.3.2"
-  dependencies:
-    "@types/history": "*"
-    "@types/react": "*"
-    "@types/react-router": "*"
-  checksum: 90f052dc5a43a77edaf41d2afa781c8ed2164cd7922b3cdf5daae446b02a2f279382425e6efc338260782c0a24d25a6101e3658acb41c8a053695968a351ea96
-  languageName: node
-  linkType: hard
-
-"@types/react-router@npm:*":
-  version: 5.1.13
-  resolution: "@types/react-router@npm:5.1.13"
-  dependencies:
-    "@types/history": "*"
-    "@types/react": "*"
-  checksum: 6309f345b8774765cb6b7588feac11ce1b824884eedbe5d13553c463aedc667fa179efd9c5a7c95d00dd7202dbd4abffd4592cc17464de18ffd9e8049738057d
   languageName: node
   linkType: hard
 
@@ -9617,21 +9580,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"history@npm:^4.9.0":
-  version: 4.10.1
-  resolution: "history@npm:4.10.1"
-  dependencies:
-    "@babel/runtime": ^7.1.2
-    loose-envify: ^1.2.0
-    resolve-pathname: ^3.0.0
-    tiny-invariant: ^1.0.2
-    tiny-warning: ^1.0.0
-    value-equal: ^1.0.1
-  checksum: addd84bc4683929bae4400419b5af132ff4e4e9b311a0d4e224579ea8e184a6b80d7f72c55927e4fa117f69076a9e47ce082d8d0b422f1a9ddac7991490ca1d0
-  languageName: node
-  linkType: hard
-
-"hoist-non-react-statics@npm:^3.1.0, hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
+"hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -11196,7 +11145,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0, loose-envify@npm:^1.2.0, loose-envify@npm:^1.3.1, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -11374,19 +11323,6 @@ fsevents@^2.3.2:
   version: 3.1.0
   resolution: "mimic-response@npm:3.1.0"
   checksum: 25739fee32c17f433626bf19f016df9036b75b3d84a3046c7d156e72ec963dd29d7fc8a302f55a3d6c5a4ff24259676b15d915aad6480815a969ff2ec0836867
-  languageName: node
-  linkType: hard
-
-"mini-create-react-context@npm:^0.4.0":
-  version: 0.4.1
-  resolution: "mini-create-react-context@npm:0.4.1"
-  dependencies:
-    "@babel/runtime": ^7.12.1
-    tiny-warning: ^1.0.3
-  peerDependencies:
-    prop-types: ^15.0.0
-    react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
-  checksum: f8cb2c7738aac355fe9ce7e8425f371b7fa90daddd5133edda4ccfdc18c49043b2ec04be6f3abf09b60a0f52549d54f158d5bfd81cdfb1a658531e5b9fe7bc6a
   languageName: node
   linkType: hard
 
@@ -12175,15 +12111,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"path-to-regexp@npm:^1.7.0":
-  version: 1.8.0
-  resolution: "path-to-regexp@npm:1.8.0"
-  dependencies:
-    isarray: 0.0.1
-  checksum: 709f6f083c0552514ef4780cb2e7e4cf49b0cc89a97439f2b7cc69a608982b7690fb5d1720a7473a59806508fc2dae0be751ba49f495ecf89fd8fbc62abccbcd
-  languageName: node
-  linkType: hard
-
 "path-type@npm:^4.0.0":
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
@@ -12388,7 +12315,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2":
+"prop-types@npm:^15.7.2":
   version: 15.7.2
   resolution: "prop-types@npm:15.7.2"
   dependencies:
@@ -12708,7 +12635,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.6.0, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
+"react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -12719,43 +12646,6 @@ fsevents@^2.3.2:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
-  languageName: node
-  linkType: hard
-
-"react-router-dom@npm:5.3.0":
-  version: 5.3.0
-  resolution: "react-router-dom@npm:5.3.0"
-  dependencies:
-    "@babel/runtime": ^7.12.13
-    history: ^4.9.0
-    loose-envify: ^1.3.1
-    prop-types: ^15.6.2
-    react-router: 5.2.1
-    tiny-invariant: ^1.0.2
-    tiny-warning: ^1.0.0
-  peerDependencies:
-    react: ">=15"
-  checksum: 47584fd629ecca52398d7888cab193b8a74057cc99a7ef44410c405d4082f618c3c0399db5325bc3524f9c511404086169570013b61a94dfa6acdfdc850d7a1f
-  languageName: node
-  linkType: hard
-
-"react-router@npm:5.2.1":
-  version: 5.2.1
-  resolution: "react-router@npm:5.2.1"
-  dependencies:
-    "@babel/runtime": ^7.12.13
-    history: ^4.9.0
-    hoist-non-react-statics: ^3.1.0
-    loose-envify: ^1.3.1
-    mini-create-react-context: ^0.4.0
-    path-to-regexp: ^1.7.0
-    prop-types: ^15.6.2
-    react-is: ^16.6.0
-    tiny-invariant: ^1.0.2
-    tiny-warning: ^1.0.0
-  peerDependencies:
-    react: ">=15"
-  checksum: 7daae084bf64531eb619cc5f4cc40ce5ae0a541b64f71d74ec71a38cbf6130ebdbb7cf38f157303fad5846deec259401f96c4d6c7386466dcc989719e01f9aaa
   languageName: node
   linkType: hard
 
@@ -12911,13 +12801,6 @@ fsevents@^2.3.2:
   version: 4.0.0
   resolution: "resolve-from@npm:4.0.0"
   checksum: f4ba0b8494846a5066328ad33ef8ac173801a51739eb4d63408c847da9a2e1c1de1e6cbbf72699211f3d13f8fc1325648b169bd15eb7da35688e30a5fb0e4a7f
-  languageName: node
-  linkType: hard
-
-"resolve-pathname@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "resolve-pathname@npm:3.0.0"
-  checksum: 6147241ba42c423dbe83cb067a2b4af4f60908c3af57e1ea567729cc71416c089737fe2a73e9e79e7a60f00f66c91e4b45ad0d37cd4be2d43fec44963ef14368
   languageName: node
   linkType: hard
 
@@ -13848,24 +13731,10 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"tiny-invariant@npm:^1.0.2":
-  version: 1.1.0
-  resolution: "tiny-invariant@npm:1.1.0"
-  checksum: 27d29bbb9e1d1d86e25766711c28ad91af6d67c87d561167077ac7fbce5212b97bbfe875e70bc369808e075748c825864c9b61f0e9f8652275ec86bcf4dcc924
-  languageName: node
-  linkType: hard
-
 "tiny-lru@npm:7.0.6":
   version: 7.0.6
   resolution: "tiny-lru@npm:7.0.6"
   checksum: 36a786a9111a3a358a698c9404783ad3f5396f6ed891672ffa4cd7dec4617abb8dfed6af7611bbaf8a3942a9475534c8b80f9bd58d7efa9aa594f395c9805f09
-  languageName: node
-  linkType: hard
-
-"tiny-warning@npm:^1.0.0, tiny-warning@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "tiny-warning@npm:1.0.3"
-  checksum: da62c4acac565902f0624b123eed6dd3509bc9a8d30c06e017104bedcf5d35810da8ff72864400ad19c5c7806fc0a8323c68baf3e326af7cb7d969f846100d71
   languageName: node
   linkType: hard
 
@@ -14335,13 +14204,6 @@ fsevents@^2.3.2:
   version: 13.7.0
   resolution: "validator@npm:13.7.0"
   checksum: 2b83283de1222ca549a7ef57f46e8d49c6669213348db78b7045bce36a3b5843ff1e9f709ebf74574e06223461ee1f264f8cc9a26a0060a79a27de079d8286ef
-  languageName: node
-  linkType: hard
-
-"value-equal@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "value-equal@npm:1.0.1"
-  checksum: bb7ae1facc76b5cf8071aeb6c13d284d023fdb370478d10a5d64508e0e6e53bb459c4bbe34258df29d82e6f561f874f0105eba38de0e61fe9edd0bdce07a77a2
   languageName: node
   linkType: hard
 
