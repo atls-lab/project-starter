@@ -24,7 +24,7 @@ export const VerificationNotification = () => (
           <Text color='white' fontSize={12}>
             Ваш email адрес не верифицирован, следуйте инструкциям, высланным в сообщении или
             <Space />
-            <IdentityLink type='verification'>
+            <IdentityLink type='verification' returnTo>
               {(url) => (
                 <a href={url} style={{ color: 'white' }}>
                   <Text color='white' fontSize={12} fontWeight={600}>
