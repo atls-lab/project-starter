@@ -28,7 +28,7 @@ export const Navigation = () => (
             <Layout mr={32} display={['none', 'flex', 'flex']}>
               <Text fontSize={14}>
                 Вы вошли как, <Space />{' '}
-                <IdentityLink type='settings' returnTo={false}>
+                <IdentityLink type='settings'>
                   {(url) => (
                     <a href={url} style={{ textDecoration: 'none' }}>
                       <Text fontSize={14} fontWeight={600}>
@@ -40,7 +40,7 @@ export const Navigation = () => (
               </Text>
             </Layout>
             <Layout>
-              <IdentityLink type='logout'>
+              <IdentityLink type='logout' returnTo>
                 {(url) => (
                   <a href={url} style={{ textDecoration: 'none' }}>
                     <Text fontSize={14} fontWeight={600}>
@@ -55,7 +55,7 @@ export const Navigation = () => (
       </WithUser>
       <WithoutUser>
         <Layout>
-          <IdentityLink>
+          <IdentityLink returnTo>
             {(url) => (
               <a href={url} style={{ textDecoration: 'none' }}>
                 <Text fontSize={14} fontWeight={600}>
@@ -66,7 +66,7 @@ export const Navigation = () => (
           </IdentityLink>
         </Layout>
         <Layout ml={32} display={['none', 'flex', 'flex']}>
-          <IdentityLink type='registration'>
+          <IdentityLink type='registration' returnTo>
             {(url) => (
               <>
                 {/* @ts-ignore */}
