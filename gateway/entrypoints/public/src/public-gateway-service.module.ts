@@ -1,8 +1,7 @@
 import { GatewayModule }        from '@atls/nestjs-gateway'
 import { GatewaySourceType }    from '@atls/nestjs-gateway'
 import { Module }               from '@nestjs/common'
-import { uploadGatewayHandler } from '@atls/services-proto-files'
-import { filesGatewayHandler }  from '@atls/services-proto-files'
+import { uploadGatewayHandler } from '@atls/services-proto-upload'
 
 @Module({
   imports: [
@@ -36,41 +35,6 @@ import { filesGatewayHandler }  from '@atls/services-proto-files'
                   useRegExpForTypes: true,
                 },
               ],
-            },
-          },
-        },
-        {
-          name: 'Files',
-          type: GatewaySourceType.GRPC,
-          handler: filesGatewayHandler,
-          transforms: {
-            rename: {
-              mode: 'bare',
-              renames: [
-                {
-                  from: {
-                    type: '(.*)RequestInput',
-                  },
-                  to: {
-                    type: '$1Input',
-                  },
-                  useRegExpForTypes: true,
-                },
-                {
-                  from: {
-                    type: 'Query',
-                    field: 'ListOwnedFiles',
-                  },
-                  to: {
-                    type: 'Query',
-                    field: 'files',
-                  },
-                },
-              ],
-            },
-            filterSchema: {
-              mode: 'bare',
-              filters: ['Query.!ListPublicFiles'],
             },
           },
         },
