@@ -43,6 +43,9 @@ node_modules
 # images
 images.json
 
+.terraform
+*.terraform.*
+terraform.*
 .next
 dist/
 .idea/workspace.xml
