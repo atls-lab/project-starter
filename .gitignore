@@ -43,6 +43,10 @@ node_modules
 # images
 images.json
 
+.terraform
+*.hcl
+*.tfstate
+*.backup
 .next
 dist/
 .idea/workspace.xml
