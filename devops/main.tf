@@ -95,8 +95,8 @@ resource "yandex_kubernetes_cluster" "jakc" {
       subnet_id = var.subnet_id
     }
   }
-  service_account_id      = yandex_iam_service_account.kubernetes.id
-  node_service_account_id = yandex_iam_service_account.registry.id
+  service_account_id      = var.sa_kubernetes
+  node_service_account_id = var.sa_registry
   depends_on              = [
     yandex_resourcemanager_folder_iam_binding.editor,
     yandex_resourcemanager_folder_iam_binding.images-puller
@@ -104,24 +104,16 @@ resource "yandex_kubernetes_cluster" "jakc" {
 }
 
 resource "yandex_vpc_subnet" "subnet-1" {
-  v4_cidr_blocks = ["192.168.0.0/24"]
+  v4_cidr_blocks = ["10.0.0.0/22"]
   zone           = var.zone
   network_id     = var.network_id
-}
-
-resource "yandex_iam_service_account" "kubernetes" {
-  name        = "kubernetes"
-}
-
-resource "yandex_iam_service_account" "registry" {
-  name        = "registry"
 }
 
 resource "yandex_resourcemanager_folder_iam_binding" "editor" {
   folder_id = var.folder_id
   role      = "editor"
   members   = [
-    "serviceAccount:${yandex_iam_service_account.kubernetes.id}"
+    "serviceAccount:${var.sa_kubernetes}"
   ]
 }
 
@@ -129,6 +121,6 @@ resource "yandex_resourcemanager_folder_iam_binding" "images-puller" {
   folder_id = var.folder_id
   role      = "container-registry.images.puller"
   members   = [
-    "serviceAccount:${yandex_iam_service_account.registry.id}"
+    "serviceAccount:${var.sa_registry}"
   ]
 }

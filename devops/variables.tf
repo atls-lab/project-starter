@@ -1,4 +1,4 @@
-variable "token"{
+variable "token" {
   type = string
   sensitive = true
 }
@@ -26,4 +26,14 @@ variable "subnet_id" {
 variable "zone" {
   type = string
   default = "ru-central1-a"
+}
+
+variable "sa_kubernetes" {
+  type = string
+  sensitive = true
+}
+
+variable "sa_registry" {
+  type = string
+  sensitive = true
 }

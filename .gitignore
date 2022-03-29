@@ -44,9 +44,8 @@ node_modules
 images.json
 
 .terraform
-*.hcl
-*.tfstate
-*.backup
+*.terraform.*
+terraform.*
 .next
 dist/
 .idea/workspace.xml
