@@ -78,3 +78,55 @@ resource "yandex_vpc_security_group" "k8s-master-whitelist" {
     port           = 443
   }
 }
+
+resource "yandex_kubernetes_node_group" "stage" {
+  cluster_id  = yandex_kubernetes_cluster.stage.id
+  name        = var.environment
+  version     = "1.17"
+
+  instance_template {
+    platform_id = "standard-node-pool"
+
+    network_interface {
+      nat                = true
+      subnet_ids         = [yandex_vpc_subnet.stage.id]
+    }
+
+    resources {
+      cores  = 2
+      memory = 4
+    }
+
+    boot_disk {
+      type = "network-hdd"
+      size = 40
+    }
+
+    scheduling_policy {
+      preemptible = false
+    }
+
+    container_runtime {
+      type = "containerd"
+    }
+  }
+
+  scale_policy {
+    auto_scale {
+      initial = 1
+      min     = 1
+      max     = 6
+    }
+  }
+
+  allocation_policy {
+    location {
+      zone = var.zone
+    }
+  }
+
+  maintenance_policy {
+    auto_upgrade = true
+    auto_repair  = true
+  }
+}
