@@ -6,12 +6,6 @@ terraform {
       prefix = "infrastructure-"
     }
   }
-  required_providers {
-    yandex = {
-      source  = "yandex-cloud/yandex"
-    }
-  }
-  required_version = ">= 0.13"
 }
 
 provider "yandex" {
@@ -20,3 +14,7 @@ provider "yandex" {
   cloud_id  = var.cloud
   zone      = var.zone
 }
+
+provider "kubernetes" {}
+
+provider "helm" {}

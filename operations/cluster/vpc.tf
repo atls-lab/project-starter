@@ -128,5 +128,17 @@ resource "yandex_kubernetes_node_group" "stage" {
   maintenance_policy {
     auto_upgrade = true
     auto_repair  = true
+
+    maintenance_window {
+      day        = "monday"
+      start_time = "15:00"
+      duration   = "3h"
+    }
+
+    maintenance_window {
+      day        = "friday"
+      start_time = "10:00"
+      duration   = "4h30m"
+    }
   }
 }
