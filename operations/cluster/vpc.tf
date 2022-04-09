@@ -82,10 +82,10 @@ resource "yandex_vpc_security_group" "k8s-master-whitelist" {
 resource "yandex_kubernetes_node_group" "stage" {
   cluster_id  = yandex_kubernetes_cluster.stage.id
   name        = var.environment
-  version     = "1.17"
+  version     = "1.20"
 
   instance_template {
-    platform_id = "standard-node-pool"
+    platform_id = "standard-v2"
 
     network_interface {
       nat                = true

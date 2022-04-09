@@ -15,6 +15,24 @@ provider "yandex" {
   zone      = var.zone
 }
 
-provider "kubernetes" {}
+provider "kubernetes" {
+  host                   = data.terraform_remote_state.cluster.outputs.auth
 
-provider "helm" {}
+  cluster_ca_certificate = data.terraform_remote_state.cluster.outputs.cert
+}
+
+provider "helm" {
+  kubernetes {
+    host                   = data.terraform_remote_state.cluster.outputs.auth
+
+    cluster_ca_certificate = data.terraform_remote_state.cluster.outputs.cert
+  }
+}
+
+provider "kubectl" {
+  load_config_file = false
+
+  host                   = data.terraform_remote_state.cluster.outputs.auth
+
+  cluster_ca_certificate = data.terraform_remote_state.cluster.outputs.cert
+}
