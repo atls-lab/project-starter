@@ -85,11 +85,16 @@ resource "yandex_kubernetes_node_group" "stage" {
   version     = "1.20"
 
   instance_template {
-    platform_id = "standard-v2"
+    platform_id = "standard-v1"
 
     network_interface {
       nat                = true
       subnet_ids         = [yandex_vpc_subnet.stage.id]
+      security_group_ids = [
+        yandex_vpc_security_group.k8s-main-sg.id,
+        yandex_vpc_security_group.k8s-nodes-ssh-access.id,
+        yandex_vpc_security_group.k8s-public-services.id
+      ]
     }
 
     resources {
@@ -130,15 +135,9 @@ resource "yandex_kubernetes_node_group" "stage" {
     auto_repair  = true
 
     maintenance_window {
-      day        = "monday"
-      start_time = "15:00"
+      day        = "saturday"
+      start_time = "21:00"
       duration   = "3h"
-    }
-
-    maintenance_window {
-      day        = "friday"
-      start_time = "10:00"
-      duration   = "4h30m"
     }
   }
 }
