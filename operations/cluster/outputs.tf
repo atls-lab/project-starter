@@ -1,9 +1,9 @@
 output "cert" {
-  value = yandex_kubernetes_cluster.stage.master.cluster_ca_certificate
+  value = yandex_kubernetes_cluster.stage.master[0]
   sensitive = true
 }
 
 output "auth" {
-  value     = yandex_kubernetes_cluster.stage.master.external_v4_endpoint
+  value     = yandex_kubernetes_cluster.stage.master[0]
   sensitive = true
 }
