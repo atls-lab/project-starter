@@ -6,7 +6,6 @@ services:
     working_dir: /workspace
     volumes:
       - ./:/workspace
-      - unplugged:/workspace/.yarn/unplugged
     entrypoint: yarn
 
   db:
@@ -67,10 +66,6 @@ services:
     working_dir: /workspace
     volumes:
       - ./:/workspace
-      - unplugged:/workspace/.yarn/unplugged
     entrypoint: yarn workspace @identity/accounts-app-entrypoint dev
     ports:
       - '3000:3000'
-
-volumes:
-  unplugged:

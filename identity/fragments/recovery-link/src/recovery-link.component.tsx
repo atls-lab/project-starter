@@ -72,7 +72,7 @@ export const RecoveryLink = () => (
         <Layout>
           <FlowSubmit method='link'>
             {({ submitting, onSubmit }) => (
-              <Button type='submit' size='large' fill disabled={submitting} onClick={onSubmit}>
+              <Button type='submit' size='large' fill disabled={submitting} onClick={() => onSubmit({ method: 'link' })}>
                 <FormattedMessage
                   id='recovery_link.reset_password'
                   defaultMessage='Сбросить пароль'
