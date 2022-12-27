@@ -48,5 +48,5 @@ images.json
 terraform.*
 .next
 dist/
-.idea/workspace.xml
-.idea/vcs.xml
+.idea
+*.iml
