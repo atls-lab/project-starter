@@ -81,13 +81,6 @@ services:
       - '4436:4436'
       - '4437:4437'
 
-  oathkeeper:
-    image: ghcr.io/atls/forge-oathkeeper:v1
-    command: serve --config /config.yaml
-    ports:
-      - 4455:4455
-      - 4456:4456
-
   identity:
     image: node:16.13
     working_dir: /workspace
