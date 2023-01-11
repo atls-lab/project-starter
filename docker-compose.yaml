@@ -2,56 +2,78 @@ version: '3.8'
 
 services:
   yarn:
-    image: node:alpine
+    image: node:16.13
     working_dir: /workspace
     volumes:
       - ./:/workspace
     entrypoint: yarn
+
+  traefik:
+    image: traefik:v2.6
+    command:
+      - --entrypoints.web.address=:80
+      - --entrypoints.web-secure.address=:443
+      - --providers.docker=true
+      - --providers.file.directory=/configuration/
+      - --providers.file.watch=true
+    ports:
+      - '4433:80'
+      - '443:443'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
 
   db:
     image: bitnami/postgresql
     environment:
       - POSTGRESQL_PASSWORD=password
       - POSTGRESQL_DATABASE=db
+      - POSTGRESQL_USER=postgres
     ports:
       - 5432:5432
 
   kratos-migrate:
     depends_on:
       - db
-    image: oryd/kratos:v0.8.2-alpha.1
+    image: docker.io/oryd/kratos:v0.11.0
     environment:
       - DSN=postgres://postgres:password@db:5432/db?sslmode=disable&max_conns=20&max_idle_conns=4
     volumes:
       - type: bind
-        source: .config/kratos
-        target: /etc/config/kratos
-    command: -c /etc/config/kratos/kratos.yaml migrate sql -e --yes
+        source: ./config/ory/kratos
+        target: /config/kratos
+    command: -c /config/kratos/kratos.yaml migrate sql -e --yes
     restart: on-failure
+    networks:
+      - default
 
   kratos:
     depends_on:
       - kratos-migrate
       - mailslurper
       - db
-    image: oryd/kratos:v0.8.2-alpha.1
+      - traefik
+    image: docker.io/oryd/kratos:v0.11.0
     ports:
-      - '4433:4433'
       - '4434:4434'
     restart: unless-stopped
     environment:
       - DSN=postgres://postgres:password@db:5432/db?sslmode=disable&max_conns=20&max_idle_conns=4
       - LOG_LEVEL=trace
-    command: serve -c /etc/config/kratos/kratos.yaml --dev --watch-courier
+    command: serve -c /config/kratos/kratos.yaml --dev --watch-courier
+    networks:
+      - default
     volumes:
       - type: bind
-        source: .config/kratos
-        target: /etc/config/kratos
-    networks:
-      default:
-        aliases:
-          - kratos-public
-          - kratos-admin
+        source: ./config/ory/kratos
+        target: /config/kratos
+    labels:
+      - 'traefik.http.services.identity.loadbalancer.server.port=4433'
+      - 'traefik.http.routers.identity.rule=Host(`localhost`)'
+      - 'traefik.http.routers.identity.middlewares=cors'
+      - 'traefik.http.middlewares.cors.headers.accesscontrolalloworiginlist=http://localhost:3000'
+      - 'traefik.http.middlewares.cors.headers.accesscontrolallowmethods=GET,POST,PUT,OPTIONS'
+      - 'traefik.http.middlewares.cors.headers.accesscontrolallowheaders=content-type,authorization,cookie'
+      - 'traefik.http.middlewares.cors.headers.accesscontrolallowcredentials=true'
 
   mailslurper:
     image: oryd/mailslurper:latest-smtps
@@ -59,13 +81,13 @@ services:
       - '4436:4436'
       - '4437:4437'
 
-  accounts:
-    depends_on:
-      - kratos
-    image: node:alpine
+  identity:
+    image: node:16.13
     working_dir: /workspace
     volumes:
       - ./:/workspace
-    entrypoint: yarn workspace @identity/accounts-app-entrypoint dev
+    entrypoint: yarn workspace @identity/renderer-entrypoint dev
+    depends_on:
+      - kratos
     ports:
       - '3000:3000'

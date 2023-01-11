@@ -1,12 +1,12 @@
-import { FlowSubmit }       from '@atls/next-identity-integration'
-import { FlowMessages }     from '@atls/next-identity-integration'
-import { FlowNodeMessages } from '@atls/next-identity-integration'
-import { FlowNode }         from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
+import { FlowSubmit }       from '@atls/next-identity-integration'
+import { FlowMessages }     from '@atls/next-identity-integration'
+import { FlowNodeMessages } from '@atls/next-identity-integration'
+import { FlowNode }         from '@atls/next-identity-integration'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
@@ -28,7 +28,7 @@ export const LoginPassword = () => (
     <Layout maxWidth={320} width='100%'>
       <Column>
         <Layout>
-          <FlowNode name='password_identifier'>
+          <FlowNode name='identifier'>
             {(field, value, onChange) => (
               <Column>
                 <Layout>
@@ -37,12 +37,7 @@ export const LoginPassword = () => (
                   </Text>
                 </Layout>
                 <Layout mt='8px'>
-                  <Input
-                    id='password_identifier'
-                    {...field.attributes}
-                    value={value}
-                    onChange={onChange}
-                  />
+                  <Input {...field.attributes} value={value} onChange={onChange} />
                 </Layout>
                 <Layout flexBasis={24} pb='8px'>
                   <FlowNodeMessages name='password_identifier'>
@@ -63,7 +58,7 @@ export const LoginPassword = () => (
                   </Text>
                 </Layout>
                 <Layout mt='8px'>
-                  <Input id='password' {...field.attributes} value={value} onChange={onChange} />
+                  <Input {...field.attributes} value={value} onChange={onChange} />
                 </Layout>
                 <Layout flexBasis={32} pb='8px'>
                   <FlowNodeMessages name='password'>

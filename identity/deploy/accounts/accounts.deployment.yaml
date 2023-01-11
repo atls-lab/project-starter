@@ -19,17 +19,17 @@ spec:
         app: accounts
     spec:
       containers:
-      - name: accounts
-        image: eu.gcr.io/the-mesh-254617/ps-identity-accounts-app-entrypoint:490d982-1646653474140 # {"$imagepolicy": "flux-system:project-starter-accounts"}
-        imagePullPolicy: IfNotPresent
-        ports:
-        - containerPort: 3000
-          name: http
-          protocol: TCP
-        env:
-        - name: KRATOS_BROWSER_URL
-          value: https://identity.project-starter.site
-        - name: PUBLIC_BROWSER_URL
-          value: https://identity.project-starter.site
-        - name: SERVICE_NAME
-          value: accounts
+        - name: accounts
+          image: eu.gcr.io/the-mesh-254617/ps-identity-accounts-app-entrypoint:490d982-1646653474140 # {"$imagepolicy": "flux-system:project-starter-accounts"}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+              name: http
+              protocol: TCP
+          env:
+            - name: KRATOS_BROWSER_URL
+              value: https://identity.project-starter.site
+            - name: PUBLIC_BROWSER_URL
+              value: https://identity.project-starter.site
+            - name: SERVICE_NAME
+              value: accounts

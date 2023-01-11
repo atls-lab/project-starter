@@ -1,10 +1,10 @@
-import { FlowNodesFilter }  from '@atls/next-identity-integration'
-import { FlowSubmit }       from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Column }           from '@atls-ui-proto/layout'
 import { Row }              from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
+import { FlowNodesFilter }  from '@atls/next-identity-integration'
+import { FlowSubmit }       from '@atls/next-identity-integration'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'

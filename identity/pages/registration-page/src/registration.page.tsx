@@ -1,5 +1,5 @@
-import { RegistrationFlow }     from '@atls/next-identity-integration'
 import { Column }               from '@atls-ui-proto/layout'
+import { RegistrationFlow }     from '@atls/next-identity-integration'
 
 import React                    from 'react'
 

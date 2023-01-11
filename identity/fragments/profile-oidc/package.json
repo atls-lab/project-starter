@@ -3,11 +3,14 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.tsx",
+  "dependencies": {
+    "@atls-ui-proto/button": "^0.0.5"
+  },
   "devDependencies": {
     "@atls-ui-proto/input": "0.0.5",
     "@atls-ui-proto/layout": "0.0.2",
     "@atls-ui-proto/text": "0.0.5",
-    "@atls/next-identity-integration": "^0.0.8",
+    "@atls/next-identity-integration": "0.0.12",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@types/react": "^17.0.38",
@@ -19,8 +22,5 @@
   "peerDependencies": {
     "react": "^17.0.1",
     "react-intl": "^5.18.1"
-  },
-  "dependencies": {
-    "@atls-ui-proto/button": "^0.0.5"
   }
 }
