@@ -1,7 +1,7 @@
-import { FlowMessages }       from '@atls/next-identity-integration'
-import { SettingsFlow }       from '@atls/next-identity-integration'
 import { Layout }             from '@atls-ui-proto/layout'
 import { Column }             from '@atls-ui-proto/layout'
+import { FlowMessages }       from '@atls/next-identity-integration'
+import { SettingsFlow }       from '@atls/next-identity-integration'
 
 import React                  from 'react'
 

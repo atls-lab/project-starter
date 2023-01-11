@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import { FlowNode }         from '@atls/next-identity-integration'
-import { FlowSubmit }       from '@atls/next-identity-integration'
-import { FlowNodeMessages } from '@atls/next-identity-integration'
-import { FlowNodesFilter }  from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Input }            from '@atls-ui-proto/input'
 import { Column }           from '@atls-ui-proto/layout'
 import { Row }              from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
+import { FlowNode }         from '@atls/next-identity-integration'
+import { FlowSubmit }       from '@atls/next-identity-integration'
+import { FlowNodeMessages } from '@atls/next-identity-integration'
+import { FlowNodesFilter }  from '@atls/next-identity-integration'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
@@ -35,7 +35,7 @@ export const ProfileSecurity = () => (
     <Layout>
       <FlowNode name='password'>
         {({ attributes }, value, onChange) => (
-          <Input id='password' {...attributes} value={value} onChange={onChange} />
+          <Input {...attributes} value={value} onChange={onChange} />
         )}
       </FlowNode>
     </Layout>
@@ -135,7 +135,7 @@ export const ProfileSecurity = () => (
           <Layout>
             <FlowNode name='totp_code'>
               {({ attributes }, value, onChange) => (
-                <Input id='totp_code' {...attributes} value={value} onChange={onChange} />
+                <Input {...attributes} value={value} onChange={onChange} />
               )}
             </FlowNode>
           </Layout>

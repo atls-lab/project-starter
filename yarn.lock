@@ -438,17 +438,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-identity-integration@npm:^0.0.8":
-  version: 0.0.8
-  resolution: "@atls/next-identity-integration@npm:0.0.8"
+"@atls/next-identity-integration@npm:0.0.11":
+  version: 0.0.11
+  resolution: "@atls/next-identity-integration@npm:0.0.11"
   dependencies:
-    "@ory/integrations": ^0.2.1
-    "@ory/kratos-client": ^0.8.2-alpha.1
+    "@ory/integrations": ^1.1.0
+    "@ory/kratos-client": ^0.11.0
     tldjs: ^2.3.1
   peerDependencies:
     next: ^12.0.9
     react: ^17.0.1
-  checksum: 3af63d0bb3aeb471fc04ca624a830a5964c3248f58d04667171870aae151c09ab9bd59b492ad3531c07f7d72f72f2980f85c91a494f01f74afb660f572c10b45
+  checksum: db26d6cd54ba837f23ddfece2e7ac00b8b0afdd9f177da46b32ea6c2135a3cd08d488226ef55deed8e4984201549faea0ad23a3f10a69fe9e707d0fd4e7da257
+  languageName: node
+  linkType: hard
+
+"@atls/next-identity-integration@npm:0.0.12":
+  version: 0.0.12
+  resolution: "@atls/next-identity-integration@npm:0.0.12"
+  dependencies:
+    "@ory/integrations": ^1.1.0
+    "@ory/kratos-client": ^0.11.0
+    tldjs: ^2.3.1
+  peerDependencies:
+    next: ^12.0.9
+    react: ^17.0.1
+  checksum: 08e4cb60909686aca7f2b05042229c393e89e66865893d4fdf23eadc59bd0f2d519a5290abf513b4a9dc786a4365aaafbade551fb299103378629b9fde07da60
   languageName: node
   linkType: hard
 
@@ -472,18 +486,6 @@ __metadata:
     "@atls/react-user": "*"
     react: ^17.0.1
   checksum: 4105f58e3e9899ba1d1b4a162bbd1059073cd2e644cb5f32c08a80889dc98e9e6ccfa123e462a925bf42d6f0e8b821674503cba8968d3cc1a966eecd831c35c6
-  languageName: node
-  linkType: hard
-
-"@atls/react-kratos-browser-flows@npm:0.0.1":
-  version: 0.0.1
-  resolution: "@atls/react-kratos-browser-flows@npm:0.0.1"
-  dependencies:
-    "@ory/kratos-client": ^0.7.6-alpha.1
-    events: ^3.3.0
-  peerDependencies:
-    react: ^17.0.1
-  checksum: 8a6376a64cd3342fe028b51d875f7cf9f70d15a186918ad9dae758e6ad812e1dfa2d662531ae912f478de0a20d74ca037c231080d169abb80d399ca3295b21ca
   languageName: node
   linkType: hard
 
@@ -3332,34 +3334,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@identity/accounts-app-entrypoint@workspace:identity/entrypoints/accounts-app":
-  version: 0.0.0-use.local
-  resolution: "@identity/accounts-app-entrypoint@workspace:identity/entrypoints/accounts-app"
-  dependencies:
-    "@atls-ui-proto/theme": 0.0.1
-    "@atls/next-identity-integration": ^0.0.8
-    "@emotion/react": ^11.7.1
-    "@emotion/styled": ^11.6.0
-    "@formatjs/cli": 4.5.0
-    "@identity/error-page": "workspace:0.0.1"
-    "@identity/index-page": "workspace:0.0.1"
-    "@identity/login-page": "workspace:0.0.1"
-    "@identity/logout-page": "workspace:0.0.1"
-    "@identity/recovery-page": "workspace:0.0.1"
-    "@identity/registration-page": "workspace:0.0.1"
-    "@identity/settings-page": "workspace:0.0.1"
-    "@identity/verification-page": "workspace:0.0.1"
-    "@types/node": ^17.0.0
-    "@types/react": ^17.0.37
-    "@types/react-dom": ^17.0.11
-    next: ^12.1.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    react-intl: 5.23.0
-    typescript: ^4.5.4
-  languageName: unknown
-  linkType: soft
-
 "@identity/auth-layout-fragment@workspace:0.0.1, @identity/auth-layout-fragment@workspace:identity/fragments/auth-layout":
   version: 0.0.0-use.local
   resolution: "@identity/auth-layout-fragment@workspace:identity/fragments/auth-layout"
@@ -3367,7 +3341,7 @@ __metadata:
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/placeholder": 0.0.1
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3389,8 +3363,7 @@ __metadata:
     "@atls-ui-proto/button": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
-    "@atls/react-kratos-browser-flows": 0.0.1
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/styled": ^11.6.0
     "@types/react": ^17.0.38
     "@types/styled-system": ^5.1.15
@@ -3406,7 +3379,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@identity/error-page@workspace:identity/pages/error-page"
   dependencies:
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.11
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/error-fragment": "workspace:0.0.1"
     "@types/react": ^17.0.38
@@ -3437,7 +3410,7 @@ __metadata:
   resolution: "@identity/login-page@workspace:identity/pages/login-page"
   dependencies:
     "@atls-ui-proto/layout": 0.0.2
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.11
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/login-password-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3459,7 +3432,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3480,7 +3453,7 @@ __metadata:
   resolution: "@identity/logout-page@workspace:identity/pages/logout-page"
   dependencies:
     "@atls-ui-proto/layout": 0.0.3
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.11
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/error-fragment": "workspace:0.0.1"
     "@identity/login-password-fragment": "workspace:0.0.1"
@@ -3524,7 +3497,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@types/react": ^17.0.38
@@ -3545,7 +3518,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3590,7 +3563,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@types/react": ^17.0.38
@@ -3612,7 +3585,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3635,7 +3608,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3656,7 +3629,7 @@ __metadata:
   resolution: "@identity/recovery-page@workspace:identity/pages/recovery-page"
   dependencies:
     "@atls-ui-proto/layout": 0.0.2
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.11
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
     "@identity/recovery-link-fragment": "workspace:0.0.1"
@@ -3676,7 +3649,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3696,7 +3669,7 @@ __metadata:
   resolution: "@identity/registration-page@workspace:identity/pages/registration-page"
   dependencies:
     "@atls-ui-proto/layout": 0.0.2
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.11
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/login-password-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3718,7 +3691,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -3734,12 +3707,40 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@identity/renderer-entrypoint@workspace:identity/entrypoints/accounts-app":
+  version: 0.0.0-use.local
+  resolution: "@identity/renderer-entrypoint@workspace:identity/entrypoints/accounts-app"
+  dependencies:
+    "@atls-ui-proto/theme": 0.0.1
+    "@atls/next-identity-integration": 0.0.11
+    "@emotion/react": ^11.7.1
+    "@emotion/styled": ^11.6.0
+    "@formatjs/cli": 4.5.0
+    "@identity/error-page": "workspace:0.0.1"
+    "@identity/index-page": "workspace:0.0.1"
+    "@identity/login-page": "workspace:0.0.1"
+    "@identity/logout-page": "workspace:0.0.1"
+    "@identity/recovery-page": "workspace:0.0.1"
+    "@identity/registration-page": "workspace:0.0.1"
+    "@identity/settings-page": "workspace:0.0.1"
+    "@identity/verification-page": "workspace:0.0.1"
+    "@types/node": ^17.0.0
+    "@types/react": ^17.0.37
+    "@types/react-dom": ^17.0.11
+    next: ^12.1.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: 5.23.0
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
+
 "@identity/settings-page@workspace:0.0.1, @identity/settings-page@workspace:identity/pages/settings-page":
   version: 0.0.0-use.local
   resolution: "@identity/settings-page@workspace:identity/pages/settings-page"
   dependencies:
     "@atls-ui-proto/layout": ^0.0.2
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.11
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
     "@identity/profile-information-fragment": "workspace:0.0.1"
@@ -3764,7 +3765,7 @@ __metadata:
     "@atls-ui-proto/input": 0.0.5
     "@atls-ui-proto/layout": 0.0.2
     "@atls-ui-proto/text": 0.0.5
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.12
     "@emotion/styled": ^11.6.0
     "@identity/messages-fragment": "workspace:0.0.1"
     "@types/react": ^17.0.38
@@ -3782,7 +3783,7 @@ __metadata:
   resolution: "@identity/verification-page@workspace:identity/pages/verification-page"
   dependencies:
     "@atls-ui-proto/layout": 0.0.2
-    "@atls/next-identity-integration": ^0.0.8
+    "@atls/next-identity-integration": 0.0.11
     "@identity/auth-layout-fragment": "workspace:0.0.1"
     "@identity/login-password-fragment": "workspace:0.0.1"
     "@identity/messages-fragment": "workspace:0.0.1"
@@ -4417,33 +4418,42 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ory/client@npm:>=0.0.1-alpha.49":
-  version: 0.0.1-alpha.124
-  resolution: "@ory/client@npm:0.0.1-alpha.124"
+"@ory/client@npm:^1.1.0":
+  version: 1.1.5
+  resolution: "@ory/client@npm:1.1.5"
   dependencies:
     axios: ^0.21.4
-  checksum: 76846f529ce4f46dcaa7a7ec24381038d9b127e949d45277ff11da2dc1d98d58eabd1643e6e9697d2051fdfbf6a7c7ba3e98202e3200e22f51ca6b9fbd052141
+  checksum: 64888eb6b16354eef34f1de610b4a22d8e26edff873e780605cf0f2cfe9c07f163040621f1673bb5cb00af5cffa87e79a5ca0e5b68f1c155e3ced171ad9f7b7c
   languageName: node
   linkType: hard
 
-"@ory/integrations@npm:^0.2.1":
-  version: 0.2.4
-  resolution: "@ory/integrations@npm:0.2.4"
+"@ory/integrations@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@ory/integrations@npm:1.1.0"
   dependencies:
-    "@ory/client": ">=0.0.1-alpha.49"
+    "@ory/client": ^1.1.0
     "@types/tldjs": ^2.3.1
     cookie: ^0.4.1
     istextorbinary: ^6.0.0
     next: ">=12.0.10"
-    ory-prettier-styles: ^1.1.2
+    ory-prettier-styles: ^1.3.0
     prettier: ^2.3.2
     request: ^2.88.2
     set-cookie-parser: ^2.4.8
     tldjs: ^2.3.1
   peerDependencies:
-    "@ory/client": ">=0.0.1-alpha.49"
+    "@ory/client": ^0.2.0-alpha.16
     next: ">=12.0.10"
-  checksum: c432a8a99a636608273e8fe2b3bce54014bcc685aff89295d86ae778e8bb722b8e7212f1c22ba47fde66022d73b0061f0e2dad0844b5809cbd999900510ca0a8
+  checksum: 38e38fad8e09312672cb3ce227e1547fbce33842e591b090d148f47a4fd8c7cbed21f30c16501f514493739a3507aabb2601f990cef14c557a94912de26321c2
+  languageName: node
+  linkType: hard
+
+"@ory/kratos-client@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@ory/kratos-client@npm:0.11.0"
+  dependencies:
+    axios: ^0.21.4
+  checksum: 462b2a4ea1d5b27a45c0111d07a0a355274bdd576b83effafb85f9a25c3e2617a5ccc5c02676a05475a864faa38ed0c20f7a3b7af6ddc62b658e5a199860fecd
   languageName: node
   linkType: hard
 
@@ -4453,15 +4463,6 @@ __metadata:
   dependencies:
     axios: ^0.19.2
   checksum: 2bc6fd1b2c57c10fa4f6d7e40367a6ce79ba2852bff6bac2f9a0bbb6026eab25ce3dfd088e52f013304a90f18bd1881b42f86afa04addb9686124278652b2f81
-  languageName: node
-  linkType: hard
-
-"@ory/kratos-client@npm:^0.7.6-alpha.1":
-  version: 0.7.6-alpha.1
-  resolution: "@ory/kratos-client@npm:0.7.6-alpha.1"
-  dependencies:
-    axios: ^0.21.1
-  checksum: 5ea6c8604aa7f98727d7d5b448f92f370d7e72a233607049b77973fd6f2f5499988f46d376d2330f0e9ffc3b57ab7c4260874c5c0f6636122660f5f5349833e3
   languageName: node
   linkType: hard
 
@@ -8689,7 +8690,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"events@npm:^3.2.0, events@npm:^3.3.0":
+"events@npm:^3.2.0":
   version: 3.3.0
   resolution: "events@npm:3.3.0"
   checksum: f6f487ad2198aa41d878fa31452f1a3c00958f46e9019286ff4787c84aac329332ab45c9cdc8c445928fc6d7ded294b9e005a7fce9426488518017831b272780
@@ -12151,10 +12152,10 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"ory-prettier-styles@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "ory-prettier-styles@npm:1.1.2"
-  checksum: 4cca6b6f6de5999ec3b07a2da280f7501145d014e8160bdf0595f586dd6596e1cf6172ee3acd38079b762debdb678eff1c10c1139a2f5e9109b444db135b4bfd
+"ory-prettier-styles@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "ory-prettier-styles@npm:1.3.0"
+  checksum: 95398258a4f946c61ca17d510ff742c73463ecaffc9b7c212b3cae42be9283b37498a9dfae4e14b2e1b54e23b48521b672ebae1463d3120f240ef1492afcf3d2
   languageName: node
   linkType: hard
 

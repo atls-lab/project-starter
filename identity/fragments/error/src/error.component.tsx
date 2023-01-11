@@ -1,8 +1,8 @@
-import { ErrorNode }        from '@atls/next-identity-integration'
 import { Button }           from '@atls-ui-proto/button'
 import { Column }           from '@atls-ui-proto/layout'
 import { Layout }           from '@atls-ui-proto/layout'
 import { Text }             from '@atls-ui-proto/text'
+import { ErrorNode }        from '@atls/next-identity-integration'
 
 import React                from 'react'
 import { FormattedMessage } from 'react-intl'
