@@ -1,0 +1,60 @@
+[
+  {
+    "id": "public-gateway-allow-authenticated",
+    "version": "v0.0.1",
+    "upstream": {
+      "url": "http://public-gateway:3000/graphql"
+    },
+    "match": {
+      "url": "http://<127.0.0.1|localhost>:4455/public-gateway",
+      "methods": ["GET", "POST"]
+    },
+    "authenticators": [
+      {
+        "handler": "cookie_session"
+      }
+    ],
+    "authorizer": {
+      "handler": "allow"
+    },
+    "mutators": [
+      {
+        "handler": "header",
+        "config": {
+          "headers": {
+            "X-User": "{{ print .Subject }}"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "private-gateway-allow-authenticated",
+    "version": "v0.0.1",
+    "upstream": {
+      "url": "http://private-gateway:3000/graphql"
+    },
+    "match": {
+      "url": "http://<127.0.0.1|localhost>:4455/private-gateway",
+      "methods": ["GET", "POST"]
+    },
+    "authenticators": [
+      {
+        "handler": "cookie_session"
+      }
+    ],
+    "authorizer": {
+      "handler": "allow"
+    },
+    "mutators": [
+      {
+        "handler": "header",
+        "config": {
+          "headers": {
+            "X-User": "{{ print .Subject }}"
+          }
+        }
+      }
+    ]
+  }
+]
