@@ -1,0 +1,81 @@
+serve:
+  proxy:
+    cors:
+      enabled: true
+      allowed_origins:
+        - 'http://localhost:3001'
+      allowed_methods:
+        - POST
+        - GET
+        - PUT
+        - PATCH
+        - DELETE
+      allowed_headers:
+        - '*'
+      exposed_headers:
+        - '*'
+      allow_credentials: true
+      debug: true
+
+access_rules:
+  repositories:
+    - file:///config/oathkeeper/rules.json
+
+authenticators:
+  anonymous:
+    enabled: true
+    config:
+      subject: guest
+
+  jwt:
+    enabled: true
+    config:
+      jwks_urls:
+        - file:///config/oathkeeper/mutator.id_token.jwks.json
+      scope_strategy: wildcard
+
+  cookie_session:
+    enabled: true
+    config:
+      check_session_url: http://kratos:4433/sessions/whoami
+      preserve_path: true
+      extra_from: '@this'
+      subject_from: 'identity.id'
+      only:
+        - ory_kratos_session
+
+  noop:
+    enabled: true
+
+authorizers:
+  allow:
+    enabled: true
+  deny:
+    enabled: true
+
+mutators:
+  header:
+    enabled: true
+    config:
+      headers:
+        X-Oathkeeper: oathkeeper
+
+  noop:
+    enabled: true
+
+  id_token:
+    enabled: true
+    config:
+      jwks_url: file:///config/oathkeeper/mutator.id_token.jwks.json
+      issuer_url: http://localhost:3000
+      ttl: 1h
+
+errors:
+  fallback:
+    - json
+
+  handlers:
+    json:
+      enabled: true
+      config:
+        verbose: true
